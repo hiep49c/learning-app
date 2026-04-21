@@ -1,0 +1,52 @@
+[
+  {
+    "id": "prereq-001",
+    "module_id": "module-02",
+    "prerequisite_module_id": "module-01"
+  },
+  {
+    "id": "prereq-002",
+    "module_id": "module-03",
+    "prerequisite_module_id": "module-02"
+  },
+  {
+    "id": "prereq-003",
+    "module_id": "module-04",
+    "prerequisite_module_id": "module-03"
+  },
+  {
+    "id": "prereq-004",
+    "module_id": "module-05",
+    "prerequisite_module_id": "module-04"
+  },
+  {
+    "id": "prereq-005",
+    "module_id": "module-06",
+    "prerequisite_module_id": "module-05"
+  },
+  {
+    "id": "prereq-006",
+    "module_id": "module-07",
+    "prerequisite_module_id": "module-05"
+  },
+  {
+    "id": "prereq-007",
+    "module_id": "module-08",
+    "prerequisite_module_id": "module-05"
+  },
+  {
+    "id": "prereq-008",
+    "module_id": "module-09",
+    "prerequisite_module_id": "module-06"
+  },
+  {
+    "id": "prereq-009",
+    "module_id": "module-09",
+    "prerequisite_module_id": "module-07"
+  },
+  {
+    "id": "prereq-010",
+    "module_id": "module-09",
+    "prerequisite_module_id": "module-08"
+  }
+]

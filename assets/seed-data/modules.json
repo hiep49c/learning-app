@@ -1,0 +1,92 @@
+[
+  {
+    "id": "module-01",
+    "title": "Java Core Fundamentals",
+    "title_vi": "Java Cơ Bản",
+    "description": "Java Core Fundamentals - Java Cơ Bản",
+    "order_index": 1,
+    "difficulty_level": "beginner",
+    "icon_name": "language-java",
+    "lesson_count": 7
+  },
+  {
+    "id": "module-02",
+    "title": "Java OOP",
+    "title_vi": "Java Hướng Đối Tượng",
+    "description": "Java OOP - Java Hướng Đối Tượng",
+    "order_index": 2,
+    "difficulty_level": "beginner",
+    "icon_name": "shape-outline",
+    "lesson_count": 7
+  },
+  {
+    "id": "module-03",
+    "title": "Java Advanced",
+    "title_vi": "Java Nâng Cao",
+    "description": "Java Advanced - Java Nâng Cao",
+    "order_index": 3,
+    "difficulty_level": "intermediate",
+    "icon_name": "rocket-launch-outline",
+    "lesson_count": 5
+  },
+  {
+    "id": "module-04",
+    "title": "Spring Framework Basics",
+    "title_vi": "Spring Cơ Bản",
+    "description": "Spring Framework Basics - Spring Cơ Bản",
+    "order_index": 4,
+    "difficulty_level": "intermediate",
+    "icon_name": "leaf",
+    "lesson_count": 2
+  },
+  {
+    "id": "module-05",
+    "title": "Spring Boot",
+    "title_vi": "Spring Boot",
+    "description": "Spring Boot - Spring Boot",
+    "order_index": 5,
+    "difficulty_level": "intermediate",
+    "icon_name": "flash-outline",
+    "lesson_count": 2
+  },
+  {
+    "id": "module-06",
+    "title": "Spring Data & Persistence",
+    "title_vi": "Spring Data",
+    "description": "Spring Data & Persistence - Spring Data",
+    "order_index": 6,
+    "difficulty_level": "advanced",
+    "icon_name": "database-outline",
+    "lesson_count": 1
+  },
+  {
+    "id": "module-07",
+    "title": "Spring Security",
+    "title_vi": "Spring Security",
+    "description": "Spring Security - Spring Security",
+    "order_index": 7,
+    "difficulty_level": "advanced",
+    "icon_name": "shield-lock-outline",
+    "lesson_count": 1
+  },
+  {
+    "id": "module-08",
+    "title": "Spring Cloud & Microservices",
+    "title_vi": "Spring Cloud",
+    "description": "Spring Cloud & Microservices - Spring Cloud",
+    "order_index": 8,
+    "difficulty_level": "advanced",
+    "icon_name": "cloud-outline",
+    "lesson_count": 1
+  },
+  {
+    "id": "module-09",
+    "title": "Real-world Project Patterns",
+    "title_vi": "Dự Án Thực Tế",
+    "description": "Real-world Project Patterns - Dự Án Thực Tế",
+    "order_index": 9,
+    "difficulty_level": "expert",
+    "icon_name": "briefcase-outline",
+    "lesson_count": 1
+  }
+]

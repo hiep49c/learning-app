@@ -1,0 +1,1937 @@
+[
+  {
+    "id": "kw-rel-0001",
+    "keyword_id": "keyword-arithmetic-operators",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0002",
+    "keyword_id": "keyword-arithmetic-operators",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0003",
+    "keyword_id": "keyword-arithmetic-operators",
+    "related_keyword_id": "keyword-arrays-vs-collections"
+  },
+  {
+    "id": "kw-rel-0004",
+    "keyword_id": "keyword-array-internals",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0005",
+    "keyword_id": "keyword-array-internals",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0006",
+    "keyword_id": "keyword-array-internals",
+    "related_keyword_id": "keyword-arrays-vs-collections"
+  },
+  {
+    "id": "kw-rel-0007",
+    "keyword_id": "keyword-array-operations-performance",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0008",
+    "keyword_id": "keyword-array-operations-performance",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0009",
+    "keyword_id": "keyword-array-operations-performance",
+    "related_keyword_id": "keyword-arrays-vs-collections"
+  },
+  {
+    "id": "kw-rel-0010",
+    "keyword_id": "keyword-arrays-vs-collections",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0011",
+    "keyword_id": "keyword-arrays-vs-collections",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0012",
+    "keyword_id": "keyword-arrays-vs-collections",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0013",
+    "keyword_id": "keyword-bitwise-operators",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0014",
+    "keyword_id": "keyword-bitwise-operators",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0015",
+    "keyword_id": "keyword-bitwise-operators",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0016",
+    "keyword_id": "keyword-break-continue-return",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0017",
+    "keyword_id": "keyword-break-continue-return",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0018",
+    "keyword_id": "keyword-break-continue-return",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0019",
+    "keyword_id": "keyword-comparison-operators-equality",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0020",
+    "keyword_id": "keyword-comparison-operators-equality",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0021",
+    "keyword_id": "keyword-comparison-operators-equality",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0022",
+    "keyword_id": "keyword-custom-exception-design",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0023",
+    "keyword_id": "keyword-custom-exception-design",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0024",
+    "keyword_id": "keyword-custom-exception-design",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0025",
+    "keyword_id": "keyword-exception-handling-patterns",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0026",
+    "keyword_id": "keyword-exception-handling-patterns",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0027",
+    "keyword_id": "keyword-exception-handling-patterns",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0028",
+    "keyword_id": "keyword-exception-hierarchy-design",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0029",
+    "keyword_id": "keyword-exception-hierarchy-design",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0030",
+    "keyword_id": "keyword-exception-hierarchy-design",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0031",
+    "keyword_id": "keyword-exception-performance-cost",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0032",
+    "keyword_id": "keyword-exception-performance-cost",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0033",
+    "keyword_id": "keyword-exception-performance-cost",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0034",
+    "keyword_id": "keyword-final",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0035",
+    "keyword_id": "keyword-final",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0036",
+    "keyword_id": "keyword-final",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0037",
+    "keyword_id": "keyword-for-loop-enhanced-for",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0038",
+    "keyword_id": "keyword-for-loop-enhanced-for",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0039",
+    "keyword_id": "keyword-for-loop-enhanced-for",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0040",
+    "keyword_id": "keyword-if-else",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0041",
+    "keyword_id": "keyword-if-else",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0042",
+    "keyword_id": "keyword-if-else",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0043",
+    "keyword_id": "keyword-instanceof-pattern-matching",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0044",
+    "keyword_id": "keyword-instanceof-pattern-matching",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0045",
+    "keyword_id": "keyword-instanceof-pattern-matching",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0046",
+    "keyword_id": "keyword-interruptedexception",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0047",
+    "keyword_id": "keyword-interruptedexception",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0048",
+    "keyword_id": "keyword-interruptedexception",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0049",
+    "keyword_id": "keyword-logical-operators-short-circuit",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0050",
+    "keyword_id": "keyword-logical-operators-short-circuit",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0051",
+    "keyword_id": "keyword-logical-operators-short-circuit",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0052",
+    "keyword_id": "keyword-method-design-principles",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0053",
+    "keyword_id": "keyword-method-design-principles",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0054",
+    "keyword_id": "keyword-method-design-principles",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0055",
+    "keyword_id": "keyword-method-invocation-jvm-level",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0056",
+    "keyword_id": "keyword-method-invocation-jvm-level",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0057",
+    "keyword_id": "keyword-method-invocation-jvm-level",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0058",
+    "keyword_id": "keyword-method-overloading-resolution-rules",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0059",
+    "keyword_id": "keyword-method-overloading-resolution-rules",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0060",
+    "keyword_id": "keyword-method-overloading-resolution-rules",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0061",
+    "keyword_id": "keyword-method-parameters-pass-by-value-deep-dive",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0062",
+    "keyword_id": "keyword-method-parameters-pass-by-value-deep-dive",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0063",
+    "keyword_id": "keyword-method-parameters-pass-by-value-deep-dive",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0064",
+    "keyword_id": "keyword-multidimensional-arrays",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0065",
+    "keyword_id": "keyword-multidimensional-arrays",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0066",
+    "keyword_id": "keyword-multidimensional-arrays",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0067",
+    "keyword_id": "keyword-numeric-literals",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0068",
+    "keyword_id": "keyword-numeric-literals",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0069",
+    "keyword_id": "keyword-numeric-literals",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0070",
+    "keyword_id": "keyword-operator-precedence-evaluation-order",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0071",
+    "keyword_id": "keyword-operator-precedence-evaluation-order",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0072",
+    "keyword_id": "keyword-operator-precedence-evaluation-order",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0073",
+    "keyword_id": "keyword-primitive-types",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0074",
+    "keyword_id": "keyword-primitive-types",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0075",
+    "keyword_id": "keyword-primitive-types",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0076",
+    "keyword_id": "keyword-recursion-stack-optimization",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0077",
+    "keyword_id": "keyword-recursion-stack-optimization",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0078",
+    "keyword_id": "keyword-recursion-stack-optimization",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0079",
+    "keyword_id": "keyword-reference-types",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0080",
+    "keyword_id": "keyword-reference-types",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0081",
+    "keyword_id": "keyword-reference-types",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0082",
+    "keyword_id": "keyword-regular-expressions-advanced",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0083",
+    "keyword_id": "keyword-regular-expressions-advanced",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0084",
+    "keyword_id": "keyword-regular-expressions-advanced",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0085",
+    "keyword_id": "keyword-string-concatenation-optimization",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0086",
+    "keyword_id": "keyword-string-concatenation-optimization",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0087",
+    "keyword_id": "keyword-string-concatenation-optimization",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0088",
+    "keyword_id": "keyword-string-immutability",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0089",
+    "keyword_id": "keyword-string-immutability",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0090",
+    "keyword_id": "keyword-string-immutability",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0091",
+    "keyword_id": "keyword-string-interning-memory",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0092",
+    "keyword_id": "keyword-string-interning-memory",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0093",
+    "keyword_id": "keyword-string-interning-memory",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0094",
+    "keyword_id": "keyword-string-methods-advanced",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0095",
+    "keyword_id": "keyword-string-methods-advanced",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0096",
+    "keyword_id": "keyword-string-methods-advanced",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0097",
+    "keyword_id": "keyword-string-pool-interning",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0098",
+    "keyword_id": "keyword-string-pool-interning",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0099",
+    "keyword_id": "keyword-string-pool-interning",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0100",
+    "keyword_id": "keyword-switch-switch-expressions",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0101",
+    "keyword_id": "keyword-switch-switch-expressions",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0102",
+    "keyword_id": "keyword-switch-switch-expressions",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0103",
+    "keyword_id": "keyword-try-with-resources-deep-dive",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0104",
+    "keyword_id": "keyword-try-with-resources-deep-dive",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0105",
+    "keyword_id": "keyword-try-with-resources-deep-dive",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0106",
+    "keyword_id": "keyword-type-casting-promotion",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0107",
+    "keyword_id": "keyword-type-casting-promotion",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0108",
+    "keyword_id": "keyword-type-casting-promotion",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0109",
+    "keyword_id": "keyword-var-local-variable-type-inference",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0110",
+    "keyword_id": "keyword-var-local-variable-type-inference",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0111",
+    "keyword_id": "keyword-var-local-variable-type-inference",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0112",
+    "keyword_id": "keyword-varargs-internals-pitfalls",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0113",
+    "keyword_id": "keyword-varargs-internals-pitfalls",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0114",
+    "keyword_id": "keyword-varargs-internals-pitfalls",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0115",
+    "keyword_id": "keyword-variable",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0116",
+    "keyword_id": "keyword-variable",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0117",
+    "keyword_id": "keyword-variable",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0118",
+    "keyword_id": "keyword-while-do-while",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0119",
+    "keyword_id": "keyword-while-do-while",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0120",
+    "keyword_id": "keyword-while-do-while",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0121",
+    "keyword_id": "keyword-wrapper-classes-autoboxing",
+    "related_keyword_id": "keyword-arithmetic-operators"
+  },
+  {
+    "id": "kw-rel-0122",
+    "keyword_id": "keyword-wrapper-classes-autoboxing",
+    "related_keyword_id": "keyword-array-internals"
+  },
+  {
+    "id": "kw-rel-0123",
+    "keyword_id": "keyword-wrapper-classes-autoboxing",
+    "related_keyword_id": "keyword-array-operations-performance"
+  },
+  {
+    "id": "kw-rel-0124",
+    "keyword_id": "keyword-abstract-class-vs-interface-decision-guide",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0125",
+    "keyword_id": "keyword-abstract-class-vs-interface-decision-guide",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0126",
+    "keyword_id": "keyword-abstract-class-vs-interface-decision-guide",
+    "related_keyword_id": "keyword-constructor-advanced"
+  },
+  {
+    "id": "kw-rel-0127",
+    "keyword_id": "keyword-ad-hoc-polymorphism-method-overloading",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0128",
+    "keyword_id": "keyword-ad-hoc-polymorphism-method-overloading",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0129",
+    "keyword_id": "keyword-ad-hoc-polymorphism-method-overloading",
+    "related_keyword_id": "keyword-constructor-advanced"
+  },
+  {
+    "id": "kw-rel-0130",
+    "keyword_id": "keyword-composition-over-inheritance",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0131",
+    "keyword_id": "keyword-composition-over-inheritance",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0132",
+    "keyword_id": "keyword-composition-over-inheritance",
+    "related_keyword_id": "keyword-constructor-advanced"
+  },
+  {
+    "id": "kw-rel-0133",
+    "keyword_id": "keyword-constructor-advanced",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0134",
+    "keyword_id": "keyword-constructor-advanced",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0135",
+    "keyword_id": "keyword-constructor-advanced",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0136",
+    "keyword_id": "keyword-covariant-return-types",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0137",
+    "keyword_id": "keyword-covariant-return-types",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0138",
+    "keyword_id": "keyword-covariant-return-types",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0139",
+    "keyword_id": "keyword-dependency-inversion-principle-dip",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0140",
+    "keyword_id": "keyword-dependency-inversion-principle-dip",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0141",
+    "keyword_id": "keyword-dependency-inversion-principle-dip",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0142",
+    "keyword_id": "keyword-designing-for-inheritance",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0143",
+    "keyword_id": "keyword-designing-for-inheritance",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0144",
+    "keyword_id": "keyword-designing-for-inheritance",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0145",
+    "keyword_id": "keyword-diamond-problem-default-method-conflicts",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0146",
+    "keyword_id": "keyword-diamond-problem-default-method-conflicts",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0147",
+    "keyword_id": "keyword-diamond-problem-default-method-conflicts",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0148",
+    "keyword_id": "keyword-encapsulation-vs-information-hiding",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0149",
+    "keyword_id": "keyword-encapsulation-vs-information-hiding",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0150",
+    "keyword_id": "keyword-encapsulation-vs-information-hiding",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0151",
+    "keyword_id": "keyword-enum-advanced-patterns",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0152",
+    "keyword_id": "keyword-enum-advanced-patterns",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0153",
+    "keyword_id": "keyword-enum-advanced-patterns",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0154",
+    "keyword_id": "keyword-enum-internals",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0155",
+    "keyword_id": "keyword-enum-internals",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0156",
+    "keyword_id": "keyword-enum-internals",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0157",
+    "keyword_id": "keyword-enumset-enummap",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0158",
+    "keyword_id": "keyword-enumset-enummap",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0159",
+    "keyword_id": "keyword-enumset-enummap",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0160",
+    "keyword_id": "keyword-equals-hashcode-tostring-contract-pitfalls",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0161",
+    "keyword_id": "keyword-equals-hashcode-tostring-contract-pitfalls",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0162",
+    "keyword_id": "keyword-equals-hashcode-tostring-contract-pitfalls",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0163",
+    "keyword_id": "keyword-fragile-base-class-problem",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0164",
+    "keyword_id": "keyword-fragile-base-class-problem",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0165",
+    "keyword_id": "keyword-fragile-base-class-problem",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0166",
+    "keyword_id": "keyword-functional-interface-lambda",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0167",
+    "keyword_id": "keyword-functional-interface-lambda",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0168",
+    "keyword_id": "keyword-functional-interface-lambda",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0169",
+    "keyword_id": "keyword-immutability-strategies",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0170",
+    "keyword_id": "keyword-immutability-strategies",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0171",
+    "keyword_id": "keyword-immutability-strategies",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0172",
+    "keyword_id": "keyword-interface-evolution-java-8-21",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0173",
+    "keyword_id": "keyword-interface-evolution-java-8-21",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0174",
+    "keyword_id": "keyword-interface-evolution-java-8-21",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0175",
+    "keyword_id": "keyword-interface-segregation-principle-isp",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0176",
+    "keyword_id": "keyword-interface-segregation-principle-isp",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0177",
+    "keyword_id": "keyword-interface-segregation-principle-isp",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0178",
+    "keyword_id": "keyword-invariant-protection",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0179",
+    "keyword_id": "keyword-invariant-protection",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0180",
+    "keyword_id": "keyword-invariant-protection",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0181",
+    "keyword_id": "keyword-liskov-substitution-principle-lsp",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0182",
+    "keyword_id": "keyword-liskov-substitution-principle-lsp",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0183",
+    "keyword_id": "keyword-liskov-substitution-principle-lsp",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0184",
+    "keyword_id": "keyword-module-system-java-9",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0185",
+    "keyword_id": "keyword-module-system-java-9",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0186",
+    "keyword_id": "keyword-module-system-java-9",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0187",
+    "keyword_id": "keyword-object-creation-patterns",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0188",
+    "keyword_id": "keyword-object-creation-patterns",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0189",
+    "keyword_id": "keyword-object-creation-patterns",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0190",
+    "keyword_id": "keyword-object-lifecycle-garbage-collection",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0191",
+    "keyword_id": "keyword-object-lifecycle-garbage-collection",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0192",
+    "keyword_id": "keyword-object-lifecycle-garbage-collection",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0193",
+    "keyword_id": "keyword-object-memory-layout",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0194",
+    "keyword_id": "keyword-object-memory-layout",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0195",
+    "keyword_id": "keyword-object-memory-layout",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0196",
+    "keyword_id": "keyword-openclosed-principle-ocp",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0197",
+    "keyword_id": "keyword-openclosed-principle-ocp",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0198",
+    "keyword_id": "keyword-openclosed-principle-ocp",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0199",
+    "keyword_id": "keyword-record-java-16",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0200",
+    "keyword_id": "keyword-record-java-16",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0201",
+    "keyword_id": "keyword-record-java-16",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0202",
+    "keyword_id": "keyword-runtime-polymorphism-dynamic-dispatch",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0203",
+    "keyword_id": "keyword-runtime-polymorphism-dynamic-dispatch",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0204",
+    "keyword_id": "keyword-runtime-polymorphism-dynamic-dispatch",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0205",
+    "keyword_id": "keyword-sealed-types-java-17",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0206",
+    "keyword_id": "keyword-sealed-types-java-17",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0207",
+    "keyword_id": "keyword-sealed-types-java-17",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0208",
+    "keyword_id": "keyword-single-responsibility-principle-srp",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0209",
+    "keyword_id": "keyword-single-responsibility-principle-srp",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0210",
+    "keyword_id": "keyword-single-responsibility-principle-srp",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0211",
+    "keyword_id": "keyword-type-erasure-polymorphism",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0212",
+    "keyword_id": "keyword-type-erasure-polymorphism",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0213",
+    "keyword_id": "keyword-type-erasure-polymorphism",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0214",
+    "keyword_id": "keyword-virtual-method-dispatch-vtable",
+    "related_keyword_id": "keyword-abstract-class-vs-interface-decision-guide"
+  },
+  {
+    "id": "kw-rel-0215",
+    "keyword_id": "keyword-virtual-method-dispatch-vtable",
+    "related_keyword_id": "keyword-ad-hoc-polymorphism-method-overloading"
+  },
+  {
+    "id": "kw-rel-0216",
+    "keyword_id": "keyword-virtual-method-dispatch-vtable",
+    "related_keyword_id": "keyword-composition-over-inheritance"
+  },
+  {
+    "id": "kw-rel-0217",
+    "keyword_id": "keyword-annotation-processing-pipeline",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0218",
+    "keyword_id": "keyword-annotation-processing-pipeline",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0219",
+    "keyword_id": "keyword-annotation-processing-pipeline",
+    "related_keyword_id": "keyword-collectors-advanced"
+  },
+  {
+    "id": "kw-rel-0220",
+    "keyword_id": "keyword-arraylist-vs-linkedlist-real-performance",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0221",
+    "keyword_id": "keyword-arraylist-vs-linkedlist-real-performance",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0222",
+    "keyword_id": "keyword-arraylist-vs-linkedlist-real-performance",
+    "related_keyword_id": "keyword-collectors-advanced"
+  },
+  {
+    "id": "kw-rel-0223",
+    "keyword_id": "keyword-atomic-classes-cas",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0224",
+    "keyword_id": "keyword-atomic-classes-cas",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0225",
+    "keyword_id": "keyword-atomic-classes-cas",
+    "related_keyword_id": "keyword-collectors-advanced"
+  },
+  {
+    "id": "kw-rel-0226",
+    "keyword_id": "keyword-collectors-advanced",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0227",
+    "keyword_id": "keyword-collectors-advanced",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0228",
+    "keyword_id": "keyword-collectors-advanced",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0229",
+    "keyword_id": "keyword-completablefuture-async-programming",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0230",
+    "keyword_id": "keyword-completablefuture-async-programming",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0231",
+    "keyword_id": "keyword-completablefuture-async-programming",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0232",
+    "keyword_id": "keyword-custom-annotation-design",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0233",
+    "keyword_id": "keyword-custom-annotation-design",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0234",
+    "keyword_id": "keyword-custom-annotation-design",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0235",
+    "keyword_id": "keyword-dynamic-proxy",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0236",
+    "keyword_id": "keyword-dynamic-proxy",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0237",
+    "keyword_id": "keyword-dynamic-proxy",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0238",
+    "keyword_id": "keyword-fail-fast-vs-fail-safe-iterators",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0239",
+    "keyword_id": "keyword-fail-fast-vs-fail-safe-iterators",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0240",
+    "keyword_id": "keyword-fail-fast-vs-fail-safe-iterators",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0241",
+    "keyword_id": "keyword-hashmap-internals",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0242",
+    "keyword_id": "keyword-hashmap-internals",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0243",
+    "keyword_id": "keyword-hashmap-internals",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0244",
+    "keyword_id": "keyword-java-memory-model-jmm",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0245",
+    "keyword_id": "keyword-java-memory-model-jmm",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0246",
+    "keyword_id": "keyword-java-memory-model-jmm",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0247",
+    "keyword_id": "keyword-javautilconcurrent-lock-framework",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0248",
+    "keyword_id": "keyword-javautilconcurrent-lock-framework",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0249",
+    "keyword_id": "keyword-javautilconcurrent-lock-framework",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0250",
+    "keyword_id": "keyword-lambda-internals",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0251",
+    "keyword_id": "keyword-lambda-internals",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0252",
+    "keyword_id": "keyword-lambda-internals",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0253",
+    "keyword_id": "keyword-method-reference-types",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0254",
+    "keyword_id": "keyword-method-reference-types",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0255",
+    "keyword_id": "keyword-method-reference-types",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0256",
+    "keyword_id": "keyword-optional-best-practices",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0257",
+    "keyword_id": "keyword-optional-best-practices",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0258",
+    "keyword_id": "keyword-optional-best-practices",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0259",
+    "keyword_id": "keyword-parallel-streams-pitfalls",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0260",
+    "keyword_id": "keyword-parallel-streams-pitfalls",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0261",
+    "keyword_id": "keyword-parallel-streams-pitfalls",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0262",
+    "keyword_id": "keyword-pecs-producer-extends-consumer-super",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0263",
+    "keyword_id": "keyword-pecs-producer-extends-consumer-super",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0264",
+    "keyword_id": "keyword-pecs-producer-extends-consumer-super",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0265",
+    "keyword_id": "keyword-queue-deque-choosing-right-implementation",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0266",
+    "keyword_id": "keyword-queue-deque-choosing-right-implementation",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0267",
+    "keyword_id": "keyword-queue-deque-choosing-right-implementation",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0268",
+    "keyword_id": "keyword-recursive-type-bounds",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0269",
+    "keyword_id": "keyword-recursive-type-bounds",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0270",
+    "keyword_id": "keyword-recursive-type-bounds",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0271",
+    "keyword_id": "keyword-reflection-performance-alternatives",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0272",
+    "keyword_id": "keyword-reflection-performance-alternatives",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0273",
+    "keyword_id": "keyword-reflection-performance-alternatives",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0274",
+    "keyword_id": "keyword-set-implementations",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0275",
+    "keyword_id": "keyword-set-implementations",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0276",
+    "keyword_id": "keyword-set-implementations",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0277",
+    "keyword_id": "keyword-stream-pipeline-internals",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0278",
+    "keyword_id": "keyword-stream-pipeline-internals",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0279",
+    "keyword_id": "keyword-stream-pipeline-internals",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0280",
+    "keyword_id": "keyword-synchronized-monitor-lock",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0281",
+    "keyword_id": "keyword-synchronized-monitor-lock",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0282",
+    "keyword_id": "keyword-synchronized-monitor-lock",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0283",
+    "keyword_id": "keyword-type-erasure-deep-dive",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0284",
+    "keyword_id": "keyword-type-erasure-deep-dive",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0285",
+    "keyword_id": "keyword-type-erasure-deep-dive",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0286",
+    "keyword_id": "keyword-type-tokens-super-type-tokens",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0287",
+    "keyword_id": "keyword-type-tokens-super-type-tokens",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0288",
+    "keyword_id": "keyword-type-tokens-super-type-tokens",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0289",
+    "keyword_id": "keyword-virtual-threads-java-21",
+    "related_keyword_id": "keyword-annotation-processing-pipeline"
+  },
+  {
+    "id": "kw-rel-0290",
+    "keyword_id": "keyword-virtual-threads-java-21",
+    "related_keyword_id": "keyword-arraylist-vs-linkedlist-real-performance"
+  },
+  {
+    "id": "kw-rel-0291",
+    "keyword_id": "keyword-virtual-threads-java-21",
+    "related_keyword_id": "keyword-atomic-classes-cas"
+  },
+  {
+    "id": "kw-rel-0292",
+    "keyword_id": "keyword-advice-ordering-transactional-internals",
+    "related_keyword_id": "keyword-aop-proxy-mechanism"
+  },
+  {
+    "id": "kw-rel-0293",
+    "keyword_id": "keyword-advice-ordering-transactional-internals",
+    "related_keyword_id": "keyword-bean-resolution-ambiguity"
+  },
+  {
+    "id": "kw-rel-0294",
+    "keyword_id": "keyword-advice-ordering-transactional-internals",
+    "related_keyword_id": "keyword-bean-scope-deep-dive"
+  },
+  {
+    "id": "kw-rel-0295",
+    "keyword_id": "keyword-aop-proxy-mechanism",
+    "related_keyword_id": "keyword-advice-ordering-transactional-internals"
+  },
+  {
+    "id": "kw-rel-0296",
+    "keyword_id": "keyword-aop-proxy-mechanism",
+    "related_keyword_id": "keyword-bean-resolution-ambiguity"
+  },
+  {
+    "id": "kw-rel-0297",
+    "keyword_id": "keyword-aop-proxy-mechanism",
+    "related_keyword_id": "keyword-bean-scope-deep-dive"
+  },
+  {
+    "id": "kw-rel-0298",
+    "keyword_id": "keyword-bean-resolution-ambiguity",
+    "related_keyword_id": "keyword-advice-ordering-transactional-internals"
+  },
+  {
+    "id": "kw-rel-0299",
+    "keyword_id": "keyword-bean-resolution-ambiguity",
+    "related_keyword_id": "keyword-aop-proxy-mechanism"
+  },
+  {
+    "id": "kw-rel-0300",
+    "keyword_id": "keyword-bean-resolution-ambiguity",
+    "related_keyword_id": "keyword-bean-scope-deep-dive"
+  },
+  {
+    "id": "kw-rel-0301",
+    "keyword_id": "keyword-bean-scope-deep-dive",
+    "related_keyword_id": "keyword-advice-ordering-transactional-internals"
+  },
+  {
+    "id": "kw-rel-0302",
+    "keyword_id": "keyword-bean-scope-deep-dive",
+    "related_keyword_id": "keyword-aop-proxy-mechanism"
+  },
+  {
+    "id": "kw-rel-0303",
+    "keyword_id": "keyword-bean-scope-deep-dive",
+    "related_keyword_id": "keyword-bean-resolution-ambiguity"
+  },
+  {
+    "id": "kw-rel-0304",
+    "keyword_id": "keyword-circular-dependencies",
+    "related_keyword_id": "keyword-advice-ordering-transactional-internals"
+  },
+  {
+    "id": "kw-rel-0305",
+    "keyword_id": "keyword-circular-dependencies",
+    "related_keyword_id": "keyword-aop-proxy-mechanism"
+  },
+  {
+    "id": "kw-rel-0306",
+    "keyword_id": "keyword-circular-dependencies",
+    "related_keyword_id": "keyword-bean-resolution-ambiguity"
+  },
+  {
+    "id": "kw-rel-0307",
+    "keyword_id": "keyword-dependency-injection-advanced-patterns",
+    "related_keyword_id": "keyword-advice-ordering-transactional-internals"
+  },
+  {
+    "id": "kw-rel-0308",
+    "keyword_id": "keyword-dependency-injection-advanced-patterns",
+    "related_keyword_id": "keyword-aop-proxy-mechanism"
+  },
+  {
+    "id": "kw-rel-0309",
+    "keyword_id": "keyword-dependency-injection-advanced-patterns",
+    "related_keyword_id": "keyword-bean-resolution-ambiguity"
+  },
+  {
+    "id": "kw-rel-0310",
+    "keyword_id": "keyword-ioc-container-internals",
+    "related_keyword_id": "keyword-advice-ordering-transactional-internals"
+  },
+  {
+    "id": "kw-rel-0311",
+    "keyword_id": "keyword-ioc-container-internals",
+    "related_keyword_id": "keyword-aop-proxy-mechanism"
+  },
+  {
+    "id": "kw-rel-0312",
+    "keyword_id": "keyword-ioc-container-internals",
+    "related_keyword_id": "keyword-bean-resolution-ambiguity"
+  },
+  {
+    "id": "kw-rel-0313",
+    "keyword_id": "keyword-pointcut-expressions-advanced",
+    "related_keyword_id": "keyword-advice-ordering-transactional-internals"
+  },
+  {
+    "id": "kw-rel-0314",
+    "keyword_id": "keyword-pointcut-expressions-advanced",
+    "related_keyword_id": "keyword-aop-proxy-mechanism"
+  },
+  {
+    "id": "kw-rel-0315",
+    "keyword_id": "keyword-pointcut-expressions-advanced",
+    "related_keyword_id": "keyword-bean-resolution-ambiguity"
+  },
+  {
+    "id": "kw-rel-0316",
+    "keyword_id": "keyword-configurationproperties-type-safe-configuration",
+    "related_keyword_id": "keyword-actuator-production-readiness"
+  },
+  {
+    "id": "kw-rel-0317",
+    "keyword_id": "keyword-configurationproperties-type-safe-configuration",
+    "related_keyword_id": "keyword-api-design-best-practices"
+  },
+  {
+    "id": "kw-rel-0318",
+    "keyword_id": "keyword-configurationproperties-type-safe-configuration",
+    "related_keyword_id": "keyword-auto-configuration-mechanism"
+  },
+  {
+    "id": "kw-rel-0319",
+    "keyword_id": "keyword-actuator-production-readiness",
+    "related_keyword_id": "keyword-configurationproperties-type-safe-configuration"
+  },
+  {
+    "id": "kw-rel-0320",
+    "keyword_id": "keyword-actuator-production-readiness",
+    "related_keyword_id": "keyword-api-design-best-practices"
+  },
+  {
+    "id": "kw-rel-0321",
+    "keyword_id": "keyword-actuator-production-readiness",
+    "related_keyword_id": "keyword-auto-configuration-mechanism"
+  },
+  {
+    "id": "kw-rel-0322",
+    "keyword_id": "keyword-api-design-best-practices",
+    "related_keyword_id": "keyword-configurationproperties-type-safe-configuration"
+  },
+  {
+    "id": "kw-rel-0323",
+    "keyword_id": "keyword-api-design-best-practices",
+    "related_keyword_id": "keyword-actuator-production-readiness"
+  },
+  {
+    "id": "kw-rel-0324",
+    "keyword_id": "keyword-api-design-best-practices",
+    "related_keyword_id": "keyword-auto-configuration-mechanism"
+  },
+  {
+    "id": "kw-rel-0325",
+    "keyword_id": "keyword-auto-configuration-mechanism",
+    "related_keyword_id": "keyword-configurationproperties-type-safe-configuration"
+  },
+  {
+    "id": "kw-rel-0326",
+    "keyword_id": "keyword-auto-configuration-mechanism",
+    "related_keyword_id": "keyword-actuator-production-readiness"
+  },
+  {
+    "id": "kw-rel-0327",
+    "keyword_id": "keyword-auto-configuration-mechanism",
+    "related_keyword_id": "keyword-api-design-best-practices"
+  },
+  {
+    "id": "kw-rel-0328",
+    "keyword_id": "keyword-error-handling-production-grade",
+    "related_keyword_id": "keyword-configurationproperties-type-safe-configuration"
+  },
+  {
+    "id": "kw-rel-0329",
+    "keyword_id": "keyword-error-handling-production-grade",
+    "related_keyword_id": "keyword-actuator-production-readiness"
+  },
+  {
+    "id": "kw-rel-0330",
+    "keyword_id": "keyword-error-handling-production-grade",
+    "related_keyword_id": "keyword-api-design-best-practices"
+  },
+  {
+    "id": "kw-rel-0331",
+    "keyword_id": "keyword-profiles-conditional-configuration",
+    "related_keyword_id": "keyword-configurationproperties-type-safe-configuration"
+  },
+  {
+    "id": "kw-rel-0332",
+    "keyword_id": "keyword-profiles-conditional-configuration",
+    "related_keyword_id": "keyword-actuator-production-readiness"
+  },
+  {
+    "id": "kw-rel-0333",
+    "keyword_id": "keyword-profiles-conditional-configuration",
+    "related_keyword_id": "keyword-api-design-best-practices"
+  },
+  {
+    "id": "kw-rel-0334",
+    "keyword_id": "keyword-request-lifecycle",
+    "related_keyword_id": "keyword-configurationproperties-type-safe-configuration"
+  },
+  {
+    "id": "kw-rel-0335",
+    "keyword_id": "keyword-request-lifecycle",
+    "related_keyword_id": "keyword-actuator-production-readiness"
+  },
+  {
+    "id": "kw-rel-0336",
+    "keyword_id": "keyword-request-lifecycle",
+    "related_keyword_id": "keyword-api-design-best-practices"
+  },
+  {
+    "id": "kw-rel-0337",
+    "keyword_id": "keyword-entity-lifecycle-persistence-context",
+    "related_keyword_id": "keyword-n1-problem-solutions"
+  },
+  {
+    "id": "kw-rel-0338",
+    "keyword_id": "keyword-entity-lifecycle-persistence-context",
+    "related_keyword_id": "keyword-query-optimization"
+  },
+  {
+    "id": "kw-rel-0339",
+    "keyword_id": "keyword-entity-lifecycle-persistence-context",
+    "related_keyword_id": "keyword-transaction-isolation-locking"
+  },
+  {
+    "id": "kw-rel-0340",
+    "keyword_id": "keyword-n1-problem-solutions",
+    "related_keyword_id": "keyword-entity-lifecycle-persistence-context"
+  },
+  {
+    "id": "kw-rel-0341",
+    "keyword_id": "keyword-n1-problem-solutions",
+    "related_keyword_id": "keyword-query-optimization"
+  },
+  {
+    "id": "kw-rel-0342",
+    "keyword_id": "keyword-n1-problem-solutions",
+    "related_keyword_id": "keyword-transaction-isolation-locking"
+  },
+  {
+    "id": "kw-rel-0343",
+    "keyword_id": "keyword-query-optimization",
+    "related_keyword_id": "keyword-entity-lifecycle-persistence-context"
+  },
+  {
+    "id": "kw-rel-0344",
+    "keyword_id": "keyword-query-optimization",
+    "related_keyword_id": "keyword-n1-problem-solutions"
+  },
+  {
+    "id": "kw-rel-0345",
+    "keyword_id": "keyword-query-optimization",
+    "related_keyword_id": "keyword-transaction-isolation-locking"
+  },
+  {
+    "id": "kw-rel-0346",
+    "keyword_id": "keyword-transaction-isolation-locking",
+    "related_keyword_id": "keyword-entity-lifecycle-persistence-context"
+  },
+  {
+    "id": "kw-rel-0347",
+    "keyword_id": "keyword-transaction-isolation-locking",
+    "related_keyword_id": "keyword-n1-problem-solutions"
+  },
+  {
+    "id": "kw-rel-0348",
+    "keyword_id": "keyword-transaction-isolation-locking",
+    "related_keyword_id": "keyword-query-optimization"
+  },
+  {
+    "id": "kw-rel-0349",
+    "keyword_id": "keyword-common-security-vulnerabilities",
+    "related_keyword_id": "keyword-jwt-authentication-production-implementation"
+  },
+  {
+    "id": "kw-rel-0350",
+    "keyword_id": "keyword-common-security-vulnerabilities",
+    "related_keyword_id": "keyword-method-security-authorization"
+  },
+  {
+    "id": "kw-rel-0351",
+    "keyword_id": "keyword-common-security-vulnerabilities",
+    "related_keyword_id": "keyword-security-filter-chain-architecture"
+  },
+  {
+    "id": "kw-rel-0352",
+    "keyword_id": "keyword-jwt-authentication-production-implementation",
+    "related_keyword_id": "keyword-common-security-vulnerabilities"
+  },
+  {
+    "id": "kw-rel-0353",
+    "keyword_id": "keyword-jwt-authentication-production-implementation",
+    "related_keyword_id": "keyword-method-security-authorization"
+  },
+  {
+    "id": "kw-rel-0354",
+    "keyword_id": "keyword-jwt-authentication-production-implementation",
+    "related_keyword_id": "keyword-security-filter-chain-architecture"
+  },
+  {
+    "id": "kw-rel-0355",
+    "keyword_id": "keyword-method-security-authorization",
+    "related_keyword_id": "keyword-common-security-vulnerabilities"
+  },
+  {
+    "id": "kw-rel-0356",
+    "keyword_id": "keyword-method-security-authorization",
+    "related_keyword_id": "keyword-jwt-authentication-production-implementation"
+  },
+  {
+    "id": "kw-rel-0357",
+    "keyword_id": "keyword-method-security-authorization",
+    "related_keyword_id": "keyword-security-filter-chain-architecture"
+  },
+  {
+    "id": "kw-rel-0358",
+    "keyword_id": "keyword-security-filter-chain-architecture",
+    "related_keyword_id": "keyword-common-security-vulnerabilities"
+  },
+  {
+    "id": "kw-rel-0359",
+    "keyword_id": "keyword-security-filter-chain-architecture",
+    "related_keyword_id": "keyword-jwt-authentication-production-implementation"
+  },
+  {
+    "id": "kw-rel-0360",
+    "keyword_id": "keyword-security-filter-chain-architecture",
+    "related_keyword_id": "keyword-method-security-authorization"
+  },
+  {
+    "id": "kw-rel-0361",
+    "keyword_id": "keyword-distributed-data-patterns",
+    "related_keyword_id": "keyword-microservices-trade-offs"
+  },
+  {
+    "id": "kw-rel-0362",
+    "keyword_id": "keyword-distributed-data-patterns",
+    "related_keyword_id": "keyword-observability-logging-metrics-tracing"
+  },
+  {
+    "id": "kw-rel-0363",
+    "keyword_id": "keyword-distributed-data-patterns",
+    "related_keyword_id": "keyword-resilience-patterns"
+  },
+  {
+    "id": "kw-rel-0364",
+    "keyword_id": "keyword-microservices-trade-offs",
+    "related_keyword_id": "keyword-distributed-data-patterns"
+  },
+  {
+    "id": "kw-rel-0365",
+    "keyword_id": "keyword-microservices-trade-offs",
+    "related_keyword_id": "keyword-observability-logging-metrics-tracing"
+  },
+  {
+    "id": "kw-rel-0366",
+    "keyword_id": "keyword-microservices-trade-offs",
+    "related_keyword_id": "keyword-resilience-patterns"
+  },
+  {
+    "id": "kw-rel-0367",
+    "keyword_id": "keyword-observability-logging-metrics-tracing",
+    "related_keyword_id": "keyword-distributed-data-patterns"
+  },
+  {
+    "id": "kw-rel-0368",
+    "keyword_id": "keyword-observability-logging-metrics-tracing",
+    "related_keyword_id": "keyword-microservices-trade-offs"
+  },
+  {
+    "id": "kw-rel-0369",
+    "keyword_id": "keyword-observability-logging-metrics-tracing",
+    "related_keyword_id": "keyword-resilience-patterns"
+  },
+  {
+    "id": "kw-rel-0370",
+    "keyword_id": "keyword-resilience-patterns",
+    "related_keyword_id": "keyword-distributed-data-patterns"
+  },
+  {
+    "id": "kw-rel-0371",
+    "keyword_id": "keyword-resilience-patterns",
+    "related_keyword_id": "keyword-microservices-trade-offs"
+  },
+  {
+    "id": "kw-rel-0372",
+    "keyword_id": "keyword-resilience-patterns",
+    "related_keyword_id": "keyword-observability-logging-metrics-tracing"
+  },
+  {
+    "id": "kw-rel-0373",
+    "keyword_id": "keyword-service-communication-patterns",
+    "related_keyword_id": "keyword-distributed-data-patterns"
+  },
+  {
+    "id": "kw-rel-0374",
+    "keyword_id": "keyword-service-communication-patterns",
+    "related_keyword_id": "keyword-microservices-trade-offs"
+  },
+  {
+    "id": "kw-rel-0375",
+    "keyword_id": "keyword-service-communication-patterns",
+    "related_keyword_id": "keyword-observability-logging-metrics-tracing"
+  },
+  {
+    "id": "kw-rel-0376",
+    "keyword_id": "keyword-architecture-decision-records-adr",
+    "related_keyword_id": "keyword-common-anti-patterns-senior-perspective"
+  },
+  {
+    "id": "kw-rel-0377",
+    "keyword_id": "keyword-architecture-decision-records-adr",
+    "related_keyword_id": "keyword-performance-engineering"
+  },
+  {
+    "id": "kw-rel-0378",
+    "keyword_id": "keyword-architecture-decision-records-adr",
+    "related_keyword_id": "keyword-testing-pyramid-production-strategy"
+  },
+  {
+    "id": "kw-rel-0379",
+    "keyword_id": "keyword-common-anti-patterns-senior-perspective",
+    "related_keyword_id": "keyword-architecture-decision-records-adr"
+  },
+  {
+    "id": "kw-rel-0380",
+    "keyword_id": "keyword-common-anti-patterns-senior-perspective",
+    "related_keyword_id": "keyword-performance-engineering"
+  },
+  {
+    "id": "kw-rel-0381",
+    "keyword_id": "keyword-common-anti-patterns-senior-perspective",
+    "related_keyword_id": "keyword-testing-pyramid-production-strategy"
+  },
+  {
+    "id": "kw-rel-0382",
+    "keyword_id": "keyword-performance-engineering",
+    "related_keyword_id": "keyword-architecture-decision-records-adr"
+  },
+  {
+    "id": "kw-rel-0383",
+    "keyword_id": "keyword-performance-engineering",
+    "related_keyword_id": "keyword-common-anti-patterns-senior-perspective"
+  },
+  {
+    "id": "kw-rel-0384",
+    "keyword_id": "keyword-performance-engineering",
+    "related_keyword_id": "keyword-testing-pyramid-production-strategy"
+  },
+  {
+    "id": "kw-rel-0385",
+    "keyword_id": "keyword-testing-pyramid-production-strategy",
+    "related_keyword_id": "keyword-architecture-decision-records-adr"
+  },
+  {
+    "id": "kw-rel-0386",
+    "keyword_id": "keyword-testing-pyramid-production-strategy",
+    "related_keyword_id": "keyword-common-anti-patterns-senior-perspective"
+  },
+  {
+    "id": "kw-rel-0387",
+    "keyword_id": "keyword-testing-pyramid-production-strategy",
+    "related_keyword_id": "keyword-performance-engineering"
+  }
+]

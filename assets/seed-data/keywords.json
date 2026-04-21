@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "keyword-variable",
+    "lesson_id": "lesson-01-01",
+    "name": "Variable",
+    "definition": "Vùng nhớ được đặt tên dùng để lưu trữ giá trị trong chương trình.",
+    "explanation": "Biến trong Java có 3 thành phần: kiểu dữ liệu, tên biến, và giá trị. Khi khai báo biến, JVM cấp phát vùng nhớ tương ứng với kiểu dữ liệu.",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-primitive-types",
+    "lesson_id": "lesson-01-01",
+    "name": "Primitive Types",
+    "definition": "8 kiểu dữ liệu nguyên thủy được JVM hỗ trợ trực tiếp, lưu giá trị trên stack (local) hoặc inline tr…",
+    "explanation": "| Kiểu | Bytes | Phạm vi | JVM Internal | Mặc định |\n|-------|-------|---------|-------------|----------|\n| `byte` | 1 | -128 → 127 | Stored as int trên stack | 0 |\n| `short` | 2 | -32,768 → 32,767 | Stored as int trên stack | 0 |\n| `int` | 4 | -2³¹ → 2³¹-1 (~±2.1 tỷ) | 32-bit integer | 0 |\n| `long` | 8 | -2⁶³ → 2⁶³-1 | 64-bit integer | 0L |\n| `float` | 4 | ±3.4E38 (6-7 chữ số có nghĩa) | IEEE 754 single | 0.0f |\n| `double` | 8 | ±1.7E308 (15-16 chữ số có nghĩa) | IEEE 754 double | 0.0d |\n| `char` | 2 | 0 → 65,535 (UTF-16 code unit) | Unsigned 16-bit | '\\u0000' |\n| `boolean` | JVM-dependent | true/false | int (0 or 1) trên stack | false |",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-reference-types",
+    "lesson_id": "lesson-01-01",
+    "name": "Reference Types",
+    "definition": "Kiểu dữ liệu lưu reference (con trỏ) đến object trên heap — bao gồm classes, interfaces, arrays, en…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-type-casting-promotion",
+    "lesson_id": "lesson-01-01",
+    "name": "Type Casting & Promotion",
+    "definition": "Chuyển đổi giá trị giữa các kiểu dữ liệu — có rules phức tạp mà senior cần nắm.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-wrapper-classes-autoboxing",
+    "lesson_id": "lesson-01-01",
+    "name": "Wrapper Classes & Autoboxing",
+    "definition": "Classes bọc primitive thành objects — cần thiết cho Collections, generics, và nullable values.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-var-local-variable-type-inference",
+    "lesson_id": "lesson-01-01",
+    "name": "var (Local Variable Type Inference)",
+    "definition": "Từ khóa `var` (Java 10+) cho phép compiler suy luận kiểu — giảm boilerplate nhưng cần dùng đúng các…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-final",
+    "lesson_id": "lesson-01-01",
+    "name": "final",
+    "definition": "Modifier đánh dấu biến không thể gán lại — nhưng KHÔNG có nghĩa là immutable.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-string-interning-memory",
+    "lesson_id": "lesson-01-01",
+    "name": "String Interning & Memory",
+    "definition": "Cơ chế JVM tối ưu bộ nhớ cho String literals bằng String Pool.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-numeric-literals",
+    "lesson_id": "lesson-01-01",
+    "name": "Numeric Literals",
+    "definition": "Các cách biểu diễn giá trị số trong source code — bao gồm các hệ cơ số và underscore separator.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-arithmetic-operators",
+    "lesson_id": "lesson-01-02",
+    "name": "Arithmetic Operators",
+    "definition": "Toán tử thực hiện phép tính số học: `+`, `-`, `*`, `/`, `%`, `++`, `--`.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-comparison-operators-equality",
+    "lesson_id": "lesson-01-02",
+    "name": "Comparison Operators & Equality",
+    "definition": "Toán tử so sánh: `==`, `!=`, `>`, `<`, `>=`, `<=` — với nhiều pitfalls cho reference types.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-logical-operators-short-circuit",
+    "lesson_id": "lesson-01-02",
+    "name": "Logical Operators & Short-Circuit",
+    "definition": "`&&`, `||` (short-circuit) vs `&`, `|` (non-short-circuit) — khác biệt quan trọng.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-bitwise-operators",
+    "lesson_id": "lesson-01-02",
+    "name": "Bitwise Operators",
+    "definition": "Toán tử thao tác trên từng bit — dùng trong low-level programming, flags, và performance optimizati…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-instanceof-pattern-matching",
+    "lesson_id": "lesson-01-02",
+    "name": "instanceof & Pattern Matching",
+    "definition": "Kiểm tra kiểu runtime — Java 16+ thêm pattern matching giảm boilerplate.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-operator-precedence-evaluation-order",
+    "lesson_id": "lesson-01-02",
+    "name": "Operator Precedence & Evaluation Order",
+    "definition": "Thứ tự ưu tiên và thứ tự đánh giá — hai khái niệm khác nhau mà nhiều người nhầm lẫn.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-if-else",
+    "lesson_id": "lesson-01-03",
+    "name": "if-else",
+    "definition": "Câu lệnh rẽ nhánh dựa trên điều kiện boolean.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-switch-switch-expressions",
+    "lesson_id": "lesson-01-03",
+    "name": "switch & Switch Expressions",
+    "definition": "Rẽ nhánh nhiều hướng — Java 21 hoàn thiện với pattern matching, sealed types, và exhaustiveness che…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-for-loop-enhanced-for",
+    "lesson_id": "lesson-01-03",
+    "name": "for Loop & Enhanced for",
+    "definition": "Vòng lặp với nhiều biến thể — hiểu rõ iterator protocol và performance implications.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-while-do-while",
+    "lesson_id": "lesson-01-03",
+    "name": "while & do-while",
+    "definition": "Vòng lặp dựa trên điều kiện — while kiểm tra trước, do-while kiểm tra sau.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-break-continue-return",
+    "lesson_id": "lesson-01-03",
+    "name": "break, continue, return",
+    "definition": "Câu lệnh điều khiển luồng trong vòng lặp — break thoát, continue bỏ qua, return thoát method.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-array-internals",
+    "lesson_id": "lesson-01-04",
+    "name": "Array Internals",
+    "definition": "Array là object đặc biệt trên heap — có header, length field, và contiguous memory cho elements.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-array-operations-performance",
+    "lesson_id": "lesson-01-04",
+    "name": "Array Operations & Performance",
+    "definition": "Các thao tác mảng và đặc điểm hiệu năng.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-multidimensional-arrays",
+    "lesson_id": "lesson-01-04",
+    "name": "Multidimensional Arrays",
+    "definition": "Mảng nhiều chiều — thực chất là mảng chứa mảng (array of arrays), KHÔNG phải matrix liên tục.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-arrays-vs-collections",
+    "lesson_id": "lesson-01-04",
+    "name": "Arrays vs Collections",
+    "definition": "Khi nào dùng array, khi nào dùng Collection — trade-offs quan trọng.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-string-immutability",
+    "lesson_id": "lesson-01-05",
+    "name": "String Immutability",
+    "definition": "String objects không thể thay đổi sau khi tạo — mọi \"modification\" tạo object mới.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-string-pool-interning",
+    "lesson_id": "lesson-01-05",
+    "name": "String Pool & Interning",
+    "definition": "Vùng nhớ trong Heap nơi JVM lưu trữ và tái sử dụng String literals.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-string-concatenation-optimization",
+    "lesson_id": "lesson-01-05",
+    "name": "String Concatenation Optimization",
+    "definition": "JVM tối ưu string concatenation qua các phiên bản — từ StringBuilder đến invokedynamic.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-string-methods-advanced",
+    "lesson_id": "lesson-01-05",
+    "name": "String Methods — Advanced",
+    "definition": "Các methods quan trọng và edge cases mà senior cần biết.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-regular-expressions-advanced",
+    "lesson_id": "lesson-01-05",
+    "name": "Regular Expressions — Advanced",
+    "definition": "Regex engine trong Java dùng NFA (Nondeterministic Finite Automaton) — có thể bị catastrophic backt…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-method-invocation-jvm-level",
+    "lesson_id": "lesson-01-06",
+    "name": "Method Invocation — JVM Level",
+    "definition": "JVM có 5 bytecode instructions cho method invocation, mỗi loại có dispatch mechanism khác nhau.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-method-parameters-pass-by-value-deep-dive",
+    "lesson_id": "lesson-01-06",
+    "name": "Method Parameters — Pass-by-Value Deep Dive",
+    "definition": "Java LUÔN pass-by-value — primitives copy giá trị, references copy địa chỉ.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-varargs-internals-pitfalls",
+    "lesson_id": "lesson-01-06",
+    "name": "Varargs — Internals & Pitfalls",
+    "definition": "Variable arguments — compiler tạo array tại call site.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-method-overloading-resolution-rules",
+    "lesson_id": "lesson-01-06",
+    "name": "Method Overloading — Resolution Rules",
+    "definition": "Compiler chọn overloaded method tại compile time theo rules phức tạp.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-recursion-stack-optimization",
+    "lesson_id": "lesson-01-06",
+    "name": "Recursion — Stack & Optimization",
+    "definition": "Method gọi chính nó — mỗi call tạo stack frame mới, có thể StackOverflowError.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-method-design-principles",
+    "lesson_id": "lesson-01-06",
+    "name": "Method Design Principles",
+    "definition": "Nguyên tắc thiết kế method cho code sạch, dễ bảo trì.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-exception-hierarchy-design",
+    "lesson_id": "lesson-01-07",
+    "name": "Exception Hierarchy & Design",
+    "definition": "Phân cấp exception trong Java và lý do thiết kế.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-exception-performance-cost",
+    "lesson_id": "lesson-01-07",
+    "name": "Exception Performance Cost",
+    "definition": "Tạo exception object rất tốn kém — chủ yếu do fillInStackTrace().",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-try-with-resources-deep-dive",
+    "lesson_id": "lesson-01-07",
+    "name": "try-with-resources — Deep Dive",
+    "definition": "Automatic resource management — đảm bảo close() được gọi, xử lý suppressed exceptions.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-exception-handling-patterns",
+    "lesson_id": "lesson-01-07",
+    "name": "Exception Handling Patterns",
+    "definition": "Patterns và anti-patterns cho exception handling trong enterprise applications.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-custom-exception-design",
+    "lesson_id": "lesson-01-07",
+    "name": "Custom Exception Design",
+    "definition": "Thiết kế exception hierarchy cho ứng dụng — balance giữa granularity và simplicity.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-interruptedexception",
+    "lesson_id": "lesson-01-07",
+    "name": "InterruptedException",
+    "definition": "Exception đặc biệt cho thread interruption — xử lý sai là bug phổ biến.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-core"
+  },
+  {
+    "id": "keyword-object-memory-layout",
+    "lesson_id": "lesson-02-01",
+    "name": "Object Memory Layout",
+    "definition": "Cách JVM lưu trữ object trên heap — header, fields, padding.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-object-lifecycle-garbage-collection",
+    "lesson_id": "lesson-02-01",
+    "name": "Object Lifecycle & Garbage Collection",
+    "definition": "Vòng đời object từ allocation đến GC collection — hiểu để tránh memory leaks.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-constructor-advanced",
+    "lesson_id": "lesson-02-01",
+    "name": "Constructor — Advanced",
+    "definition": "Constructor không chỉ khởi tạo — liên quan đến initialization order, this() chaining, và object pub…",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-equals-hashcode-tostring-contract-pitfalls",
+    "lesson_id": "lesson-02-01",
+    "name": "equals, hashCode, toString — Contract & Pitfalls",
+    "definition": "Ba methods từ Object mà mọi class nên override đúng cách.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-record-java-16",
+    "lesson_id": "lesson-02-01",
+    "name": "Record (Java 16+)",
+    "definition": "Transparent carrier cho immutable data — compiler tự generate constructor, accessors, equals, hashC…",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-object-creation-patterns",
+    "lesson_id": "lesson-02-01",
+    "name": "Object Creation Patterns",
+    "definition": "Các patterns tạo object ngoài constructor — static factory, builder, prototype.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-encapsulation-vs-information-hiding",
+    "lesson_id": "lesson-02-02",
+    "name": "Encapsulation vs Information Hiding",
+    "definition": "Encapsulation = bundling data + behavior. Information hiding = ẩn implementation details. Hai khái …",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-invariant-protection",
+    "lesson_id": "lesson-02-02",
+    "name": "Invariant Protection",
+    "definition": "Đảm bảo object luôn ở trạng thái hợp lệ — không thể tạo hoặc chuyển sang trạng thái invalid.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-immutability-strategies",
+    "lesson_id": "lesson-02-02",
+    "name": "Immutability Strategies",
+    "definition": "Các cách tạo immutable objects — từ simple đến deep immutability.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-module-system-java-9",
+    "lesson_id": "lesson-02-02",
+    "name": "Module System (Java 9+)",
+    "definition": "Java Platform Module System (JPMS) — encapsulation ở cấp package, mạnh hơn access modifiers.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-virtual-method-dispatch-vtable",
+    "lesson_id": "lesson-02-03",
+    "name": "Virtual Method Dispatch (vtable)",
+    "definition": "JVM dùng virtual method table để resolve method call tại runtime — nền tảng của polymorphism.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-fragile-base-class-problem",
+    "lesson_id": "lesson-02-03",
+    "name": "Fragile Base Class Problem",
+    "definition": "Thay đổi base class có thể break subclasses theo cách không lường trước — lý do chính để ưu tiên co…",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-composition-over-inheritance",
+    "lesson_id": "lesson-02-03",
+    "name": "Composition over Inheritance",
+    "definition": "Ưu tiên \"has-a\" (composition) hơn \"is-a\" (inheritance) — linh hoạt hơn, ít coupling hơn.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-designing-for-inheritance",
+    "lesson_id": "lesson-02-03",
+    "name": "Designing for Inheritance",
+    "definition": "Nếu class được thiết kế để extend, phải document rõ ràng và test kỹ.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-runtime-polymorphism-dynamic-dispatch",
+    "lesson_id": "lesson-02-04",
+    "name": "Runtime Polymorphism (Dynamic Dispatch)",
+    "definition": "JVM chọn method implementation tại runtime dựa trên actual type của object.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-covariant-return-types",
+    "lesson_id": "lesson-02-04",
+    "name": "Covariant Return Types",
+    "definition": "Override method có thể return subtype của original return type — hữu ích cho fluent APIs.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-type-erasure-polymorphism",
+    "lesson_id": "lesson-02-04",
+    "name": "Type Erasure & Polymorphism",
+    "definition": "Generics bị erase tại runtime — ảnh hưởng đến polymorphism với generic types.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-ad-hoc-polymorphism-method-overloading",
+    "lesson_id": "lesson-02-04",
+    "name": "Ad-hoc Polymorphism (Method Overloading)",
+    "definition": "Compile-time polymorphism — compiler chọn method dựa trên static type, KHÔNG phải runtime type.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-interface-evolution-java-8-21",
+    "lesson_id": "lesson-02-05",
+    "name": "Interface Evolution (Java 8 → 21)",
+    "definition": "Interface trong Java đã tiến hóa từ pure contract thành powerful abstraction mechanism.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-diamond-problem-default-method-conflicts",
+    "lesson_id": "lesson-02-05",
+    "name": "Diamond Problem & Default Method Conflicts",
+    "definition": "Khi class implement 2 interfaces có cùng default method — Java có rules rõ ràng để resolve.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-abstract-class-vs-interface-decision-guide",
+    "lesson_id": "lesson-02-05",
+    "name": "Abstract Class vs Interface — Decision Guide",
+    "definition": "Khi nào dùng cái nào — không chỉ về syntax mà về design intent.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-functional-interface-lambda",
+    "lesson_id": "lesson-02-05",
+    "name": "Functional Interface & Lambda",
+    "definition": "Interface với đúng 1 abstract method — nền tảng của functional programming trong Java.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-sealed-types-java-17",
+    "lesson_id": "lesson-02-05",
+    "name": "Sealed Types (Java 17+)",
+    "definition": "Restrict hierarchy — chỉ cho phép listed subtypes, enabling exhaustive pattern matching.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-enum-internals",
+    "lesson_id": "lesson-02-06",
+    "name": "Enum Internals",
+    "definition": "Enum constants là static final instances — JVM đảm bảo singleton, serialization-safe, reflection-sa…",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-enumset-enummap",
+    "lesson_id": "lesson-02-06",
+    "name": "EnumSet & EnumMap",
+    "definition": "Specialized collections cho enums — dùng bitmask internally, cực kỳ nhanh.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-enum-advanced-patterns",
+    "lesson_id": "lesson-02-06",
+    "name": "Enum Advanced Patterns",
+    "definition": "Enum với abstract methods, interface implementation, và state machine pattern.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-single-responsibility-principle-srp",
+    "lesson_id": "lesson-02-07",
+    "name": "Single Responsibility Principle (SRP)",
+    "definition": "Mỗi class chỉ có MỘT lý do để thay đổi — một actor/stakeholder chịu trách nhiệm.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-openclosed-principle-ocp",
+    "lesson_id": "lesson-02-07",
+    "name": "Open/Closed Principle (OCP)",
+    "definition": "Mở cho extension, đóng cho modification — thêm behavior mới mà không sửa code cũ.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-liskov-substitution-principle-lsp",
+    "lesson_id": "lesson-02-07",
+    "name": "Liskov Substitution Principle (LSP)",
+    "definition": "Subtype phải thay thế được supertype mà không làm sai program behavior — behavioral subtyping.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-interface-segregation-principle-isp",
+    "lesson_id": "lesson-02-07",
+    "name": "Interface Segregation Principle (ISP)",
+    "definition": "Clients không nên phụ thuộc vào methods không dùng — chia interface lớn thành nhỏ, focused.",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-dependency-inversion-principle-dip",
+    "lesson_id": "lesson-02-07",
+    "name": "Dependency Inversion Principle (DIP)",
+    "definition": "High-level modules không phụ thuộc low-level modules — cả hai phụ thuộc abstractions. Đây là nền tả…",
+    "explanation": "",
+    "code_example": null,
+    "category": "oop"
+  },
+  {
+    "id": "keyword-type-erasure-deep-dive",
+    "lesson_id": "lesson-03-01",
+    "name": "Type Erasure — Deep Dive",
+    "definition": "Compiler xóa generic type info, thay bằng bounds (hoặc Object) — generics chỉ tồn tại tại compile t…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-pecs-producer-extends-consumer-super",
+    "lesson_id": "lesson-03-01",
+    "name": "PECS — Producer Extends, Consumer Super",
+    "definition": "Wildcard guideline: dùng `? extends T` khi đọc (produce), `? super T` khi ghi (consume).",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-recursive-type-bounds",
+    "lesson_id": "lesson-03-01",
+    "name": "Recursive Type Bounds",
+    "definition": "Type parameter tham chiếu đến chính nó — pattern cho self-referential types.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-type-tokens-super-type-tokens",
+    "lesson_id": "lesson-03-01",
+    "name": "Type Tokens & Super Type Tokens",
+    "definition": "Patterns để preserve generic type info tại runtime — vượt qua type erasure.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-hashmap-internals",
+    "lesson_id": "lesson-03-02",
+    "name": "HashMap Internals",
+    "definition": "Hash table implementation — array of buckets, separate chaining, treeification (Java 8+).",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-arraylist-vs-linkedlist-real-performance",
+    "lesson_id": "lesson-03-02",
+    "name": "ArrayList vs LinkedList — Real Performance",
+    "definition": "ArrayList gần như luôn nhanh hơn LinkedList — ngay cả cho insertions.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-set-implementations",
+    "lesson_id": "lesson-03-02",
+    "name": "Set Implementations",
+    "definition": "HashSet, LinkedHashSet, TreeSet — chọn dựa trên ordering requirements.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-queue-deque-choosing-right-implementation",
+    "lesson_id": "lesson-03-02",
+    "name": "Queue & Deque — Choosing Right Implementation",
+    "definition": "Queue (FIFO), Deque (double-ended), PriorityQueue (heap) — mỗi cái cho use case khác.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-fail-fast-vs-fail-safe-iterators",
+    "lesson_id": "lesson-03-02",
+    "name": "Fail-Fast vs Fail-Safe Iterators",
+    "definition": "Fail-fast throw ConcurrentModificationException; fail-safe work on copy/snapshot.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-lambda-internals",
+    "lesson_id": "lesson-03-03",
+    "name": "Lambda Internals",
+    "definition": "Lambda KHÔNG phải anonymous class — JVM dùng invokedynamic + LambdaMetafactory để tạo tại runtime.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-method-reference-types",
+    "lesson_id": "lesson-03-03",
+    "name": "Method Reference Types",
+    "definition": "4 loại method reference — mỗi loại có capture behavior khác nhau.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-stream-pipeline-internals",
+    "lesson_id": "lesson-03-03",
+    "name": "Stream Pipeline Internals",
+    "definition": "Stream pipeline = source + intermediate ops (lazy) + terminal op (triggers execution).",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-collectors-advanced",
+    "lesson_id": "lesson-03-03",
+    "name": "Collectors — Advanced",
+    "definition": "Collectors cho complex aggregation — grouping, partitioning, downstream collectors.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-parallel-streams-pitfalls",
+    "lesson_id": "lesson-03-03",
+    "name": "Parallel Streams — Pitfalls",
+    "definition": "Parallel stream dùng ForkJoinPool — nhưng không phải lúc nào cũng nhanh hơn.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-optional-best-practices",
+    "lesson_id": "lesson-03-03",
+    "name": "Optional — Best Practices",
+    "definition": "Container cho nullable values — dùng đúng cách tránh anti-patterns.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-java-memory-model-jmm",
+    "lesson_id": "lesson-03-04",
+    "name": "Java Memory Model (JMM)",
+    "definition": "JMM (JSR 133) định nghĩa cách threads tương tác qua shared memory — visibility và ordering guarante…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-synchronized-monitor-lock",
+    "lesson_id": "lesson-03-04",
+    "name": "synchronized — Monitor Lock",
+    "definition": "Intrinsic lock (monitor) — mutual exclusion + memory visibility.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-javautilconcurrent-lock-framework",
+    "lesson_id": "lesson-03-04",
+    "name": "java.util.concurrent — Lock Framework",
+    "definition": "Explicit locks với more features than synchronized — tryLock, fairness, read-write separation.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-atomic-classes-cas",
+    "lesson_id": "lesson-03-04",
+    "name": "Atomic Classes & CAS",
+    "definition": "Lock-free thread-safe operations dùng Compare-And-Swap (CAS) — nhanh hơn synchronized cho simple op…",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-completablefuture-async-programming",
+    "lesson_id": "lesson-03-04",
+    "name": "CompletableFuture — Async Programming",
+    "definition": "Composable async operations — Java's answer to Promises/Futures.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-virtual-threads-java-21",
+    "lesson_id": "lesson-03-04",
+    "name": "Virtual Threads (Java 21+)",
+    "definition": "Lightweight threads managed by JVM — millions of concurrent threads cho I/O-bound workloads.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-annotation-processing-pipeline",
+    "lesson_id": "lesson-03-05",
+    "name": "Annotation Processing Pipeline",
+    "definition": "Annotations được xử lý ở 3 giai đoạn: compile-time (APT), class-loading, và runtime (reflection).",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-custom-annotation-design",
+    "lesson_id": "lesson-03-05",
+    "name": "Custom Annotation Design",
+    "definition": "Thiết kế annotation cho framework/library — meta-annotations, repeatable, inherited.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-reflection-performance-alternatives",
+    "lesson_id": "lesson-03-05",
+    "name": "Reflection — Performance & Alternatives",
+    "definition": "Reflection cho phép inspect/modify code tại runtime — powerful nhưng có performance cost.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-dynamic-proxy",
+    "lesson_id": "lesson-03-05",
+    "name": "Dynamic Proxy",
+    "definition": "Tạo proxy object tại runtime implement interfaces — nền tảng của Spring AOP.",
+    "explanation": "",
+    "code_example": null,
+    "category": "java-advanced"
+  },
+  {
+    "id": "keyword-ioc-container-internals",
+    "lesson_id": "lesson-04-01",
+    "name": "IoC Container Internals",
+    "definition": "Spring Container = BeanFactory + ApplicationContext — quản lý bean definitions, instantiation, wiri…",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-dependency-injection-advanced-patterns",
+    "lesson_id": "lesson-04-01",
+    "name": "Dependency Injection — Advanced Patterns",
+    "definition": "Ngoài basic constructor/setter/field injection, Spring hỗ trợ nhiều patterns phức tạp.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-bean-resolution-ambiguity",
+    "lesson_id": "lesson-04-01",
+    "name": "Bean Resolution & Ambiguity",
+    "definition": "Cách Spring chọn bean khi có nhiều candidates — @Primary, @Qualifier, custom qualifiers.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-circular-dependencies",
+    "lesson_id": "lesson-04-01",
+    "name": "Circular Dependencies",
+    "definition": "A depends on B, B depends on A — Spring có thể resolve cho setter/field injection nhưng KHÔNG cho c…",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-bean-scope-deep-dive",
+    "lesson_id": "lesson-04-01",
+    "name": "Bean Scope — Deep Dive",
+    "definition": "Scope xác định lifecycle và sharing behavior của beans.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-aop-proxy-mechanism",
+    "lesson_id": "lesson-04-02",
+    "name": "AOP Proxy Mechanism",
+    "definition": "Spring AOP dùng runtime proxies — JDK Dynamic Proxy hoặc CGLIB.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-pointcut-expressions-advanced",
+    "lesson_id": "lesson-04-02",
+    "name": "Pointcut Expressions — Advanced",
+    "definition": "Pointcut language xác định WHERE advice applies — execution, annotation, within, args.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-advice-ordering-transactional-internals",
+    "lesson_id": "lesson-04-02",
+    "name": "Advice Ordering & @Transactional Internals",
+    "definition": "Khi nhiều aspects apply cùng method — thứ tự quan trọng.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-core"
+  },
+  {
+    "id": "keyword-auto-configuration-mechanism",
+    "lesson_id": "lesson-05-01",
+    "name": "Auto-configuration Mechanism",
+    "definition": "Spring Boot tự động cấu hình beans dựa trên classpath, properties, và existing beans.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-boot"
+  },
+  {
+    "id": "keyword-configurationproperties-type-safe-configuration",
+    "lesson_id": "lesson-05-01",
+    "name": "@ConfigurationProperties — Type-safe Configuration",
+    "definition": "Bind configuration properties vào Java objects — type-safe, validated, IDE-supported.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-boot"
+  },
+  {
+    "id": "keyword-profiles-conditional-configuration",
+    "lesson_id": "lesson-05-01",
+    "name": "Profiles & Conditional Configuration",
+    "definition": "Tách cấu hình theo môi trường — profiles, conditional beans, feature flags.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-boot"
+  },
+  {
+    "id": "keyword-actuator-production-readiness",
+    "lesson_id": "lesson-05-01",
+    "name": "Actuator & Production Readiness",
+    "definition": "Monitoring, health checks, metrics — production-grade observability.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-boot"
+  },
+  {
+    "id": "keyword-request-lifecycle",
+    "lesson_id": "lesson-05-02",
+    "name": "Request Lifecycle",
+    "definition": "HTTP request đi qua nhiều layers trước khi đến controller method.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-boot"
+  },
+  {
+    "id": "keyword-error-handling-production-grade",
+    "lesson_id": "lesson-05-02",
+    "name": "Error Handling — Production Grade",
+    "definition": "Consistent error responses, proper HTTP status codes, và error detail levels.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-boot"
+  },
+  {
+    "id": "keyword-api-design-best-practices",
+    "lesson_id": "lesson-05-02",
+    "name": "API Design Best Practices",
+    "definition": "RESTful conventions, versioning, pagination, HATEOAS.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-boot"
+  },
+  {
+    "id": "keyword-entity-lifecycle-persistence-context",
+    "lesson_id": "lesson-06-01",
+    "name": "Entity Lifecycle & Persistence Context",
+    "definition": "JPA Entity có 4 states — Transient, Managed, Detached, Removed. Persistence Context (EntityManager)…",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-data"
+  },
+  {
+    "id": "keyword-n1-problem-solutions",
+    "lesson_id": "lesson-06-01",
+    "name": "N+1 Problem & Solutions",
+    "definition": "Loading N child collections triggers N additional queries — most common JPA performance issue.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-data"
+  },
+  {
+    "id": "keyword-transaction-isolation-locking",
+    "lesson_id": "lesson-06-01",
+    "name": "Transaction Isolation & Locking",
+    "definition": "Isolation levels và locking strategies cho concurrent data access.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-data"
+  },
+  {
+    "id": "keyword-query-optimization",
+    "lesson_id": "lesson-06-01",
+    "name": "Query Optimization",
+    "definition": "Techniques để optimize JPA queries cho production workloads.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-data"
+  },
+  {
+    "id": "keyword-security-filter-chain-architecture",
+    "lesson_id": "lesson-07-01",
+    "name": "Security Filter Chain Architecture",
+    "definition": "Spring Security = chain of servlet filters — mỗi filter xử lý một security concern.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-security"
+  },
+  {
+    "id": "keyword-jwt-authentication-production-implementation",
+    "lesson_id": "lesson-07-01",
+    "name": "JWT Authentication — Production Implementation",
+    "definition": "Stateless authentication bằng signed tokens — không cần server-side session.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-security"
+  },
+  {
+    "id": "keyword-method-security-authorization",
+    "lesson_id": "lesson-07-01",
+    "name": "Method Security & Authorization",
+    "definition": "Fine-grained authorization tại method level — SpEL expressions, custom permission evaluators.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-security"
+  },
+  {
+    "id": "keyword-common-security-vulnerabilities",
+    "lesson_id": "lesson-07-01",
+    "name": "Common Security Vulnerabilities",
+    "definition": "OWASP Top 10 vulnerabilities và cách Spring Security bảo vệ.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-security"
+  },
+  {
+    "id": "keyword-microservices-trade-offs",
+    "lesson_id": "lesson-08-01",
+    "name": "Microservices Trade-offs",
+    "definition": "Microservices không phải silver bullet — hiểu trade-offs trước khi adopt.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-cloud"
+  },
+  {
+    "id": "keyword-service-communication-patterns",
+    "lesson_id": "lesson-08-01",
+    "name": "Service Communication Patterns",
+    "definition": "Synchronous (REST, gRPC) vs Asynchronous (messaging) — mỗi cái cho use case khác.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-cloud"
+  },
+  {
+    "id": "keyword-resilience-patterns",
+    "lesson_id": "lesson-08-01",
+    "name": "Resilience Patterns",
+    "definition": "Patterns để handle failures trong distributed systems — Circuit Breaker, Retry, Bulkhead, Rate Limi…",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-cloud"
+  },
+  {
+    "id": "keyword-distributed-data-patterns",
+    "lesson_id": "lesson-08-01",
+    "name": "Distributed Data Patterns",
+    "definition": "Patterns cho data consistency across microservices — Saga, CQRS, Event Sourcing.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-cloud"
+  },
+  {
+    "id": "keyword-observability-logging-metrics-tracing",
+    "lesson_id": "lesson-08-01",
+    "name": "Observability — Logging, Metrics, Tracing",
+    "definition": "Three pillars of observability cho microservices — logs, metrics, distributed tracing.",
+    "explanation": "",
+    "code_example": null,
+    "category": "spring-cloud"
+  },
+  {
+    "id": "keyword-architecture-decision-records-adr",
+    "lesson_id": "lesson-09-01",
+    "name": "Architecture Decision Records (ADR)",
+    "definition": "Document architecture decisions — context, decision, consequences.",
+    "explanation": "",
+    "code_example": null,
+    "category": "real-world"
+  },
+  {
+    "id": "keyword-testing-pyramid-production-strategy",
+    "lesson_id": "lesson-09-01",
+    "name": "Testing Pyramid — Production Strategy",
+    "definition": "Unit → Integration → E2E — mỗi level có purpose và cost khác nhau.",
+    "explanation": "",
+    "code_example": null,
+    "category": "real-world"
+  },
+  {
+    "id": "keyword-performance-engineering",
+    "lesson_id": "lesson-09-01",
+    "name": "Performance Engineering",
+    "definition": "Systematic approach to performance — profiling, benchmarking, optimization.",
+    "explanation": "",
+    "code_example": null,
+    "category": "real-world"
+  },
+  {
+    "id": "keyword-common-anti-patterns-senior-perspective",
+    "lesson_id": "lesson-09-01",
+    "name": "Common Anti-patterns — Senior Perspective",
+    "definition": "Design và implementation mistakes phổ biến trong production systems.",
+    "explanation": "",
+    "code_example": null,
+    "category": "real-world"
+  }
+]
