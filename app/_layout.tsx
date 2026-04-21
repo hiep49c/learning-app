@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Stack } from 'expo-router';
+import { Stack, router, useSegments } from 'expo-router';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { DatabaseProvider } from '@/database/DatabaseProvider';
@@ -8,9 +8,42 @@ import { useAppTheme } from '@/theme/useAppTheme';
 import { ToastProvider } from '@/components/ToastProvider';
 import { SeedingScreen } from '@/components/SeedingScreen';
 import { isSeeded, seed, resumeSeed } from '@/services/SeedService';
+import { useAuthStore } from '@/stores/authStore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SEED_LAST_MODULE_KEY = '@seed_last_module';
+
+/**
+ * Auth gate — redirects to login if not authenticated,
+ * or to tabs if already logged in.
+ */
+function AuthGate({ children }: { children: React.ReactNode }) {
+  const { isAuthenticated, loadProfiles } = useAuthStore();
+  const segments = useSegments();
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    async function init() {
+      await loadProfiles();
+      setIsReady(true);
+    }
+    void init();
+  }, [loadProfiles]);
+
+  useEffect(() => {
+    if (!isReady) return;
+
+    const inAuthGroup = segments[0] === '(auth)';
+
+    if (!isAuthenticated && !inAuthGroup) {
+      router.replace('/(auth)/login');
+    } else if (isAuthenticated && inAuthGroup) {
+      router.replace('/(tabs)');
+    }
+  }, [isAuthenticated, segments, isReady]);
+
+  return <>{children}</>;
+}
 
 /**
  * Inner layout that reads the resolved theme to set StatusBar style.
@@ -55,7 +88,6 @@ function SeedGate({ children }: { children: React.ReactNode }) {
       setError(null);
       setProgress(0);
 
-      // Check if there's a partial seed to resume
       const lastModule = await AsyncStorage.getItem(SEED_LAST_MODULE_KEY);
       if (lastModule !== null) {
         await resumeSeed((percent) => setProgress(percent));
@@ -114,7 +146,7 @@ function SeedGate({ children }: { children: React.ReactNode }) {
 
 /**
  * Root layout — wraps the entire app with providers.
- * Provider hierarchy: SafeAreaProvider → DatabaseProvider → ThemeProvider → SeedGate → AppStack
+ * Provider hierarchy: SafeAreaProvider → DatabaseProvider → ThemeProvider → ToastProvider → SeedGate → AuthGate → AppStack
  */
 export default function RootLayout() {
   return (
@@ -123,7 +155,9 @@ export default function RootLayout() {
         <ThemeProvider>
           <ToastProvider>
             <SeedGate>
-              <AppStack />
+              <AuthGate>
+                <AppStack />
+              </AuthGate>
             </SeedGate>
           </ToastProvider>
         </ThemeProvider>

@@ -68,7 +68,10 @@ export default function ProfileScreen() {
 
   useEffect(() => {
     async function init() {
-      if (!currentUser) return;
+      if (!currentUser) {
+        setIsLoading(false);
+        return;
+      }
       try {
         await Promise.all([loadProgress(), loadCourseTree()]);
       } catch {

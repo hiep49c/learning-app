@@ -49,7 +49,10 @@ export default function BookmarksScreen() {
 
   useEffect(() => {
     async function init() {
-      if (!currentUser) return;
+      if (!currentUser) {
+        setIsLoading(false);
+        return;
+      }
       try {
         await loadBookmarks(currentUser.id);
       } catch {
