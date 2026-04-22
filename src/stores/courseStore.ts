@@ -31,7 +31,7 @@ export interface ModuleData {
 
 interface CourseState {
   modules: ModuleData[];
-  expandedModules: Set<string>;
+  expandedModules: Record<string, boolean>;
   selectedLessonId: string | null;
   isLoading: boolean;
 }
@@ -64,7 +64,7 @@ export const useCourseStore = create<CourseState & CourseActions>()(
   immer((set) => ({
     // State
     modules: [],
-    expandedModules: new Set<string>(),
+    expandedModules: {} as Record<string, boolean>,
     selectedLessonId: null,
     isLoading: false,
 
@@ -96,10 +96,10 @@ export const useCourseStore = create<CourseState & CourseActions>()(
 
     toggleModule: (moduleId: string): void => {
       set((state) => {
-        if (state.expandedModules.has(moduleId)) {
-          state.expandedModules.delete(moduleId);
+        if (state.expandedModules[moduleId]) {
+          delete state.expandedModules[moduleId];
         } else {
-          state.expandedModules.add(moduleId);
+          state.expandedModules[moduleId] = true;
         }
       });
     },

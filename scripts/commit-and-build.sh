@@ -7,7 +7,7 @@ cd /home/hiepnt/projects/app
 
 echo "=== Committing ==="
 git add -A
-git commit -m "fix: simplified LessonScreen with ErrorBoundary" || true
+git commit -m "fix: expandedModules Set->Record for immer compatibility, simplified LessonScreen, ErrorBoundary" || true
 
 echo ""
 echo "=== Rebuilding ==="

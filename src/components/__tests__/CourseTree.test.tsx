@@ -1,9 +1,6 @@
 /**
  * Tests for CourseTree component.
  *
- * Validates: module/lesson rendering, expand/collapse, difficulty badges,
- * progress bars, and accessibility.
- *
  * All modules are freely accessible — no locking system.
  */
 import React from 'react';
@@ -64,11 +61,11 @@ const mockModules = [
 ];
 
 describe('CourseTree', () => {
-  it('renders all modules with accessibility labels', () => {
+  it('renders all modules', () => {
     const { getByLabelText } = renderWithTheme(
       <CourseTree
         modules={mockModules}
-        expandedModules={new Set()}
+        expandedModules={{}}
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
@@ -76,23 +73,6 @@ describe('CourseTree', () => {
       />,
     );
 
-    expect(getByLabelText('Module: Java Cơ Bản, đã đóng')).toBeTruthy();
-    expect(getByLabelText('Module: Java OOP, đã đóng')).toBeTruthy();
-  });
-
-  it('all modules are freely accessible — no lock state', () => {
-    const { getByLabelText } = renderWithTheme(
-      <CourseTree
-        modules={mockModules}
-        expandedModules={new Set()}
-        onToggleModule={jest.fn()}
-        onSelectLesson={jest.fn()}
-        moduleProgress={{}}
-        completedLessons={new Set()}
-      />,
-    );
-
-    // Both modules should show as closed (not locked)
     expect(getByLabelText('Module: Java Cơ Bản, đã đóng')).toBeTruthy();
     expect(getByLabelText('Module: Java OOP, đã đóng')).toBeTruthy();
   });
@@ -101,7 +81,7 @@ describe('CourseTree', () => {
     const { getByText } = renderWithTheme(
       <CourseTree
         modules={mockModules}
-        expandedModules={new Set(['mod-1'])}
+        expandedModules={{ 'mod-1': true }}
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
@@ -118,7 +98,7 @@ describe('CourseTree', () => {
     const { getByText } = renderWithTheme(
       <CourseTree
         modules={mockModules}
-        expandedModules={new Set(['mod-1'])}
+        expandedModules={{ 'mod-1': true }}
         onToggleModule={jest.fn()}
         onSelectLesson={onSelectLesson}
         moduleProgress={{}}
@@ -130,11 +110,11 @@ describe('CourseTree', () => {
     expect(onSelectLesson).toHaveBeenCalledWith('les-1');
   });
 
-  it('marks completed lessons in accessibility label', () => {
+  it('marks completed lessons', () => {
     const { getByLabelText } = renderWithTheme(
       <CourseTree
         modules={mockModules}
-        expandedModules={new Set(['mod-1'])}
+        expandedModules={{ 'mod-1': true }}
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
@@ -145,11 +125,11 @@ describe('CourseTree', () => {
     expect(getByLabelText('Biến, đã hoàn thành')).toBeTruthy();
   });
 
-  it('renders empty modules list without crashing', () => {
+  it('renders empty list without crashing', () => {
     const { toJSON } = renderWithTheme(
       <CourseTree
         modules={[]}
-        expandedModules={new Set()}
+        expandedModules={{}}
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}

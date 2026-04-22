@@ -49,8 +49,8 @@ interface ModuleData {
 interface CourseTreeProps {
   /** All modules with their lessons. */
   modules: ModuleData[];
-  /** Set of currently expanded module IDs. */
-  expandedModules: Set<string>;
+  /** Map of expanded module IDs (moduleId → true). */
+  expandedModules: Record<string, boolean>;
   /** Toggle a module's expanded/collapsed state. */
   onToggleModule: (id: string) => void;
   /** Navigate to a lesson. */
@@ -148,7 +148,7 @@ export function CourseTree({
     <View style={styles.container}>
       {sortedModules.map((mod) => {
         const progress = moduleProgress[mod.id] ?? 0;
-        const isExpanded = expandedModules.has(mod.id);
+        const isExpanded = expandedModules[mod.id] === true;
         const difficulty = getDifficultyStyle(mod.difficultyLevel);
         const normalizedProgress = Math.min(Math.max(progress, 0), 100) / 100;
         const sortedLessons = [...mod.lessons].sort(
