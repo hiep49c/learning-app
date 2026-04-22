@@ -2,7 +2,9 @@
  * Tests for CourseTree component.
  *
  * Validates: module/lesson rendering, expand/collapse, difficulty badges,
- * progress bars, lock state, and accessibility.
+ * progress bars, and accessibility.
+ *
+ * All modules are freely accessible — no locking system.
  */
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
@@ -45,7 +47,6 @@ const mockModules = [
       { id: 'les-1', title: 'Variables', titleVi: 'Biến', orderIndex: 1 },
       { id: 'les-2', title: 'Operators', titleVi: 'Toán tử', orderIndex: 2 },
     ],
-    prerequisiteNames: [],
   },
   {
     id: 'mod-2',
@@ -59,7 +60,6 @@ const mockModules = [
     lessons: [
       { id: 'les-3', title: 'Classes', titleVi: 'Lớp & Đối tượng', orderIndex: 1 },
     ],
-    prerequisiteNames: ['Java Cơ Bản'],
   },
 ];
 
@@ -72,7 +72,6 @@ describe('CourseTree', () => {
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
-        unlockedModules={new Set(['mod-1', 'mod-2'])}
         completedLessons={new Set()}
       />,
     );
@@ -81,7 +80,7 @@ describe('CourseTree', () => {
     expect(getByLabelText('Module: Java OOP, đã đóng')).toBeTruthy();
   });
 
-  it('marks locked modules in accessibility label', () => {
+  it('all modules are freely accessible — no lock state', () => {
     const { getByLabelText } = renderWithTheme(
       <CourseTree
         modules={mockModules}
@@ -89,15 +88,13 @@ describe('CourseTree', () => {
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
-        unlockedModules={new Set(['mod-1'])}
         completedLessons={new Set()}
       />,
     );
 
-    // mod-1 is unlocked
+    // Both modules should show as closed (not locked)
     expect(getByLabelText('Module: Java Cơ Bản, đã đóng')).toBeTruthy();
-    // mod-2 is locked
-    expect(getByLabelText('Module: Java OOP, đã khóa, đã đóng')).toBeTruthy();
+    expect(getByLabelText('Module: Java OOP, đã đóng')).toBeTruthy();
   });
 
   it('shows lessons when module is expanded', () => {
@@ -108,7 +105,6 @@ describe('CourseTree', () => {
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
-        unlockedModules={new Set(['mod-1'])}
         completedLessons={new Set()}
       />,
     );
@@ -126,7 +122,6 @@ describe('CourseTree', () => {
         onToggleModule={jest.fn()}
         onSelectLesson={onSelectLesson}
         moduleProgress={{}}
-        unlockedModules={new Set(['mod-1'])}
         completedLessons={new Set()}
       />,
     );
@@ -143,7 +138,6 @@ describe('CourseTree', () => {
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
-        unlockedModules={new Set(['mod-1'])}
         completedLessons={new Set(['les-1'])}
       />,
     );
@@ -159,7 +153,6 @@ describe('CourseTree', () => {
         onToggleModule={jest.fn()}
         onSelectLesson={jest.fn()}
         moduleProgress={{}}
-        unlockedModules={new Set()}
         completedLessons={new Set()}
       />,
     );

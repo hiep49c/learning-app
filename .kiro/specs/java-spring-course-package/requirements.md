@@ -31,9 +31,9 @@ Tính năng này tạo một gói nội dung khóa học Java Spring toàn diệ
 
 1. THE Course_Package SHALL tổ chức nội dung thành các modules theo thứ tự: Java Core Fundamentals, Java OOP, Java Advanced, Spring Framework Basics, Spring Boot, Spring Data & Persistence, Spring Security, Spring Cloud & Microservices, và Real-world Project Patterns.
 2. WHEN một Module được tạo, THE Course_Package SHALL gán cho Module đó một Difficulty_Level tương ứng (Beginner, Intermediate, Advanced, hoặc Expert).
-3. THE Course_Package SHALL định nghĩa prerequisites giữa các modules sao cho mỗi module chỉ accessible khi tất cả modules prerequisite đã được hoàn thành hoặc bỏ qua bởi người dùng.
+3. THE Course_Package SHALL make all modules freely accessible to the user without prerequisite locking — users can study any module in any order.
 4. WHEN một Lesson được tạo, THE Course_Package SHALL gán Lesson đó vào đúng một Module và xác định vị trí thứ tự trong Module.
-5. THE Course_Package SHALL lưu trữ toàn bộ cấu trúc khóa học trong WatermelonDB với các bảng riêng biệt cho modules, lessons, keywords, code examples và quizzes.
+5. THE Course_Package SHALL lưu trữ toàn bộ cấu trúc khóa học trong WatermelonDB (SQLiteAdapter) với các bảng riêng biệt cho modules, lessons, keywords, code examples và quizzes.
 
 ### Yêu Cầu 2: Nội Dung Java Core Fundamentals
 
@@ -214,3 +214,15 @@ Tính năng này tạo một gói nội dung khóa học Java Spring toàn diệ
 3. WHEN quá trình nạp seed data đang diễn ra, THE Course_Package SHALL hiển thị progress indicator cho người dùng.
 4. IF quá trình nạp seed data bị gián đoạn, THEN THE Course_Package SHALL phát hiện dữ liệu chưa hoàn chỉnh và tiếp tục nạp từ điểm dừng khi ứng dụng được mở lại.
 5. THE Course_Package SHALL sử dụng version number cho seed data để hỗ trợ cập nhật nội dung trong các phiên bản ứng dụng sau.
+
+### Yêu Cầu 19: Text-to-Speech (TTS)
+
+**User Story:** Là người học, tôi muốn nghe nội dung bài học được đọc to, để tôi có thể học khi không tiện nhìn màn hình hoặc muốn ôn tập bằng tai.
+
+#### Tiêu Chí Chấp Nhận
+
+1. WHEN người dùng nhấn nút FAB "Đọc bài" trên màn hình bài học, THE Content_Renderer SHALL bắt đầu đọc nội dung bài học bằng Text-to-Speech (expo-speech).
+2. THE TTS Controls panel SHALL cho phép người dùng điều chỉnh: tốc độ đọc (0.5x–2x), cao độ (Thấp/Bình thường/Cao), và chọn giọng đọc (Vietnamese voices).
+3. THE TTS Service SHALL lưu cài đặt tốc độ, cao độ, và giọng đọc vào AsyncStorage để khôi phục khi mở lại app.
+4. WHEN người dùng rời khỏi màn hình bài học, THE TTS Service SHALL tự động dừng đọc.
+5. THE extractLessonText utility SHALL trích xuất plain text từ LessonContent, bao gồm headings, paragraphs, code (dòng đầu), tables, lists, và bỏ qua diagrams.

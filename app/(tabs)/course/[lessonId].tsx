@@ -100,13 +100,12 @@ export default function LessonScreen() {
       try {
         const lessonRecord = await database.get<Lesson>('lessons').find(lessonId);
 
-        // Parse content_json from raw record — @field may not work for large
-        // text columns in WatermelonDB, so access _raw directly.
+        // Parse content_json — always read from _raw directly because @field
+        // decorator may not work correctly for large text columns in WatermelonDB.
         let parsedContent: LessonContent = { sections: [] };
+        let parseError = false;
         try {
-          const rawStr =
-            lessonRecord.contentJsonRaw ??
-            ((lessonRecord._raw as Record<string, unknown>).content_json as string | undefined);
+          const rawStr = (lessonRecord._raw as Record<string, unknown>).content_json as string | undefined;
           if (typeof rawStr === 'string' && rawStr.length > 0) {
             const parsed = JSON.parse(rawStr);
             if (parsed && Array.isArray(parsed.sections)) {
@@ -115,9 +114,12 @@ export default function LessonScreen() {
           }
         } catch (parseErr) {
           console.error('[LessonScreen] content_json parse error:', parseErr);
+          parseError = true;
         }
 
-        if (parsedContent.sections.length === 0) {
+        if (parseError) {
+          showToast('Nội dung bài học bị lỗi');
+        } else if (parsedContent.sections.length === 0) {
           showToast('Nội dung bài học trống');
         }
 
@@ -212,12 +214,12 @@ export default function LessonScreen() {
   }, [lessonId, currentUser, toggleBookmark]);
 
   const handleKeywordPress = useCallback((keywordId: string) => {
-    router.push(`/keyword/${keywordId}`);
+    router.push({ pathname: '/keyword/[keywordId]', params: { keywordId } });
   }, []);
 
   const handleQuizPress = useCallback(() => {
     if (quizId) {
-      router.push(`/quiz/${quizId}`);
+      router.push({ pathname: '/quiz/[quizId]', params: { quizId } });
     }
   }, [quizId]);
 

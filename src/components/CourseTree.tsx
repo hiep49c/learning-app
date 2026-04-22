@@ -1,9 +1,10 @@
 /**
  * CourseTree — renders the module/lesson hierarchy as an expandable tree.
  *
+ * All modules are freely accessible — no locking system.
  * Each module is an expandable header with icon, title, difficulty badge,
- * progress bar, and lock icon if locked. Each lesson is a tappable row
- * with title and completion checkmark.
+ * and progress bar. Each lesson is a tappable row with title and completion
+ * checkmark.
  *
  * Uses custom expandable sections (TouchableRipple + View) instead of
  * List.Accordion to avoid rendering issues with description render functions.
@@ -41,8 +42,6 @@ interface ModuleData {
   iconName: string;
   lessonCount: number;
   lessons: LessonData[];
-  /** Names of prerequisite modules (for lock message). */
-  prerequisiteNames?: string[];
 }
 
 // ─── Props ───────────────────────────────────────────────────────────────────
@@ -58,8 +57,6 @@ interface CourseTreeProps {
   onSelectLesson: (id: string) => void;
   /** Module completion percentages (0–100). */
   moduleProgress: Record<string, number>;
-  /** Set of unlocked module IDs. */
-  unlockedModules: Set<string>;
   /** Set of completed lesson IDs. */
   completedLessons: Set<string>;
 }
@@ -95,7 +92,6 @@ export function CourseTree({
   onToggleModule,
   onSelectLesson,
   moduleProgress,
-  unlockedModules,
   completedLessons,
 }: CourseTreeProps) {
   const theme = useTheme<MD3Theme>();
@@ -106,19 +102,16 @@ export function CourseTree({
   );
 
   const renderLesson = useCallback(
-    (lesson: LessonData, isLocked: boolean) => {
+    (lesson: LessonData) => {
       const isCompleted = completedLessons.has(lesson.id);
 
       return (
         <TouchableRipple
           key={lesson.id}
           onPress={() => {
-            if (!isLocked) {
-              onSelectLesson(lesson.id);
-            }
+            onSelectLesson(lesson.id);
           }}
-          disabled={isLocked}
-          accessibilityLabel={`${lesson.titleVi || lesson.title}${isCompleted ? ', đã hoàn thành' : ''}${isLocked ? ', đã khóa' : ''}`}
+          accessibilityLabel={`${lesson.titleVi || lesson.title}${isCompleted ? ', đã hoàn thành' : ''}`}
           accessibilityRole="button"
           style={styles.lessonItem}
         >
@@ -130,9 +123,7 @@ export function CourseTree({
                 color={
                   isCompleted
                     ? theme.colors.primary
-                    : isLocked
-                      ? theme.colors.onSurfaceDisabled
-                      : theme.colors.onSurfaceVariant
+                    : theme.colors.onSurfaceVariant
                 }
               />
             </View>
@@ -140,11 +131,7 @@ export function CourseTree({
               variant="bodyMedium"
               style={[
                 styles.lessonTitle,
-                {
-                  color: isLocked
-                    ? theme.colors.onSurfaceDisabled
-                    : theme.colors.onSurface,
-                },
+                { color: theme.colors.onSurface },
               ]}
               numberOfLines={2}
             >
@@ -160,9 +147,8 @@ export function CourseTree({
   return (
     <View style={styles.container}>
       {sortedModules.map((mod) => {
-        const isLocked = !unlockedModules.has(mod.id);
         const progress = moduleProgress[mod.id] ?? 0;
-        const isExpanded = expandedModules.has(mod.id) && !isLocked;
+        const isExpanded = expandedModules.has(mod.id);
         const difficulty = getDifficultyStyle(mod.difficultyLevel);
         const normalizedProgress = Math.min(Math.max(progress, 0), 100) / 100;
         const sortedLessons = [...mod.lessons].sort(
@@ -174,19 +160,13 @@ export function CourseTree({
             {/* Module header — tappable to expand/collapse */}
             <TouchableRipple
               onPress={() => {
-                if (!isLocked) {
-                  onToggleModule(mod.id);
-                }
+                onToggleModule(mod.id);
               }}
-              accessibilityLabel={`Module: ${mod.titleVi || mod.title}${isLocked ? ', đã khóa' : ''}${isExpanded ? ', đang mở' : ', đã đóng'}`}
+              accessibilityLabel={`Module: ${mod.titleVi || mod.title}${isExpanded ? ', đang mở' : ', đã đóng'}`}
               accessibilityRole="button"
               style={[
                 styles.moduleContainer,
-                {
-                  backgroundColor: isLocked
-                    ? theme.dark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)'
-                    : theme.colors.surface,
-                },
+                { backgroundColor: theme.colors.surface },
               ]}
             >
               <View style={styles.moduleHeader}>
@@ -195,28 +175,24 @@ export function CourseTree({
                     <Icon
                       source={mod.iconName || 'book-outline'}
                       size={24}
-                      color={isLocked ? theme.colors.onSurfaceDisabled : theme.colors.primary}
+                      color={theme.colors.primary}
                     />
                     <Text
                       variant="titleMedium"
                       style={[
                         styles.moduleTitle,
-                        { color: isLocked ? theme.colors.onSurfaceDisabled : theme.colors.onSurface },
+                        { color: theme.colors.onSurface },
                       ]}
                       numberOfLines={2}
                     >
                       {mod.titleVi || mod.title}
                     </Text>
                   </View>
-                  {isLocked ? (
-                    <Icon source="lock" size={20} color={theme.colors.onSurfaceDisabled} />
-                  ) : (
-                    <Icon
-                      source={isExpanded ? 'chevron-up' : 'chevron-down'}
-                      size={24}
-                      color={theme.colors.onSurfaceVariant}
-                    />
-                  )}
+                  <Icon
+                    source={isExpanded ? 'chevron-up' : 'chevron-down'}
+                    size={24}
+                    color={theme.colors.onSurfaceVariant}
+                  />
                 </View>
 
                 <View style={styles.moduleMeta}>
@@ -236,41 +212,27 @@ export function CourseTree({
                   </Text>
                 </View>
 
-                {!isLocked && (
-                  <View style={styles.progressRow}>
-                    <ProgressBar
-                      progress={normalizedProgress}
-                      color={theme.colors.primary}
-                      style={styles.progressBar}
-                      accessibilityLabel={`Tiến trình: ${progress} phần trăm`}
-                    />
-                    <Text
-                      variant="labelSmall"
-                      style={[styles.progressText, { color: theme.colors.onSurfaceVariant }]}
-                    >
-                      {progress}%
-                    </Text>
-                  </View>
-                )}
-
-                {isLocked && mod.prerequisiteNames != null && mod.prerequisiteNames.length > 0 && (
-                  <View style={styles.lockMessage}>
-                    <Icon source="information-outline" size={14} color={theme.colors.onSurfaceVariant} />
-                    <Text
-                      variant="bodySmall"
-                      style={[styles.lockText, { color: theme.colors.onSurfaceVariant }]}
-                    >
-                      Hoàn thành {mod.prerequisiteNames.join(', ')} trước
-                    </Text>
-                  </View>
-                )}
+                <View style={styles.progressRow}>
+                  <ProgressBar
+                    progress={normalizedProgress}
+                    color={theme.colors.primary}
+                    style={styles.progressBar}
+                    accessibilityLabel={`Tiến trình: ${progress} phần trăm`}
+                  />
+                  <Text
+                    variant="labelSmall"
+                    style={[styles.progressText, { color: theme.colors.onSurfaceVariant }]}
+                  >
+                    {progress}%
+                  </Text>
+                </View>
               </View>
             </TouchableRipple>
 
             {/* Lessons — conditionally rendered when expanded */}
             {isExpanded && (
               <View style={styles.lessonsContainer}>
-                {sortedLessons.map((lesson) => renderLesson(lesson, isLocked))}
+                {sortedLessons.map((lesson) => renderLesson(lesson))}
               </View>
             )}
           </View>
@@ -338,15 +300,6 @@ const styles = StyleSheet.create({
     width: 36,
     textAlign: 'right',
     fontVariant: ['tabular-nums'],
-  },
-  lockMessage: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    marginTop: 8,
-  },
-  lockText: {
-    fontStyle: 'italic',
   },
   lessonsContainer: {
     paddingLeft: 16,

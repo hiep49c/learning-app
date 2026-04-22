@@ -7,7 +7,7 @@
 ### Mục tiêu chính
 
 - **Local-first**: Toàn bộ nội dung, tiến độ, bookmarks, quiz results lưu trên thiết bị
-- **Content pipeline**: Markdown → JSON seed data → WatermelonDB (tại build time, không parse runtime)
+- **Content pipeline**: Markdown → JSON seed data → WatermelonDB (SQLiteAdapter, tại build time, không parse runtime)
 - **Offline learning**: Không yêu cầu kết nối mạng cho bất kỳ tính năng nào
 - **Resume learning**: Tự động quay lại bài học gần nhất khi mở app
 - **Samsung S24 Ultra optimized**: Tận dụng màn hình 6.8" QHD+ với safe area handling
@@ -276,7 +276,7 @@ Responsibilities:
 - Hiển thị multi-file code examples với tab interface
 
 #### CourseTree
-Component hiển thị cấu trúc khóa học dạng tree/directory.
+Component hiển thị cấu trúc khóa học dạng tree/directory. All modules are freely accessible — no locking. Uses custom TouchableRipple + View instead of List.Accordion.
 
 ```typescript
 interface CourseTreeProps {
@@ -285,7 +285,7 @@ interface CourseTreeProps {
   onToggleModule: (moduleId: string) => void;
   onSelectLesson: (lessonId: string) => void;
   moduleProgress: Map<string, number>; // moduleId → completion %
-  unlockedModules: Set<string>;
+  completedLessons: Set<string>;
 }
 ```
 
@@ -382,6 +382,33 @@ Strategy:
 - Câu hỏi trắc nghiệm: so sánh trực tiếp `userAnswer === correctAnswer`
 - Mỗi câu hỏi có sẵn `correctAnswer` và `explanation` trong seed data
 - Liên kết đến phần nội dung liên quan trong lesson khi trả lời sai
+
+#### TTSService
+Text-to-Speech service sử dụng `expo-speech` để đọc nội dung bài học.
+
+```typescript
+interface TTSService {
+  speak: (text: string) => Promise<void>;
+  stop: () => Promise<void>;
+  getVoices: () => Promise<Voice[]>;
+  setRate: (rate: number) => void;   // 0.5–2.0
+  setPitch: (pitch: number) => void; // 0.5–2.0
+}
+```
+
+Strategy:
+- `expo-speech` wraps native TTS engine (Android TTS / iOS AVSpeechSynthesizer)
+- `ttsStore` (Zustand): manages isSpeaking, rate, pitch, selectedVoice, persists preferences to AsyncStorage
+- `TTSControls` component: Play/Stop, speed selector, pitch selector, voice picker
+- `extractLessonText(content: LessonContent)`: extracts plain text from sections (headings, paragraphs, code first line, tables, lists; skips diagrams)
+- Auto-stop TTS when leaving lesson screen via useEffect cleanup
+
+#### content_json Handling Note
+The `content_json` column stores large JSON strings. The `@field('content_json')` decorator may return `undefined` for large text in WatermelonDB with SQLiteAdapter. Always read from `_raw` directly:
+```typescript
+const rawStr = (lessonRecord._raw as Record<string, unknown>).content_json as string;
+const content = JSON.parse(rawStr);
+```
 
 ---
 
@@ -608,11 +635,11 @@ interface ContentSection {
 
 *A property is a characteristic or behavior that should hold true across all valid executions of a system — essentially, a formal statement about what the system should do. Properties serve as the bridge between human-readable specifications and machine-verifiable correctness guarantees.*
 
-### Property 1: Module prerequisite unlock logic
+### Property 1: All modules freely accessible
 
-*For any* module and *for any* set of completed modules, `isModuleUnlocked(moduleId)` SHALL return `true` if and only if every prerequisite module for that module is in the completed set (or the module has no prerequisites).
+*For any* module in the course, the module SHALL be freely accessible to the user without prerequisite checks — all modules are always unlocked.
 
-**Validates: Requirements 1.3, 2.4**
+**Validates: Requirements 1.3**
 
 ### Property 2: All lessons contain at least one code block
 
@@ -740,7 +767,6 @@ interface ContentSection {
 | Scenario | Handling Strategy |
 |----------|------------------|
 | Deep link to non-existent lesson | Redirect to course tree with toast "Bài học không tồn tại". |
-| Accessing locked module | Show lock icon with prerequisite info: "Hoàn thành [module name] trước". |
 
 ---
 
@@ -788,7 +814,7 @@ describe('Feature: java-spring-course-package', () => {
 
 | Property | What It Tests | Generator Strategy |
 |----------|--------------|-------------------|
-| P1: Module unlock | Prerequisite logic | Random module IDs + random completion sets |
+| P1: All modules accessible | No locking | N/A — all modules always unlocked |
 | P2: Lessons have code | Content data invariant | Iterate all lessons from test DB |
 | P3: Keyword completeness | Data integrity | Iterate all keywords from test DB |
 | P4: Keyword search | Search relevance | Random keyword names as queries |

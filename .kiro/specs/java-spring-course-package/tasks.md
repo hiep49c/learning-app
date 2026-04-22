@@ -395,6 +395,59 @@ Build a local-first mobile learning app for Java Spring using React Native + Exp
   - Verify all unit tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
+- [x] 17. Text-to-Speech (TTS) feature
+  - [x] 17.1 Implement TTSService
+    - Create `src/services/TTSService.ts` using `expo-speech`
+    - Implement `speak(text)`, `stop()`, `getVoices()`, `setRate()`, `setPitch()`
+    - _Requirements: 19.1, 19.2_
+
+  - [x] 17.2 Implement ttsStore (Zustand)
+    - Create `src/stores/ttsStore.ts` with state: `isSpeaking`, `rate`, `pitch`, `selectedVoice`
+    - Persist TTS preferences to AsyncStorage
+    - _Requirements: 19.3_
+
+  - [x] 17.3 Implement TTSControls component
+    - Create `src/components/TTSControls.tsx` with Play/Stop, speed selector, pitch selector, voice picker
+    - _Requirements: 19.2_
+
+  - [x] 17.4 Implement extractLessonText utility
+    - Create `src/utils/extractLessonText.ts` — extract plain text from LessonContent sections
+    - Include headings, paragraphs, code (first line), tables, lists; skip diagrams
+    - _Requirements: 19.5_
+
+  - [x] 17.5 Integrate TTS into LessonScreen
+    - Add FAB "Đọc bài" button and TTSControls panel to `app/(tabs)/course/[lessonId].tsx`
+    - Auto-stop TTS on screen leave via useEffect cleanup
+    - _Requirements: 19.1, 19.4_
+
+- [x] 18. Bug fixes
+  - [x] 18.1 Fix SQLiteAdapter — data persistence
+    - Changed `LokiJSAdapter` to `SQLiteAdapter` in `src/database/index.ts`
+    - Data now persists across app restarts
+    - _Requirements: 17.1, 17.5_
+
+  - [x] 18.2 Fix AuthGate — redirect to login
+    - Added `AuthGate` component in `app/_layout.tsx`
+    - Calls `loadProfiles()` and redirects to login when not authenticated
+    - _Requirements: 1.3_
+
+  - [x] 18.3 Fix CourseTree — rewrite with custom TouchableRipple
+    - Replaced `List.Accordion` with custom `TouchableRipple + View` in `src/components/CourseTree.tsx`
+    - Fixed rendering issues with description render functions
+    - _Requirements: 1.1, 1.3_
+
+  - [x] 18.4 Fix content_json — white screen on lesson select
+    - Read `content_json` from `_raw` directly instead of relying on `@field` decorator
+    - Added error boundary for JSON.parse failures
+    - Fixed navigation to use object-based `router.push()` with params
+    - _Requirements: 2.2, 16.1_
+
+  - [x] 18.5 Remove module locking — all modules freely accessible
+    - Removed `ModuleUnlockService` logic from `app/(tabs)/course/index.tsx`
+    - Removed lock-related UI (lock icon, disabled state, lock message) from `src/components/CourseTree.tsx`
+    - All modules are always expandable, all lessons always tappable
+    - _Requirements: 1.3_
+
 ## Notes
 
 - Tasks marked with `*` are optional and can be skipped for faster MVP

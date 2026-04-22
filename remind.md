@@ -13,27 +13,27 @@
 ```
 app/
 ├── app/                    # Expo Router screens
-│   ├── _layout.tsx         # Root layout (providers)
+│   ├── _layout.tsx         # Root layout (providers, SeedGate, AuthGate)
 │   ├── (auth)/             # Login flow
 │   ├── (tabs)/             # Tab navigation (Home, Course, Search, Bookmarks, Profile)
 │   ├── quiz/               # Quiz screens
 │   └── keyword/            # Keyword detail
 ├── src/
-│   ├── components/         # UI components (CodeBlock, ContentRenderer, CourseTree, QuizCard)
-│   ├── database/           # WatermelonDB schema, models, provider
-│   ├── services/           # Business logic (Progress, Search, Quiz, Bookmark, ModuleUnlock, Seed)
-│   ├── stores/             # Zustand stores (Auth, Progress, Course, Search, Quiz, Bookmark)
+│   ├── components/         # UI components (CodeBlock, ContentRenderer, CourseTree, QuizCard, TTSControls, SeedingScreen, ToastProvider)
+│   ├── database/           # WatermelonDB schema, models, provider (SQLiteAdapter)
+│   ├── services/           # Business logic (Progress, Search, Quiz, Bookmark, ModuleUnlock, Seed, TTS)
+│   ├── stores/             # Zustand stores (Auth, Progress, Course, Search, Quiz, Bookmark, TTS)
 │   ├── theme/              # React Native Paper theme (light/dark)
-│   └── utils/              # Toast utility
+│   └── utils/              # Toast utility, extractLessonText (cho TTS)
 ├── scripts/                # Build-time scripts
 │   ├── parse-content.ts    # Parse markdown → JSON
 │   ├── generate-quizzes.ts # Generate quiz questions
 │   ├── output-seed-data.ts # Output seed JSON files
 │   ├── run-with-nvm.sh     # NVM wrapper cho commands
+│   ├── rebuild.sh          # Build APK (khuyên dùng)
 │   ├── install-android-sdk.sh
 │   ├── setup-sdk.sh
-│   ├── create-icons.sh
-│   └── build-apk.sh        # Build APK script
+│   └── create-icons.sh
 ├── assets/
 │   └── seed-data/          # JSON seed data (auto-generated)
 ├── doc/                    # Markdown tài liệu khóa học (source content)
@@ -51,11 +51,8 @@ app/
 ### 1.1 Cài Node.js qua nvm
 
 ```bash
-# Nếu chưa có nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
-
-# Cài Node 22
 nvm install 22
 nvm use 22
 ```
@@ -69,16 +66,9 @@ npm install
 ### 1.3 Cài Android SDK (nếu chưa có)
 
 ```bash
-# Cài unzip (cần sudo)
 sudo apt-get install -y unzip wget
-
-# Chạy script cài Android SDK
 bash scripts/install-android-sdk.sh
 bash scripts/setup-sdk.sh
-
-# Thêm vào .bashrc (nếu chưa có)
-echo 'export ANDROID_HOME="$HOME/Android/Sdk"' >> ~/.bashrc
-echo 'export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -90,19 +80,13 @@ bash scripts/create-icons.sh
 
 ---
 
-## 2. Generate Seed Data (Nội Dung Khóa Học)
+## 2. Generate Seed Data
 
-Mỗi khi thay đổi nội dung trong thư mục `doc/`, cần chạy lại:
+Mỗi khi thay đổi nội dung trong `doc/`, chạy lại:
 
 ```bash
 npm run parse-content
 ```
-
-Script này sẽ:
-- Parse tất cả file `.md` trong `doc/`
-- Tạo quiz questions tự động
-- Xuất JSON vào `assets/seed-data/`
-- Validate dữ liệu (mỗi bài có code, mỗi keyword có definition ≤100 ký tự, mỗi quiz có ≥3 câu hỏi)
 
 **Output**: 9 modules, 27 lessons, 129 keywords, 140 code examples, 27 quizzes, 129 questions
 
@@ -114,170 +98,214 @@ Script này sẽ:
 npm test
 ```
 
-Hoặc chạy trực tiếp:
-
-```bash
-bash scripts/run-with-nvm.sh npx jest --forceExit
-```
-
-**Kết quả mong đợi**: 180 tests pass, 13 test suites
+**Kết quả mong đợi**: 188+ tests pass
 
 ---
 
 ## 4. Build APK
 
-### Cách 1: Script tự động (khuyên dùng)
+### Cách nhanh nhất (khuyên dùng)
 
 ```bash
-bash scripts/build-apk.sh
+# Commit code trước
+git add -A && git commit -m "update"
+
+# Build
+bash scripts/rebuild.sh
 ```
 
-Script này tự động:
-1. Chạy `expo prebuild` tạo thư mục `android/`
-2. Chạy Gradle `assembleRelease` build APK
-3. Copy APK ra `./java-spring-course.apk`
+Thời gian build: ~8-10 phút. APK output: `./java-spring-course.apk`
 
-### Cách 2: Từng bước thủ công
+### Cách thủ công
 
 ```bash
-# Load nvm
-export NVM_DIR="$HOME/.nvm"
-source "$NVM_DIR/nvm.sh"
-nvm use 22
-
-# Set Android SDK
+export NVM_DIR="$HOME/.nvm" && source "$NVM_DIR/nvm.sh" && nvm use 22
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
 
-# Bước 1: Generate native Android project
 npx expo prebuild --platform android --clean --no-install
-
-# Bước 2: Cấu hình SDK path
 echo "sdk.dir=$ANDROID_HOME" > android/local.properties
-
-# Bước 3: Build APK
-cd android
-chmod +x gradlew
-./gradlew assembleRelease
-cd ..
-
-# Bước 4: Tìm file APK
-find android/app/build/outputs -name "*.apk" -type f
-```
-
-### Cách 3: EAS Build (cloud, cần tài khoản Expo)
-
-```bash
-# Đăng nhập Expo (tạo tài khoản miễn phí tại https://expo.dev)
-npx eas login
-
-# Build APK trên cloud
-npx eas build --platform android --profile preview
-
-# Hoặc build local qua EAS
-npx eas build --platform android --profile preview --local
+cd android && chmod +x gradlew && ./gradlew assembleRelease && cd ..
+cp android/app/build/outputs/apk/release/app-release.apk ./java-spring-course.apk
 ```
 
 ---
 
 ## 5. Cài APK Lên Điện Thoại
 
-### 5.1 Tìm file APK
+### Copy sang Windows
 
-Sau khi build xong, file APK nằm ở:
-- Script tự động: `./java-spring-course.apk`
-- Build thủ công: `android/app/build/outputs/apk/release/app-release.apk`
-
-### 5.2 Copy APK sang Windows
-
-Từ WSL2, file nằm ở đường dẫn Windows:
 ```
 \\wsl$\Ubuntu-22.04\home\hiepnt\projects\app\java-spring-course.apk
 ```
 
-Hoặc copy ra Desktop:
-```bash
-cp java-spring-course.apk /mnt/c/Users/<TenUser>/Desktop/
-```
+### Cài lên Samsung S24 Ultra
 
-### 5.3 Cài lên Samsung S24 Ultra
+1. Copy file `.apk` vào điện thoại qua USB hoặc Google Drive
+2. Mở File Manager → tìm file APK → nhấn cài đặt
+3. Nếu bị chặn: Cài đặt → Bảo mật → Cho phép cài từ nguồn không xác định
 
-**Cách A: Qua USB**
-1. Kết nối điện thoại qua USB
-2. Bật "Truyền tệp" (File Transfer) trên điện thoại
-3. Copy file `.apk` vào thư mục `Download` trên điện thoại
-4. Mở File Manager trên điện thoại → tìm file APK → nhấn cài đặt
-5. Nếu bị chặn: Cài đặt → Bảo mật → Cho phép cài từ nguồn không xác định
-
-**Cách B: Qua ADB (Android Debug Bridge)**
-```bash
-# Bật Developer Options + USB Debugging trên điện thoại
-# Kết nối USB
-
-# Từ WSL2
-export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
-adb devices                    # Kiểm tra kết nối
-adb install java-spring-course.apk   # Cài APK
-```
-
-**Cách C: Qua Google Drive / Email**
-1. Upload file APK lên Google Drive
-2. Mở Google Drive trên điện thoại
-3. Tải và cài đặt
+**QUAN TRỌNG**: Khi cập nhật APK mới, **gỡ app cũ trước** rồi cài lại (database format có thể thay đổi).
 
 ---
 
-## 6. Lưu Ý Quan Trọng
+## 6. Tính Năng App
 
-### Build lần đầu
-- Lần build đầu tiên mất 15-30 phút vì phải download Gradle, NDK, và tất cả dependencies
-- Các lần build sau nhanh hơn nhiều (3-5 phút)
+### 6.1 Đăng nhập & Hồ sơ
+- Tạo hồ sơ với tên + PIN tùy chọn
+- Tự động đăng nhập nếu chỉ có 1 hồ sơ không PIN
+- Lưu session qua AsyncStorage — mở lại app không cần đăng nhập lại
+- Dữ liệu persist qua SQLiteAdapter (WatermelonDB)
 
-### Khi thay đổi nội dung
-1. Sửa file `.md` trong `doc/`
-2. Chạy `npm run parse-content` để regenerate seed data
-3. Build lại APK
+### 6.2 Khóa Học
+- 9 modules từ Java Core → Real-world Patterns
+- 27 bài học với nội dung chi tiết
+- Cây thư mục expandable — click module để mở danh sách bài học
+- Hệ thống prerequisite — module sau mở khóa khi hoàn thành module trước
+- Module đầu tiên (Java Core) luôn mở khóa
 
-### Khi thay đổi code
-1. Sửa code trong `src/` hoặc `app/`
-2. Chạy `npm test` để verify
-3. Build lại APK
+### 6.3 Nội Dung Bài Học
+- Hiển thị headings, paragraphs, code blocks (syntax highlighting Java), tables, lists, diagrams
+- Code blocks có nút copy, line numbers, file name header
+- Nút "Đánh dấu hoàn thành" và "Làm Quiz"
+- Bookmark (đánh dấu yêu thích) với icon heart
+- Lưu vị trí scroll — mở lại bài học tiếp tục từ chỗ cũ
 
-### Lỗi thường gặp
+### 6.4 Text-to-Speech (MỚI)
+- Nút FAB "Đọc bài" trên mỗi bài học
+- Panel điều khiển:
+  - Play/Stop
+  - Tốc độ đọc: 0.5x, 0.75x, 1x, 1.25x, 1.5x, 2x
+  - Cao độ: Thấp, Bình thường, Cao
+  - Chọn giọng đọc (Vietnamese voices)
+- Lưu cài đặt tốc độ/cao độ/giọng đọc
+- Tự động dừng khi thoát bài học
+- Đọc: headings, paragraphs, code (dòng đầu), tables, lists. Bỏ qua diagrams.
 
-| Lỗi | Nguyên nhân | Cách sửa |
-|-----|-------------|----------|
-| `npx: command not found` | Node chưa load qua nvm | `source ~/.nvm/nvm.sh && nvm use 22` |
-| `ANDROID_HOME not set` | Chưa set biến môi trường | `export ANDROID_HOME=$HOME/Android/Sdk` |
-| `SDK location not found` | Thiếu `local.properties` | `echo "sdk.dir=$ANDROID_HOME" > android/local.properties` |
-| `Permission denied: gradlew` | Thiếu quyền execute | `chmod +x android/gradlew` |
-| `NDK not found` | Chưa cài NDK | `sdkmanager --install "ndk;26.1.10909125"` |
-| Build bị treo ở CONFIGURING | Đang download dependencies | Đợi 5-10 phút, kiểm tra mạng |
-| `expo prebuild` hỏi confirm | Git chưa commit | `git add -A && git commit -m "update"` |
+### 6.5 Quiz
+- Mỗi bài học có quiz với ≥3 câu hỏi trắc nghiệm
+- Câu hỏi bằng tiếng Việt
+- Hiển thị đáp án đúng/sai + giải thích sau khi nộp bài
+- Lưu lịch sử tất cả lần làm bài
+- Có thể làm lại không giới hạn
 
-### Thông tin APK
-- **Package name**: `com.javaspring.course`
-- **Min SDK**: 24 (Android 7.0+)
-- **Target SDK**: 34 (Android 14)
-- **Tương thích**: Samsung S24 Ultra và tất cả Android 7.0+
+### 6.6 Tìm Kiếm
+- Tìm kiếm bài học, từ khóa, code examples
+- Hỗ trợ tiếng Việt và tiếng Anh
+- Kết quả nhóm theo loại
+- Lưu lịch sử tìm kiếm gần đây
+
+### 6.7 Đánh Dấu & Ghi Chú
+- Bookmark bài học và từ khóa
+- Lọc theo loại (bài học / từ khóa)
+- Xóa bookmark
+
+### 6.8 Hồ Sơ & Cài Đặt
+- Tiến trình tổng thể và theo module
+- Giao diện: Sáng / Tối / Hệ thống
+- Cỡ chữ: 0.8x - 1.4x
+- Đặt lại dữ liệu
+- Đăng xuất
 
 ---
 
-## 7. Commands Tham Khảo Nhanh
+## 7. Kiến Trúc Kỹ Thuật
+
+### Database
+- **WatermelonDB** với **SQLiteAdapter** (JSI) — dữ liệu persist trên disk
+- 12 bảng: user_profiles, modules, module_prerequisites, lessons, keywords, keyword_relations, code_examples, quizzes, quiz_questions, lesson_progress, quiz_attempts, bookmarks
+- AsyncStorage chỉ cho settings nhỏ (theme, font size, TTS preferences, seed version, current user ID)
+
+### State Management
+- **Zustand** + immer middleware
+- 7 stores: Auth, Progress, Course, Search, Quiz, Bookmark, TTS
+
+### Navigation
+- **Expo Router** (file-based routing)
+- AuthGate: redirect đến login nếu chưa đăng nhập
+- SeedGate: hiện progress bar khi nạp dữ liệu lần đầu
+- Tab navigation: 5 tabs (Home, Course, Search, Bookmarks, Profile)
+
+### Content Pipeline
+- Build-time: `doc/*.md` → `scripts/parse-content.ts` → `assets/seed-data/*.json`
+- Runtime: JSON → SeedService → WatermelonDB (lần đầu mở app)
+
+### Text-to-Speech
+- **expo-speech** — wrapper native TTS engine
+- TTSService: speak, stop, getVoices, setRate, setPitch
+- ttsStore: Zustand store quản lý state + persist preferences
+- extractLessonText: trích xuất plain text từ LessonContent cho TTS
+
+---
+
+## 8. Lỗi Đã Fix & Bài Học Rút Ra
+
+### Bug 1: Dữ liệu mất khi tắt app
+- **Nguyên nhân**: Dùng `LokiJSAdapter` (in-memory) thay vì `SQLiteAdapter`
+- **Fix**: Đổi sang `SQLiteAdapter` với JSI trong `src/database/index.ts`
+- **Bài học**: LokiJS chỉ dùng cho development/testing, production phải dùng SQLiteAdapter
+
+### Bug 2: Không có auth flow — app mở thẳng vào tabs
+- **Nguyên nhân**: Thiếu AuthGate component redirect đến login
+- **Fix**: Thêm `AuthGate` trong `app/_layout.tsx` gọi `loadProfiles()` và redirect
+- **Bài học**: Luôn implement auth gate ngay từ đầu
+
+### Bug 3: Screens loading vô hạn
+- **Nguyên nhân**: `if (!currentUser) return` trong useEffect mà không set `isLoading = false`
+- **Fix**: Thêm `setIsLoading(false)` khi `!currentUser`
+- **Bài học**: Mọi async init phải có finally block set loading = false
+
+### Bug 4: CourseTree hiển thị trống
+- **Nguyên nhân**: `List.Accordion` từ react-native-paper dùng sai — `title=""` và `description={() => ...}` (function thay vì ReactNode)
+- **Fix**: Rewrite CourseTree dùng `TouchableRipple` + `View` tự custom
+- **Bài học**: Không dùng render function cho props expect ReactNode
+
+### Bug 5: Nội dung bài học trắng
+- **Nguyên nhân**: `@json` decorator của WatermelonDB gây lỗi silent khi parse JSON string từ SQLite
+- **Fix**: Đổi sang `@field` + parse thủ công bằng `JSON.parse()`, fallback đọc `_raw.content_json`
+- **Bài học**: Tránh `@json` decorator, dùng `@field` + manual parse cho JSON columns
+
+### Bug 6: Không back được từ bài học
+- **Nguyên nhân**: Thiếu `headerShown: true` và `headerBackVisible: true` trong course stack layout
+- **Fix**: Thêm options vào `app/(tabs)/course/_layout.tsx`
+- **Bài học**: Luôn set `headerBackVisible: true` cho nested stack screens
+
+### Bug 7: Build chậm (20+ phút)
+- **Nguyên nhân**: Build native C++ cho 4 architectures (arm64, armeabi, x86, x86_64)
+- **Fix**: Thêm `"ndk": { "abiFilters": ["arm64-v8a"] }` trong `app.json` (chỉ ảnh hưởng APK packaging, library modules vẫn build cho tất cả)
+- **Bài học**: Restrict ABI filters cho target device khi build development APK
+
+---
+
+## 9. Commands Tham Khảo Nhanh
 
 ```bash
-# Chạy app trong development mode (Expo Go)
-npm start
+# Generate seed data
+npm run parse-content
 
 # Chạy tests
 npm test
 
-# Generate seed data từ markdown
-npm run parse-content
-
 # Build APK
-bash scripts/build-apk.sh
+git add -A && git commit -m "update" && bash scripts/rebuild.sh
 
-# Kiểm tra TypeScript
+# Kiểm tra TypeScript (decorator errors OK)
 bash scripts/run-with-nvm.sh npx tsc --noEmit
+
+# Tìm file APK
+find . -name "*.apk" -type f
 ```
+
+---
+
+## 10. Thông Tin APK
+
+| Thuộc tính | Giá trị |
+|-----------|---------|
+| Package name | `com.javaspring.course` |
+| Min SDK | 24 (Android 7.0+) |
+| Target SDK | 34 (Android 14) |
+| ABI | arm64-v8a (Samsung S24 Ultra) |
+| Kích thước | ~73MB |
+| Database | WatermelonDB + SQLiteAdapter (JSI) |
+| TTS | expo-speech (vi-VN) |

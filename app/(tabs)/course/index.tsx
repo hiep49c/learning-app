@@ -1,11 +1,13 @@
 /**
- * CourseTreeScreen — renders the module/lesson hierarchy with progress and unlock status.
+ * CourseTreeScreen — renders the module/lesson hierarchy with progress.
+ *
+ * All modules are freely accessible — no prerequisite locking.
  *
  * Features:
  * - Render CourseTree component with data from useCourseStore
  * - Load course tree on mount
  * - Wire onToggleModule and onSelectLesson
- * - Load module progress and unlock status
+ * - Load module progress
  *
  * Requirements: 1.1, 1.3, 12.2
  */
@@ -23,7 +25,6 @@ import { CourseTree } from '@/components/CourseTree';
 import { useCourseStore } from '@/stores/courseStore';
 import { useProgressStore } from '@/stores/progressStore';
 import { useAuthStore } from '@/stores/authStore';
-import * as ModuleUnlockService from '@/services/ModuleUnlockService';
 
 // ─── Types ───
 
@@ -42,7 +43,6 @@ interface ModuleWithLessons {
     titleVi: string;
     orderIndex: number;
   }>;
-  prerequisiteNames?: string[];
 }
 
 // ─── Component ───
@@ -55,7 +55,6 @@ export default function CourseTreeScreen() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [modulesWithLessons, setModulesWithLessons] = useState<ModuleWithLessons[]>([]);
-  const [unlockedModules, setUnlockedModules] = useState<Set<string>>(new Set());
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
 
   // ── Load data on mount ──
@@ -87,9 +86,6 @@ export default function CourseTreeScreen() {
       try {
         const userId = currentUser.id;
 
-        // Get completed module IDs for unlock checks
-        const completedModuleIds = await ModuleUnlockService.getCompletedModuleIds(userId);
-
         // Get completed lesson IDs
         const completedRecords = await database
           .get<LessonProgress>('lesson_progress')
@@ -100,8 +96,7 @@ export default function CourseTreeScreen() {
         );
         setCompletedLessons(completedLessonIds);
 
-        // Build modules with lessons and unlock status
-        const unlocked = new Set<string>();
+        // Build modules with lessons — all modules freely accessible
         const modulesData: ModuleWithLessons[] = [];
 
         for (const mod of modules) {
@@ -110,24 +105,6 @@ export default function CourseTreeScreen() {
             .get<Lesson>('lessons')
             .query(Q.where('module_id', mod.id), Q.sortBy('order_index', Q.asc))
             .fetch();
-
-          // Check unlock status
-          const prerequisites = await ModuleUnlockService.getPrerequisites(mod.id);
-          const isUnlocked = ModuleUnlockService.isModuleUnlocked(
-            mod.id,
-            prerequisites,
-            completedModuleIds,
-          );
-          if (isUnlocked) {
-            unlocked.add(mod.id);
-          }
-
-          // Get prerequisite module names for lock message
-          let prerequisiteNames: string[] = [];
-          if (!isUnlocked && prerequisites.length > 0) {
-            const prereqModules = modules.filter((m) => prerequisites.includes(m.id));
-            prerequisiteNames = prereqModules.map((m) => m.titleVi || m.title);
-          }
 
           modulesData.push({
             id: mod.id,
@@ -144,11 +121,9 @@ export default function CourseTreeScreen() {
               titleVi: l.titleVi,
               orderIndex: l.orderIndex,
             })),
-            prerequisiteNames,
           });
         }
 
-        setUnlockedModules(unlocked);
         setModulesWithLessons(modulesData);
       } catch (error) {
         console.error('[CourseTreeScreen] buildModuleData failed:', error);
@@ -170,7 +145,10 @@ export default function CourseTreeScreen() {
   );
 
   const handleSelectLesson = useCallback((lessonId: string) => {
-    router.push(`/(tabs)/course/${lessonId}`);
+    router.push({
+      pathname: '/(tabs)/course/[lessonId]',
+      params: { lessonId },
+    });
   }, []);
 
   // ── Loading state ──
@@ -206,7 +184,6 @@ export default function CourseTreeScreen() {
         onToggleModule={handleToggleModule}
         onSelectLesson={handleSelectLesson}
         moduleProgress={moduleProgress}
-        unlockedModules={unlockedModules}
         completedLessons={completedLessons}
       />
     </ScrollView>
