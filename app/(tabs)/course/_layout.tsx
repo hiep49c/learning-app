@@ -23,6 +23,7 @@ export default function CourseLayout() {
         name="[lessonId]"
         options={{
           title: 'Bài học',
+          headerShown: true,
           headerBackVisible: true,
         }}
       />

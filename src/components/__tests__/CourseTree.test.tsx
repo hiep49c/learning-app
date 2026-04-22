@@ -77,8 +77,8 @@ describe('CourseTree', () => {
       />,
     );
 
-    expect(getByLabelText('Module: Java Cơ Bản')).toBeTruthy();
-    expect(getByLabelText('Module: Java OOP')).toBeTruthy();
+    expect(getByLabelText('Module: Java Cơ Bản, đã đóng')).toBeTruthy();
+    expect(getByLabelText('Module: Java OOP, đã đóng')).toBeTruthy();
   });
 
   it('marks locked modules in accessibility label', () => {
@@ -95,9 +95,9 @@ describe('CourseTree', () => {
     );
 
     // mod-1 is unlocked
-    expect(getByLabelText('Module: Java Cơ Bản')).toBeTruthy();
+    expect(getByLabelText('Module: Java Cơ Bản, đã đóng')).toBeTruthy();
     // mod-2 is locked
-    expect(getByLabelText('Module: Java OOP, đã khóa')).toBeTruthy();
+    expect(getByLabelText('Module: Java OOP, đã khóa, đã đóng')).toBeTruthy();
   });
 
   it('shows lessons when module is expanded', () => {

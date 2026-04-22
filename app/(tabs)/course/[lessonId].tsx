@@ -8,6 +8,8 @@
  * - Bookmark toggle button in header (heart icon)
  * - "Làm Quiz" button → navigate to quiz
  * - Save scroll position on leave, restore on return
+ * - Text-to-Speech: "Đọc bài" FAB to read lesson content aloud
+ * - Auto-stop TTS when leaving the screen
  *
  * Requirements: 2.2, 12.1, 14.1, 16.1, 17.5
  */
@@ -16,6 +18,7 @@ import { StyleSheet, View } from 'react-native';
 import {
   ActivityIndicator,
   Button,
+  FAB,
   IconButton,
   Text,
   useTheme,
@@ -33,6 +36,9 @@ import { useProgressStore } from '@/stores/progressStore';
 import { useBookmarkStore } from '@/stores/bookmarkStore';
 import { useAuthStore } from '@/stores/authStore';
 import { showToast } from '@/utils/toast';
+import { TTSControls } from '@/components/TTSControls';
+import { useTTSStore } from '@/stores/ttsStore';
+import { extractLessonText } from '@/utils/extractLessonText';
 
 // ─── Types ───
 
@@ -75,9 +81,12 @@ export default function LessonScreen() {
   const [bookmarked, setBookmarked] = useState(false);
   const [initialScrollPosition, setInitialScrollPosition] = useState(0);
   const [isMarking, setIsMarking] = useState(false);
+  const [showTTSControls, setShowTTSControls] = useState(false);
 
   const startTime = useRef(Date.now());
   const lastScrollPosition = useRef(0);
+
+  const { isSpeaking, stop: stopTTS, speak: speakTTS, loadPreferences: loadTTSPreferences } = useTTSStore();
 
   // ── Load lesson data ──
 
@@ -91,10 +100,13 @@ export default function LessonScreen() {
       try {
         const lessonRecord = await database.get<Lesson>('lessons').find(lessonId);
 
-        // Parse content_json from raw string
+        // Parse content_json from raw record — @field may not work for large
+        // text columns in WatermelonDB, so access _raw directly.
         let parsedContent: LessonContent = { sections: [] };
         try {
-          const rawStr = lessonRecord.contentJsonRaw;
+          const rawStr =
+            lessonRecord.contentJsonRaw ??
+            ((lessonRecord._raw as Record<string, unknown>).content_json as string | undefined);
           if (typeof rawStr === 'string' && rawStr.length > 0) {
             const parsed = JSON.parse(rawStr);
             if (parsed && Array.isArray(parsed.sections)) {
@@ -152,6 +164,7 @@ export default function LessonScreen() {
 
     startTime.current = Date.now();
     void loadLesson();
+    void loadTTSPreferences();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonId, currentUser]);
 
@@ -162,6 +175,8 @@ export default function LessonScreen() {
       if (lessonId && currentUser) {
         void updateScrollPosition(lessonId, lastScrollPosition.current);
       }
+      // Auto-stop TTS when leaving the screen
+      void stopTTS();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonId, currentUser]);
@@ -205,6 +220,27 @@ export default function LessonScreen() {
       router.push(`/quiz/${quizId}`);
     }
   }, [quizId]);
+
+  const handleTTSPlay = useCallback(() => {
+    if (lesson) {
+      const text = extractLessonText(lesson.content);
+      if (text.length > 0) {
+        void speakTTS(text);
+      } else {
+        showToast('Không có nội dung để đọc');
+      }
+    }
+  }, [lesson, speakTTS]);
+
+  const handleTTSFABPress = useCallback(() => {
+    if (isSpeaking) {
+      // If already speaking, show controls to manage playback
+      setShowTTSControls(true);
+    } else {
+      // Show controls panel
+      setShowTTSControls(true);
+    }
+  }, [isSpeaking]);
 
   // ── Loading state ──
 
@@ -259,6 +295,25 @@ export default function LessonScreen() {
         onScrollPositionChange={handleScrollPositionChange}
         initialScrollPosition={initialScrollPosition}
       />
+
+      {/* TTS Controls panel */}
+      <TTSControls
+        visible={showTTSControls}
+        onPlay={handleTTSPlay}
+        onDismiss={() => setShowTTSControls(false)}
+      />
+
+      {/* TTS FAB — floating action button */}
+      {!showTTSControls && (
+        <FAB
+          icon={isSpeaking ? 'volume-high' : 'text-to-speech'}
+          onPress={handleTTSFABPress}
+          style={styles.ttsFab}
+          size="small"
+          accessibilityLabel={isSpeaking ? 'Đang đọc bài, nhấn để điều khiển' : 'Đọc bài'}
+          accessibilityRole="button"
+        />
+      )}
 
       {/* Bottom action bar */}
       <View style={[styles.bottomBar, { backgroundColor: theme.colors.surface, borderTopColor: theme.colors.outlineVariant }]}>
@@ -320,5 +375,11 @@ const styles = StyleSheet.create({
   },
   actionButtonContent: {
     minHeight: 44,
+  },
+  ttsFab: {
+    position: 'absolute',
+    right: 16,
+    bottom: 80,
+    borderRadius: 16,
   },
 });
