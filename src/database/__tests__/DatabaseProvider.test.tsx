@@ -4,9 +4,31 @@ import { render } from '@testing-library/react-native';
 import { Database } from '@nozbe/watermelondb';
 import LokiJSAdapter from '@nozbe/watermelondb/adapters/lokijs';
 
-import { DatabaseProvider, useDatabase } from '../DatabaseProvider';
 import { schema } from '../schema';
 import { modelClasses } from '../models';
+
+/**
+ * Mock the database index module to avoid SQLiteAdapter JSI initialization
+ * which is not available in the Jest test environment.
+ */
+jest.mock('../index', () => {
+  const { Database: WMDatabase } = require('@nozbe/watermelondb');
+  const { default: LokiAdapter } = require('@nozbe/watermelondb/adapters/lokijs');
+  const { schema: dbSchema } = require('../schema');
+  const { modelClasses: models } = require('../models');
+
+  const adapter = new LokiAdapter({
+    schema: dbSchema,
+    useWebWorker: false,
+    useIncrementalIndexedDB: false,
+  });
+
+  return {
+    database: new WMDatabase({ adapter, modelClasses: models }),
+  };
+});
+
+import { DatabaseProvider, useDatabase } from '../DatabaseProvider';
 
 function createTestDatabase(): Database {
   const adapter = new LokiJSAdapter({

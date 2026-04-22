@@ -87,10 +87,23 @@ export default function LessonScreen() {
 
       try {
         const lessonRecord = await database.get<Lesson>('lessons').find(lessonId);
-        const content = lessonRecord.contentJson as LessonContent;
 
-        const validContent = content?.sections ? content : { sections: [] };
-        if (!content?.sections) {
+        // Defensive parsing: @json decorator should parse the string,
+        // but if the raw value is still a string (e.g. double-stringified), parse it again.
+        let parsedContent: LessonContent;
+        const rawContent = lessonRecord.contentJson;
+        if (typeof rawContent === 'string') {
+          try {
+            parsedContent = JSON.parse(rawContent) as LessonContent;
+          } catch {
+            parsedContent = { sections: [] };
+          }
+        } else {
+          parsedContent = (rawContent as LessonContent) ?? { sections: [] };
+        }
+
+        const validContent = parsedContent?.sections ? parsedContent : { sections: [] };
+        if (!parsedContent?.sections) {
           showToast('Nội dung bị lỗi');
         }
 

@@ -10,6 +10,17 @@ import type Quiz from './Quiz';
 import type LessonProgress from './LessonProgress';
 
 const sanitizeContentJson = (raw: unknown): unknown => {
+  if (typeof raw === 'string') {
+    try {
+      const parsed = JSON.parse(raw);
+      if (typeof parsed === 'object' && parsed !== null) {
+        return parsed;
+      }
+    } catch {
+      // Fall through to default
+    }
+    return { sections: [] };
+  }
   if (typeof raw === 'object' && raw !== null) {
     return raw;
   }

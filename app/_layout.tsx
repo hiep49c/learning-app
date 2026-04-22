@@ -24,8 +24,13 @@ function AuthGate({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     async function init() {
-      await loadProfiles();
-      setIsReady(true);
+      try {
+        await loadProfiles();
+      } catch (error) {
+        console.error('[AuthGate] loadProfiles failed:', error);
+      } finally {
+        setIsReady(true);
+      }
     }
     void init();
   }, [loadProfiles]);
@@ -41,6 +46,10 @@ function AuthGate({ children }: { children: React.ReactNode }) {
       router.replace('/(tabs)');
     }
   }, [isAuthenticated, segments, isReady]);
+
+  if (!isReady) {
+    return null;
+  }
 
   return <>{children}</>;
 }

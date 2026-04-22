@@ -1,6 +1,26 @@
-import { database } from '../index';
+import { Database } from '@nozbe/watermelondb';
+import LokiJSAdapter from '@nozbe/watermelondb/adapters/lokijs';
+
+import { schema } from '../schema';
+import { modelClasses } from '../models';
+
+/**
+ * Tests use LokiJSAdapter since SQLiteAdapter requires native JSI
+ * which is not available in the Jest test environment.
+ * The production app uses SQLiteAdapter for persistent storage.
+ */
+function createTestDatabase(): Database {
+  const adapter = new LokiJSAdapter({
+    schema,
+    useWebWorker: false,
+    useIncrementalIndexedDB: false,
+  });
+  return new Database({ adapter, modelClasses });
+}
 
 describe('Database initialization', () => {
+  const database = createTestDatabase();
+
   it('exports a singleton database instance', () => {
     expect(database).toBeDefined();
     expect(database).toHaveProperty('adapter');

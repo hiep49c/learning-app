@@ -1,20 +1,21 @@
 /**
  * Database initialization — singleton WatermelonDB instance.
  *
- * Uses LokiJSAdapter for development (works in Expo Go without native modules).
- * For production APK builds, switch to SQLiteAdapter with JSI.
+ * Uses SQLiteAdapter with JSI for native APK builds.
+ * JSI provides better performance by bypassing the JS bridge.
  */
 import { Database } from '@nozbe/watermelondb';
-import LokiJSAdapter from '@nozbe/watermelondb/adapters/lokijs';
+import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite';
 
 import { schema } from './schema';
 import { modelClasses } from './models';
 
-const adapter = new LokiJSAdapter({
+const adapter = new SQLiteAdapter({
   schema,
-  // Disable web workers for React Native (not available in RN environment)
-  useWebWorker: false,
-  useIncrementalIndexedDB: false,
+  jsi: true,
+  onSetUpError: (error) => {
+    console.error('[Database] Setup error:', error);
+  },
 });
 
 export const database = new Database({
