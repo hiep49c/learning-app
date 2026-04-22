@@ -1,15 +1,6 @@
 /**
- * extractLessonText — extracts plain text from LessonContent sections
- * for Text-to-Speech reading.
- *
- * Strategy:
- * - headings → text
- * - paragraphs → text (strip markdown bold/code)
- * - code_blocks → "Đoạn code: [first line]"
- * - tables → read headers then rows
- * - lists → read items
- * - diagrams → skip
- * - keyword_ref → skip (no meaningful text)
+ * extractLessonText — extracts clean plain text from LessonContent for TTS.
+ * Removes special characters, limits code blocks, skips diagrams.
  */
 
 interface ContentSection {
@@ -30,25 +21,17 @@ interface LessonContent {
   sections: ContentSection[];
 }
 
-/**
- * Strip basic markdown formatting from text:
- * - **bold** → bold
- * - `code` → code
- * - *italic* → italic
- */
 function stripMarkdown(text: string): string {
   return text
-    .replace(/\*\*(.+?)\*\*/g, '$1')   // bold
-    .replace(/\*(.+?)\*/g, '$1')        // italic
-    .replace(/`(.+?)`/g, '$1')          // inline code
-    .replace(/\[(.+?)\]\(.+?\)/g, '$1') // links
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\*(.+?)\*/g, '$1')
+    .replace(/`(.+?)`/g, '$1')
+    .replace(/\[(.+?)\]\(.+?\)/g, '$1')
+    .replace(/[─│┌┐└┘├┤┬┴═║╔╗╚╝╠╣╦╩→←↑↓▶▼►◄┼╬╪╫]/g, '')
+    .replace(/[#~_]/g, '')
     .trim();
 }
 
-/**
- * Extract plain text from lesson content sections for TTS.
- * Returns a single string suitable for speech synthesis.
- */
 export function extractLessonText(content: LessonContent): string {
   const parts: string[] = [];
 
@@ -56,58 +39,47 @@ export function extractLessonText(content: LessonContent): string {
     switch (section.type) {
       case 'heading':
         if (section.text) {
-          parts.push(stripMarkdown(section.text));
+          const clean = stripMarkdown(section.text);
+          if (clean.length > 0) parts.push(clean);
         }
         break;
 
       case 'paragraph':
         if (section.text) {
-          parts.push(stripMarkdown(section.text));
+          const clean = stripMarkdown(section.text);
+          if (clean.length > 0) parts.push(clean);
         }
         break;
 
-      case 'code_block': {
-        // Read just the first line of code as a brief mention
-        if (section.code) {
-          const firstLine = section.code.split('\n')[0]?.trim();
-          if (firstLine) {
-            const fileName = section.fileName ? `, file ${section.fileName}` : '';
-            parts.push(`Đoạn code${fileName}: ${firstLine}`);
-          }
+      case 'code_block':
+        // Only mention code briefly — don't read full code
+        if (section.fileName) {
+          parts.push(`Đoạn code file ${section.fileName}`);
         }
         break;
-      }
 
       case 'table':
         if (section.headers && section.headers.length > 0) {
           parts.push(`Bảng: ${section.headers.join(', ')}`);
         }
-        if (section.rows) {
-          for (const row of section.rows) {
-            parts.push(row.join(', '));
-          }
-        }
+        // Skip table rows — too verbose for TTS
         break;
 
       case 'list':
         if (section.items) {
-          for (let i = 0; i < section.items.length; i++) {
-            const prefix = section.ordered ? `${i + 1}.` : '•';
-            parts.push(`${prefix} ${stripMarkdown(section.items[i] ?? '')}`);
+          for (let i = 0; i < Math.min(section.items.length, 5); i++) {
+            const prefix = section.ordered ? `${i + 1}.` : '';
+            const clean = stripMarkdown(section.items[i] ?? '');
+            if (clean.length > 0) parts.push(`${prefix} ${clean}`);
+          }
+          if (section.items.length > 5) {
+            parts.push(`và ${section.items.length - 5} mục khác`);
           }
         }
         break;
 
-      case 'diagram':
-        // Skip diagrams — not meaningful for TTS
-        break;
-
-      case 'keyword_ref':
-        // Skip keyword references
-        break;
-
+      // Skip diagrams and keyword_ref
       default:
-        // Unknown section type — skip
         break;
     }
   }
