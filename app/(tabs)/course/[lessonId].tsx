@@ -83,35 +83,37 @@ export default function LessonScreen() {
 
   useEffect(() => {
     async function loadLesson() {
-      if (!lessonId || !currentUser) return;
+      if (!lessonId || !currentUser) {
+        setIsLoading(false);
+        return;
+      }
 
       try {
         const lessonRecord = await database.get<Lesson>('lessons').find(lessonId);
 
-        // Defensive parsing: @json decorator should parse the string,
-        // but if the raw value is still a string (e.g. double-stringified), parse it again.
-        let parsedContent: LessonContent;
-        const rawContent = lessonRecord.contentJson;
-        if (typeof rawContent === 'string') {
-          try {
-            parsedContent = JSON.parse(rawContent) as LessonContent;
-          } catch {
-            parsedContent = { sections: [] };
+        // Parse content_json from raw string
+        let parsedContent: LessonContent = { sections: [] };
+        try {
+          const rawStr = lessonRecord.contentJsonRaw;
+          if (typeof rawStr === 'string' && rawStr.length > 0) {
+            const parsed = JSON.parse(rawStr);
+            if (parsed && Array.isArray(parsed.sections)) {
+              parsedContent = parsed as LessonContent;
+            }
           }
-        } else {
-          parsedContent = (rawContent as LessonContent) ?? { sections: [] };
+        } catch (parseErr) {
+          console.error('[LessonScreen] content_json parse error:', parseErr);
         }
 
-        const validContent = parsedContent?.sections ? parsedContent : { sections: [] };
-        if (!parsedContent?.sections) {
-          showToast('Nội dung bị lỗi');
+        if (parsedContent.sections.length === 0) {
+          showToast('Nội dung bài học trống');
         }
 
         setLesson({
           id: lessonRecord.id,
           title: lessonRecord.title,
           titleVi: lessonRecord.titleVi,
-          content: validContent,
+          content: parsedContent,
         });
 
         // Load quiz for this lesson
