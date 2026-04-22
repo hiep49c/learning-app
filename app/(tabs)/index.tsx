@@ -67,23 +67,48 @@ export default function HomeScreen() {
     void init();
   }, [currentUser, loadProgress, loadCourseTree, loadBookmarks]);
 
-  // ── Load last lesson info ──
+  // ── Load next uncompleted lesson ──
 
   useEffect(() => {
-    async function fetchLastLesson() {
-      if (!lastLessonId) {
+    async function fetchNextLesson() {
+      if (!currentUser) {
         setLastLesson(null);
         return;
       }
       try {
-        const lesson = await database.get<Lesson>('lessons').find(lastLessonId);
-        setLastLesson({ id: lesson.id, title: lesson.title, titleVi: lesson.titleVi });
+        // Get first uncompleted lesson (by module order, then lesson order)
+        const modules = await database.get('modules')
+          .query(Q.sortBy('order_index', Q.asc)).fetch();
+
+        const completedRecords = await database.get('lesson_progress')
+          .query(Q.where('user_id', currentUser.id), Q.where('is_completed', true)).fetch();
+        const completedIds = new Set(
+          completedRecords.map(r => (r._raw as Record<string, unknown>)['lesson_id'] as string)
+        );
+
+        for (const mod of modules) {
+          const lessons = await database.get('lessons')
+            .query(Q.where('module_id', mod.id), Q.sortBy('order_index', Q.asc)).fetch();
+          for (const lesson of lessons) {
+            if (!completedIds.has(lesson.id)) {
+              const raw = lesson._raw as Record<string, unknown>;
+              setLastLesson({
+                id: lesson.id,
+                title: (raw['title'] as string) ?? '',
+                titleVi: (raw['title_vi'] as string) ?? '',
+              });
+              return;
+            }
+          }
+        }
+        // All lessons completed
+        setLastLesson(null);
       } catch {
         setLastLesson(null);
       }
     }
-    void fetchLastLesson();
-  }, [lastLessonId]);
+    void fetchNextLesson();
+  }, [currentUser, overallProgress]); // Re-run when progress changes
 
   const handleContinueLearning = useCallback(() => {
     if (lastLesson) {
@@ -150,7 +175,7 @@ export default function HomeScreen() {
             >
               {lastLesson
                 ? lastLesson.titleVi || lastLesson.title
-                : 'Bắt đầu bài học đầu tiên'}
+                : 'Chúc mừng! Bạn đã hoàn thành tất cả bài học 🎉'}
             </Text>
           </View>
           <MaterialCommunityIcons
