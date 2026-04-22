@@ -7,12 +7,13 @@ cd /home/hiepnt/projects/app
 
 echo "=== Committing ==="
 git add -A
-git commit -m "restore TTS, bookmark, quiz, mark-complete to LessonScreen" || true
+git commit -m "add prev/next lesson navigation, fix TTS chunking" || true
 
 echo ""
 echo "=== Rebuilding ==="
+rm -f java-spring-course.apk
 bash scripts/rebuild.sh
 
 echo ""
-echo "=== Copying APK to Windows ==="
+echo "=== Copying APK ==="
 bash scripts/copy-apk.sh
