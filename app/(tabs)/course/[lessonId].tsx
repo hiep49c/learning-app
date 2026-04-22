@@ -64,7 +64,9 @@ interface LessonContent {
 
 export default function LessonScreen() {
   const theme = useTheme<MD3Theme>();
-  const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
+  const params = useLocalSearchParams<{ lessonId: string }>();
+  // Expo Router may return string or string[] — normalize to string
+  const lessonId = Array.isArray(params.lessonId) ? params.lessonId[0] : params.lessonId;
   const { currentUser } = useAuthStore();
   const { markLessonComplete, updateScrollPosition } = useProgressStore();
   const { isBookmarked, toggleBookmark } = useBookmarkStore();
@@ -92,20 +94,30 @@ export default function LessonScreen() {
 
   useEffect(() => {
     async function loadLesson() {
+      // Guard: no lessonId or no user
       if (!lessonId || !currentUser) {
+        console.warn('[LessonScreen] Missing lessonId or currentUser', { lessonId, userId: currentUser?.id });
         setIsLoading(false);
         return;
       }
 
       try {
-        const lessonRecord = await database.get<Lesson>('lessons').find(lessonId);
-
-        // Parse content_json — always read from _raw directly because @field
-        // decorator may not work correctly for large text columns in WatermelonDB.
-        let parsedContent: LessonContent = { sections: [] };
-        let parseError = false;
+        // Find lesson by ID — may throw if ID doesn't exist
+        let lessonRecord: Lesson;
         try {
-          const rawStr = (lessonRecord._raw as Record<string, unknown>).content_json as string | undefined;
+          lessonRecord = await database.get<Lesson>('lessons').find(lessonId);
+        } catch (findErr) {
+          console.error('[LessonScreen] Lesson not found:', lessonId, findErr);
+          showToast('Bài học không tồn tại');
+          setIsLoading(false);
+          return;
+        }
+
+        // Parse content_json — always read from _raw directly
+        let parsedContent: LessonContent = { sections: [] };
+        try {
+          const raw = lessonRecord._raw as Record<string, unknown>;
+          const rawStr = raw['content_json'];
           if (typeof rawStr === 'string' && rawStr.length > 0) {
             const parsed = JSON.parse(rawStr);
             if (parsed && Array.isArray(parsed.sections)) {
@@ -114,19 +126,13 @@ export default function LessonScreen() {
           }
         } catch (parseErr) {
           console.error('[LessonScreen] content_json parse error:', parseErr);
-          parseError = true;
-        }
-
-        if (parseError) {
           showToast('Nội dung bài học bị lỗi');
-        } else if (parsedContent.sections.length === 0) {
-          showToast('Nội dung bài học trống');
         }
 
         setLesson({
           id: lessonRecord.id,
-          title: lessonRecord.title,
-          titleVi: lessonRecord.titleVi,
+          title: (lessonRecord._raw as Record<string, unknown>)['title'] as string ?? 'Bài học',
+          titleVi: (lessonRecord._raw as Record<string, unknown>)['title_vi'] as string ?? 'Bài học',
           content: parsedContent,
         });
 
@@ -259,11 +265,15 @@ export default function LessonScreen() {
   if (!lesson) {
     return (
       <View style={[styles.errorContainer, { backgroundColor: theme.colors.background }]}>
+        <Stack.Screen options={{ title: 'Lỗi', headerShown: true, headerBackVisible: true }} />
         <Text variant="bodyLarge" style={{ color: theme.colors.onSurfaceVariant }}>
           Không tìm thấy bài học
         </Text>
+        <Text variant="bodySmall" style={{ color: theme.colors.onSurfaceVariant, marginTop: 8 }}>
+          ID: {lessonId ?? 'không xác định'}
+        </Text>
         <Button
-          mode="text"
+          mode="contained"
           onPress={() => router.back()}
           style={{ marginTop: 16 }}
           accessibilityLabel="Quay lại"

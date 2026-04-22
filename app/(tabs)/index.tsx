@@ -93,7 +93,9 @@ export default function HomeScreen() {
     }
   }, [lastLesson]);
 
-  const handleModulePress = useCallback(() => {
+  const handleModulePress = useCallback((moduleId: string) => {
+    // Auto-expand the module in CourseStore, then navigate to course tab
+    useCourseStore.getState().toggleModule(moduleId);
     router.push('/(tabs)/course');
   }, []);
 
@@ -197,7 +199,7 @@ export default function HomeScreen() {
               <Card
                 key={mod.id}
                 style={[styles.moduleCard, { backgroundColor: theme.colors.surface }]}
-                onPress={handleModulePress}
+                onPress={() => handleModulePress(mod.id)}
                 accessibilityLabel={`Module ${mod.titleVi || mod.title}, ${progress} phần trăm hoàn thành`}
                 accessibilityRole="button"
               >

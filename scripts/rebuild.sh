@@ -12,7 +12,7 @@ echo "Node: $(node --version)"
 echo "Time: $(date)"
 echo ""
 
-# Clean old android dir and rebuild
+# Always clean and rebuild
 rm -rf android
 
 echo "=== Step 1: Expo Prebuild ==="
