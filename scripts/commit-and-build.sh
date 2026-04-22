@@ -7,8 +7,12 @@ cd /home/hiepnt/projects/app
 
 echo "=== Committing ==="
 git add -A
-git commit -m "fix: expandedModules Set->Record for immer compatibility, simplified LessonScreen, ErrorBoundary" || true
+git commit -m "restore TTS, bookmark, quiz, mark-complete to LessonScreen" || true
 
 echo ""
 echo "=== Rebuilding ==="
 bash scripts/rebuild.sh
+
+echo ""
+echo "=== Copying APK to Windows ==="
+bash scripts/copy-apk.sh
