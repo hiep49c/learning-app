@@ -1,44 +1,16 @@
 /**
- * LessonScreen — displays lesson content with code blocks, keywords, quiz link.
- *
- * Features:
- * - Load lesson content from WatermelonDB by lessonId
- * - Render via ContentRenderer component
- * - "Đánh dấu hoàn thành" button at bottom
- * - Bookmark toggle button in header (heart icon)
- * - "Làm Quiz" button → navigate to quiz
- * - Save scroll position on leave, restore on return
- * - Text-to-Speech: "Đọc bài" FAB to read lesson content aloud
- * - Auto-stop TTS when leaving the screen
- *
- * Requirements: 2.2, 12.1, 14.1, 16.1, 17.5
+ * LessonScreen — SIMPLIFIED version to fix white screen bug.
+ * Minimal dependencies, maximum error handling.
  */
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import {
-  ActivityIndicator,
-  Button,
-  FAB,
-  IconButton,
-  Text,
-  useTheme,
-} from 'react-native-paper';
+import React, { useEffect, useState } from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Button, Text, useTheme } from 'react-native-paper';
 import type { MD3Theme } from 'react-native-paper';
 import { router, Stack, useLocalSearchParams } from 'expo-router';
-import { Q } from '@nozbe/watermelondb';
 
 import { database } from '@/database';
-import type Lesson from '@/database/models/Lesson';
-import type Quiz from '@/database/models/Quiz';
-import type LessonProgress from '@/database/models/LessonProgress';
 import { ContentRenderer } from '@/components/ContentRenderer';
-import { useProgressStore } from '@/stores/progressStore';
-import { useBookmarkStore } from '@/stores/bookmarkStore';
-import { useAuthStore } from '@/stores/authStore';
-import { showToast } from '@/utils/toast';
-import { TTSControls } from '@/components/TTSControls';
-import { useTTSStore } from '@/stores/ttsStore';
-import { extractLessonText } from '@/utils/extractLessonText';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 // ─── Types ───
 
@@ -64,334 +36,125 @@ interface LessonContent {
 
 export default function LessonScreen() {
   const theme = useTheme<MD3Theme>();
-  const params = useLocalSearchParams<{ lessonId: string }>();
-  // Expo Router may return string or string[] — normalize to string
-  const lessonId = Array.isArray(params.lessonId) ? params.lessonId[0] : params.lessonId;
-  const { currentUser } = useAuthStore();
-  const { markLessonComplete, updateScrollPosition } = useProgressStore();
-  const { isBookmarked, toggleBookmark } = useBookmarkStore();
+  const params = useLocalSearchParams();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [lesson, setLesson] = useState<{
-    id: string;
-    title: string;
-    titleVi: string;
-    content: LessonContent;
-  } | null>(null);
-  const [quizId, setQuizId] = useState<string | null>(null);
-  const [isCompleted, setIsCompleted] = useState(false);
-  const [bookmarked, setBookmarked] = useState(false);
-  const [initialScrollPosition, setInitialScrollPosition] = useState(0);
-  const [isMarking, setIsMarking] = useState(false);
-  const [showTTSControls, setShowTTSControls] = useState(false);
+  // Normalize lessonId — Expo Router may return string or string[]
+  const rawId = params.lessonId;
+  const lessonId = typeof rawId === 'string' ? rawId : Array.isArray(rawId) ? rawId[0] : undefined;
 
-  const startTime = useRef(Date.now());
-  const lastScrollPosition = useRef(0);
-
-  const { isSpeaking, stop: stopTTS, speak: speakTTS, loadPreferences: loadTTSPreferences } = useTTSStore();
-
-  // ── Load lesson data ──
+  const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
+  const [errorMsg, setErrorMsg] = useState('');
+  const [title, setTitle] = useState('Bài học');
+  const [content, setContent] = useState<LessonContent>({ sections: [] });
 
   useEffect(() => {
-    async function loadLesson() {
-      // Guard: no lessonId or no user
-      if (!lessonId || !currentUser) {
-        console.warn('[LessonScreen] Missing lessonId or currentUser', { lessonId, userId: currentUser?.id });
-        setIsLoading(false);
+    let cancelled = false;
+
+    async function load() {
+      if (!lessonId) {
+        setErrorMsg(`Không có lesson ID (params: ${JSON.stringify(params)})`);
+        setStatus('error');
         return;
       }
 
       try {
-        // Find lesson by ID — may throw if ID doesn't exist
-        let lessonRecord: Lesson;
-        try {
-          lessonRecord = await database.get<Lesson>('lessons').find(lessonId);
-        } catch (findErr) {
-          console.error('[LessonScreen] Lesson not found:', lessonId, findErr);
-          showToast('Bài học không tồn tại');
-          setIsLoading(false);
+        // Find lesson record
+        const record = await database.get('lessons').find(lessonId);
+        if (cancelled) return;
+
+        // Read fields from _raw — most reliable way
+        const raw = record._raw as Record<string, unknown>;
+        const titleVi = (raw['title_vi'] as string) ?? '';
+        const titleEn = (raw['title'] as string) ?? '';
+        setTitle(titleVi || titleEn || 'Bài học');
+
+        // Parse content_json
+        const contentStr = raw['content_json'];
+        if (typeof contentStr === 'string' && contentStr.length > 2) {
+          try {
+            const parsed = JSON.parse(contentStr);
+            if (parsed && Array.isArray(parsed.sections) && parsed.sections.length > 0) {
+              setContent(parsed as LessonContent);
+            } else {
+              setErrorMsg('Nội dung bài học trống (sections rỗng)');
+              setStatus('error');
+              return;
+            }
+          } catch (e) {
+            setErrorMsg(`Lỗi parse JSON: ${String(e)}`);
+            setStatus('error');
+            return;
+          }
+        } else {
+          setErrorMsg(`content_json không hợp lệ (type: ${typeof contentStr}, length: ${typeof contentStr === 'string' ? contentStr.length : 'N/A'})`);
+          setStatus('error');
           return;
         }
 
-        // Parse content_json — always read from _raw directly
-        let parsedContent: LessonContent = { sections: [] };
-        try {
-          const raw = lessonRecord._raw as Record<string, unknown>;
-          const rawStr = raw['content_json'];
-          if (typeof rawStr === 'string' && rawStr.length > 0) {
-            const parsed = JSON.parse(rawStr);
-            if (parsed && Array.isArray(parsed.sections)) {
-              parsedContent = parsed as LessonContent;
-            }
-          }
-        } catch (parseErr) {
-          console.error('[LessonScreen] content_json parse error:', parseErr);
-          showToast('Nội dung bài học bị lỗi');
+        setStatus('ready');
+      } catch (e) {
+        if (!cancelled) {
+          setErrorMsg(`Lỗi tải bài học: ${String(e)}`);
+          setStatus('error');
         }
-
-        setLesson({
-          id: lessonRecord.id,
-          title: (lessonRecord._raw as Record<string, unknown>)['title'] as string ?? 'Bài học',
-          titleVi: (lessonRecord._raw as Record<string, unknown>)['title_vi'] as string ?? 'Bài học',
-          content: parsedContent,
-        });
-
-        // Load quiz for this lesson
-        const quizzes = await database
-          .get<Quiz>('quizzes')
-          .query(Q.where('lesson_id', lessonId))
-          .fetch();
-        if (quizzes.length > 0) {
-          setQuizId(quizzes[0]!.id);
-        }
-
-        // Check completion status
-        const progressRecords = await database
-          .get<LessonProgress>('lesson_progress')
-          .query(
-            Q.where('user_id', currentUser.id),
-            Q.where('lesson_id', lessonId),
-          )
-          .fetch();
-        if (progressRecords.length > 0) {
-          const progress = progressRecords[0]!;
-          setIsCompleted(progress.isCompleted);
-          setInitialScrollPosition(progress.scrollPosition);
-        }
-
-        // Check bookmark status
-        const isBookmarkedResult = await isBookmarked(currentUser.id, lessonId);
-        setBookmarked(isBookmarkedResult);
-      } catch (error) {
-        console.error('[LessonScreen] loadLesson failed:', error);
-        showToast('Bài học không tồn tại');
-      } finally {
-        setIsLoading(false);
       }
     }
 
-    startTime.current = Date.now();
-    void loadLesson();
-    void loadTTSPreferences();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId, currentUser]);
+    void load();
+    return () => { cancelled = true; };
+  }, [lessonId]);
 
-  // ── Save scroll position on unmount ──
-
-  useEffect(() => {
-    return () => {
-      if (lessonId && currentUser) {
-        void updateScrollPosition(lessonId, lastScrollPosition.current);
-      }
-      // Auto-stop TTS when leaving the screen
-      void stopTTS();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId, currentUser]);
-
-  // ── Handlers ──
-
-  const handleScrollPositionChange = useCallback((position: number) => {
-    lastScrollPosition.current = position;
-  }, []);
-
-  const handleMarkComplete = useCallback(async () => {
-    if (!lessonId || !currentUser || isMarking) return;
-    setIsMarking(true);
-    try {
-      const timeSpent = Math.round((Date.now() - startTime.current) / 1000);
-      await markLessonComplete(lessonId, timeSpent);
-      setIsCompleted(true);
-    } catch {
-      // Error handled by store
-    } finally {
-      setIsMarking(false);
-    }
-  }, [lessonId, currentUser, isMarking, markLessonComplete]);
-
-  const handleToggleBookmark = useCallback(async () => {
-    if (!lessonId || !currentUser) return;
-    try {
-      await toggleBookmark(currentUser.id, lessonId, 'lesson');
-      setBookmarked((prev) => !prev);
-    } catch {
-      // Error handled by store
-    }
-  }, [lessonId, currentUser, toggleBookmark]);
-
-  const handleKeywordPress = useCallback((keywordId: string) => {
-    router.push({ pathname: '/keyword/[keywordId]', params: { keywordId } });
-  }, []);
-
-  const handleQuizPress = useCallback(() => {
-    if (quizId) {
-      router.push({ pathname: '/quiz/[quizId]', params: { quizId } });
-    }
-  }, [quizId]);
-
-  const handleTTSPlay = useCallback(() => {
-    if (lesson) {
-      const text = extractLessonText(lesson.content);
-      if (text.length > 0) {
-        void speakTTS(text);
-      } else {
-        showToast('Không có nội dung để đọc');
-      }
-    }
-  }, [lesson, speakTTS]);
-
-  const handleTTSFABPress = useCallback(() => {
-    if (isSpeaking) {
-      // If already speaking, show controls to manage playback
-      setShowTTSControls(true);
-    } else {
-      // Show controls panel
-      setShowTTSControls(true);
-    }
-  }, [isSpeaking]);
-
-  // ── Loading state ──
-
-  if (isLoading) {
+  // ── Loading ──
+  if (status === 'loading') {
     return (
-      <View style={[styles.loadingContainer, { backgroundColor: theme.colors.background }]}>
-        <ActivityIndicator size="large" accessibilityLabel="Đang tải bài học" />
+      <View style={[styles.center, { backgroundColor: theme.colors.background }]}>
+        <Stack.Screen options={{ title: 'Đang tải...', headerShown: true, headerBackVisible: true }} />
+        <ActivityIndicator size="large" />
+        <Text style={{ marginTop: 16, color: theme.colors.onSurfaceVariant }}>
+          Đang tải bài học...
+        </Text>
       </View>
     );
   }
 
-  // ── Error state ──
-
-  if (!lesson) {
+  // ── Error ──
+  if (status === 'error') {
     return (
-      <View style={[styles.errorContainer, { backgroundColor: theme.colors.background }]}>
+      <View style={[styles.center, { backgroundColor: theme.colors.background }]}>
         <Stack.Screen options={{ title: 'Lỗi', headerShown: true, headerBackVisible: true }} />
-        <Text variant="bodyLarge" style={{ color: theme.colors.onSurfaceVariant }}>
-          Không tìm thấy bài học
+        <Text variant="titleMedium" style={{ color: theme.colors.error, textAlign: 'center' }}>
+          Không thể hiển thị bài học
         </Text>
-        <Text variant="bodySmall" style={{ color: theme.colors.onSurfaceVariant, marginTop: 8 }}>
-          ID: {lessonId ?? 'không xác định'}
+        <Text variant="bodySmall" style={{ color: theme.colors.onSurfaceVariant, marginTop: 8, textAlign: 'center', paddingHorizontal: 32 }}>
+          {errorMsg}
         </Text>
-        <Button
-          mode="contained"
-          onPress={() => router.back()}
-          style={{ marginTop: 16 }}
-          accessibilityLabel="Quay lại"
-        >
+        <Text variant="bodySmall" style={{ color: theme.colors.onSurfaceVariant, marginTop: 4 }}>
+          ID: {lessonId ?? 'undefined'}
+        </Text>
+        <Button mode="contained" onPress={() => router.back()} style={{ marginTop: 24 }}>
           Quay lại
         </Button>
       </View>
     );
   }
 
+  // ── Content ──
   return (
-    <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-      <Stack.Screen
-        options={{
-          title: lesson.titleVi || lesson.title,
-          headerRight: () => (
-            <IconButton
-              icon={bookmarked ? 'heart' : 'heart-outline'}
-              iconColor={bookmarked ? theme.colors.error : theme.colors.onSurfaceVariant}
-              onPress={handleToggleBookmark}
-              accessibilityLabel={bookmarked ? 'Bỏ đánh dấu bài học' : 'Đánh dấu bài học'}
-              accessibilityRole="button"
-            />
-          ),
-        }}
-      />
-
-      <ContentRenderer
-        content={lesson.content}
-        onKeywordPress={handleKeywordPress}
-        onScrollPositionChange={handleScrollPositionChange}
-        initialScrollPosition={initialScrollPosition}
-      />
-
-      {/* TTS Controls panel */}
-      <TTSControls
-        visible={showTTSControls}
-        onPlay={handleTTSPlay}
-        onDismiss={() => setShowTTSControls(false)}
-      />
-
-      {/* TTS FAB — floating action button */}
-      {!showTTSControls && (
-        <FAB
-          icon={isSpeaking ? 'volume-high' : 'text-to-speech'}
-          onPress={handleTTSFABPress}
-          style={styles.ttsFab}
-          size="small"
-          accessibilityLabel={isSpeaking ? 'Đang đọc bài, nhấn để điều khiển' : 'Đọc bài'}
-          accessibilityRole="button"
+    <ErrorBoundary fallbackMessage="Lỗi hiển thị bài học">
+      <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+        <Stack.Screen options={{ title, headerShown: true, headerBackVisible: true }} />
+        <ContentRenderer
+          content={content}
+          onKeywordPress={(keywordId) => {
+            router.push({ pathname: '/keyword/[keywordId]', params: { keywordId } });
+          }}
         />
-      )}
-
-      {/* Bottom action bar */}
-      <View style={[styles.bottomBar, { backgroundColor: theme.colors.surface, borderTopColor: theme.colors.outlineVariant }]}>
-        {quizId && (
-          <Button
-            mode="outlined"
-            icon="pencil"
-            onPress={handleQuizPress}
-            style={styles.actionButton}
-            contentStyle={styles.actionButtonContent}
-            accessibilityLabel="Làm Quiz"
-          >
-            Làm Quiz
-          </Button>
-        )}
-        <Button
-          mode={isCompleted ? 'outlined' : 'contained'}
-          icon={isCompleted ? 'check-circle' : 'check'}
-          onPress={handleMarkComplete}
-          disabled={isCompleted || isMarking}
-          loading={isMarking}
-          style={styles.actionButton}
-          contentStyle={styles.actionButtonContent}
-          accessibilityLabel={isCompleted ? 'Đã hoàn thành' : 'Đánh dấu hoàn thành'}
-        >
-          {isCompleted ? 'Đã hoàn thành' : 'Đánh dấu hoàn thành'}
-        </Button>
       </View>
-    </View>
+    </ErrorBoundary>
   );
 }
 
-// ─── Styles ──────────────────────────────────────────────────────────────────
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  errorContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 32,
-  },
-  bottomBar: {
-    flexDirection: 'row',
-    padding: 12,
-    gap: 12,
-    borderTopWidth: StyleSheet.hairlineWidth,
-  },
-  actionButton: {
-    flex: 1,
-    borderRadius: 12,
-  },
-  actionButtonContent: {
-    minHeight: 44,
-  },
-  ttsFab: {
-    position: 'absolute',
-    right: 16,
-    bottom: 80,
-    borderRadius: 16,
-  },
+  container: { flex: 1 },
+  center: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 16 },
 });
