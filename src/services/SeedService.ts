@@ -224,6 +224,14 @@ function setModulePrerequisiteFields(record: Model, item: ModulePrerequisiteSeed
 async function seedModule(db: Database, moduleItem: ModuleSeed): Promise<void> {
   const moduleId = moduleItem.id;
 
+  // Skip if this module already exists
+  try {
+    await db.get('modules').find(moduleId);
+    return;
+  } catch {
+    // Not found — proceed with seeding
+  }
+
   // 1. Create the module record
   await batchCreate(db, db.get('modules'), [moduleItem], setModuleFields);
 
@@ -279,6 +287,14 @@ async function seedCrossCuttingData(db: Database): Promise<void> {
 async function seedVocabModule(db: Database, moduleItem: ModuleSeed): Promise<void> {
   const moduleId = moduleItem.id;
 
+  // Skip if this module already exists
+  try {
+    await db.get('modules').find(moduleId);
+    return;
+  } catch {
+    // Not found — proceed with seeding
+  }
+
   await batchCreate(db, db.get('modules'), [moduleItem], setModuleFields);
 
   const moduleLessons = vocabLessonsData.filter((l) => l.module_id === moduleId);
@@ -328,6 +344,15 @@ export async function getSeedVersion(): Promise<number> {
  * Calls `onProgress(percent)` after each module completes.
  */
 export async function seed(onProgress: (percent: number) => void): Promise<void> {
+  // If data already exists (e.g. app updated without uninstall), skip seeding
+  const existingModuleCount = await database.get('modules').query().fetchCount();
+  if (existingModuleCount > 0) {
+    await AsyncStorage.setItem(SEED_VERSION_KEY, String(CURRENT_SEED_VERSION));
+    await AsyncStorage.removeItem(SEED_LAST_MODULE_KEY);
+    onProgress(100);
+    return;
+  }
+
   const sortedModules = [...modulesData].sort((a, b) => a.order_index - b.order_index);
   const sortedVocabModules = [...vocabModulesData].sort((a, b) => a.order_index - b.order_index);
   const totalSteps = sortedModules.length + sortedVocabModules.length + 1;

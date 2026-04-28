@@ -44,3 +44,6 @@ coverage/
 .vscode/
 *.swp
 *.swo
+
+# APK builds
+*.apk
