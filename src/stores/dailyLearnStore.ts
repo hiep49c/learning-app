@@ -49,6 +49,7 @@ interface DailyLearnActions {
   submitPractice: (userId: string) => Promise<void>;
   saveUserSentence: (cardId: string, sentence: string) => void;
   reviewCard: (userId: string, cardId: string, result: 'perfect' | 'good' | 'hard' | 'forgot') => Promise<void>;
+  learnMore: (userId: string) => Promise<void>;
   reset: () => void;
 }
 
@@ -78,7 +79,7 @@ export const useDailyLearnStore = create<DailyLearnState & DailyLearnActions>()(
       try {
         const [warmup, words, reviews] = await Promise.all([
           getWarmupCards(userId),
-          getNewWords(userId, 10),
+          getNewWords(userId, 5),
           getReviewCards(userId),
         ]);
 
@@ -204,6 +205,25 @@ export const useDailyLearnStore = create<DailyLearnState & DailyLearnActions>()(
         if (isCorrect) s.correctCount = s.correctCount + 1;
         s.currentCardIndex = s.currentCardIndex + 1;
       });
+    },
+
+    learnMore: async (userId: string): Promise<void> => {
+      set((s) => { s.isLoading = true; });
+      try {
+        const words = await getNewWords(userId, 5);
+        set((s) => {
+          s.newWords = words;
+          s.currentStep = 'learn';
+          s.currentCardIndex = 0;
+          s.isLoading = false;
+          s.summary = null;
+          s.practiceAnswers = {};
+          s.userSentences = {};
+          s.completedSteps = [];
+        });
+      } catch {
+        set((s) => { s.isLoading = false; });
+      }
     },
 
     reset: (): void => {

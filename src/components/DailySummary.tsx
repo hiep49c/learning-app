@@ -11,6 +11,7 @@ import type { DailySummaryData } from '@/services/DailyLearningService';
 interface DailySummaryProps {
   summary: DailySummaryData;
   onFinish: () => void;
+  onLearnMore?: () => void;
 }
 
 function StatItem({ label, value, color }: { label: string; value: string | number; color: string }): React.JSX.Element {
@@ -22,7 +23,7 @@ function StatItem({ label, value, color }: { label: string; value: string | numb
   );
 }
 
-export function DailySummary({ summary, onFinish }: DailySummaryProps): React.JSX.Element {
+export function DailySummary({ summary, onFinish, onLearnMore }: DailySummaryProps): React.JSX.Element {
   const theme = useTheme<MD3Theme>();
   const accuracy = summary.totalCount > 0
     ? Math.round((summary.correctCount / summary.totalCount) * 100)
@@ -49,6 +50,12 @@ export function DailySummary({ summary, onFinish }: DailySummaryProps): React.JS
           </View>
         </Card.Content>
       </Card>
+
+      {onLearnMore ? (
+        <Button mode="outlined" onPress={onLearnMore} style={styles.finishBtn} accessibilityLabel="Học thêm 5 từ">
+          Học thêm 5 từ
+        </Button>
+      ) : null}
 
       <Button mode="contained" onPress={onFinish} style={styles.finishBtn} accessibilityLabel="Hoàn tất">
         Hoàn tất

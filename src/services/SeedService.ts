@@ -13,6 +13,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Database, Collection } from '@nozbe/watermelondb';
 import type { Model } from '@nozbe/watermelondb';
 
+import { Q } from '@nozbe/watermelondb';
+
 import { database } from '@/database';
 
 // ─── Seed data JSON imports (bundled with app) ───
@@ -344,9 +346,10 @@ export async function getSeedVersion(): Promise<number> {
  * Calls `onProgress(percent)` after each module completes.
  */
 export async function seed(onProgress: (percent: number) => void): Promise<void> {
-  // If data already exists (e.g. app updated without uninstall), skip seeding
-  const existingModuleCount = await database.get('modules').query().fetchCount();
-  if (existingModuleCount > 0) {
+  // If all data already exists (e.g. app updated without uninstall), skip seeding
+  const existingJavaCount = await database.get('modules').query(Q.where('id', Q.notLike('vocab-%'))).fetchCount();
+  const existingVocabCount = await database.get('modules').query(Q.where('id', Q.like('vocab-%'))).fetchCount();
+  if (existingJavaCount >= modulesData.length && existingVocabCount >= vocabModulesData.length) {
     await AsyncStorage.setItem(SEED_VERSION_KEY, String(CURRENT_SEED_VERSION));
     await AsyncStorage.removeItem(SEED_LAST_MODULE_KEY);
     onProgress(100);

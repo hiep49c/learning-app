@@ -201,7 +201,7 @@ export async function getWarmupCards(userId: string): Promise<WordData[]> {
 /**
  * Get new words for today's learning session.
  */
-export async function getNewWords(userId: string, count: number = 10): Promise<WordData[]> {
+export async function getNewWords(userId: string, count: number = 5): Promise<WordData[]> {
   // First ensure we have enough cards
   await ensureVocabCards(userId, count * 2);
 
