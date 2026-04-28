@@ -333,7 +333,7 @@ function main(): void {
   console.log('🔍 Parsing markdown content from doc/ ...\n');
 
   // Step 1: Parse all content
-  const content = parseAllContent();
+  const content = parseAllContent(path.join(process.cwd(), 'doc', 'java-spring'));
 
   console.log(`📦 Modules: ${content.modules.length}`);
   console.log(`📖 Lessons: ${content.allLessons.length}`);

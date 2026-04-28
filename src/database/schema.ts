@@ -1,7 +1,7 @@
 import { appSchema, tableSchema } from '@nozbe/watermelondb';
 
 export const schema = appSchema({
-  version: 1,
+  version: 2,
   tables: [
     // ─── User Profiles ───
     tableSchema({
@@ -143,6 +143,48 @@ export const schema = appSchema({
         { name: 'item_id', type: 'string', isIndexed: true },
         { name: 'item_type', type: 'string' },
         { name: 'note', type: 'string', isOptional: true },
+        { name: 'created_at', type: 'number' },
+      ],
+    }),
+
+    // ─── Spaced Repetition (SRS) ───
+    tableSchema({
+      name: 'vocab_cards',
+      columns: [
+        { name: 'user_id', type: 'string', isIndexed: true },
+        { name: 'keyword_id', type: 'string', isIndexed: true },
+        { name: 'word', type: 'string', isIndexed: true },
+        { name: 'repetitions', type: 'number' },
+        { name: 'ease_factor', type: 'number' },
+        { name: 'interval_days', type: 'number' },
+        { name: 'next_review_at', type: 'number', isIndexed: true },
+        { name: 'last_reviewed_at', type: 'number', isOptional: true },
+        { name: 'status', type: 'string', isIndexed: true },
+        { name: 'created_at', type: 'number' },
+      ],
+    }),
+
+    tableSchema({
+      name: 'vocab_reviews',
+      columns: [
+        { name: 'user_id', type: 'string', isIndexed: true },
+        { name: 'card_id', type: 'string', isIndexed: true },
+        { name: 'quality', type: 'number' },
+        { name: 'reviewed_at', type: 'number', isIndexed: true },
+      ],
+    }),
+
+    tableSchema({
+      name: 'daily_sessions',
+      columns: [
+        { name: 'user_id', type: 'string', isIndexed: true },
+        { name: 'session_date', type: 'string', isIndexed: true },
+        { name: 'new_words_count', type: 'number' },
+        { name: 'reviewed_count', type: 'number' },
+        { name: 'correct_count', type: 'number' },
+        { name: 'total_count', type: 'number' },
+        { name: 'completed_steps_json', type: 'string' },
+        { name: 'completed_at', type: 'number', isOptional: true },
         { name: 'created_at', type: 'number' },
       ],
     }),

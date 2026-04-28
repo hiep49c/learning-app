@@ -77,7 +77,7 @@ export const useCourseStore = create<CourseState & CourseActions>()(
       try {
         const records = await database
           .get<Module>('modules')
-          .query(Q.sortBy('order_index', Q.asc))
+          .query(Q.where('id', Q.notLike('vocab-%')), Q.sortBy('order_index', Q.asc))
           .fetch();
 
         const modules = records.map(toModuleData);

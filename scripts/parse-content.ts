@@ -537,37 +537,166 @@ export function extractDefinition(content: string): string {
 
 /**
  * Extract explanation text from a keyword section.
- * Looks for `**Giải thích chi tiết:**` and collects text until next bold section or code block.
+ * First looks for `**Giải thích chi tiết:**` marker and collects text until next bold section or code block.
+ * If no explicit marker is found, falls back to collecting paragraph text between the definition
+ * and the first code block, skipping the definition line itself.
  */
 export function extractExplanation(content: string): string {
   const lines = content.split('\n');
+
+  // Strategy 1: Look for explicit **Giải thích chi tiết:** marker
   let collecting = false;
-  const explanationLines: string[] = [];
+  const markerLines: string[] = [];
 
   for (const line of lines) {
     const trimmed = line.trim();
 
     if (/\*\*Giải thích chi tiết:\*\*/.test(trimmed)) {
       collecting = true;
-      // If there's text on the same line after the marker
       const afterMarker = trimmed.replace(/.*\*\*Giải thích chi tiết:\*\*\s*/, '').trim();
       if (afterMarker) {
-        explanationLines.push(afterMarker);
+        markerLines.push(afterMarker);
       }
       continue;
     }
 
     if (collecting) {
-      // Stop at next bold section header or code block
       if (trimmed.startsWith('```')) break;
       if (/^\*\*[^*]+:\*\*/.test(trimmed) && !/\*\*Giải thích/.test(trimmed)) break;
       if (trimmed !== '') {
-        explanationLines.push(trimmed);
+        markerLines.push(trimmed);
       }
     }
   }
 
-  return explanationLines.join('\n').trim();
+  if (markerLines.length > 0) {
+    return markerLines.join('\n').trim();
+  }
+
+  // Strategy 2: Collect paragraph text after the definition line, before the first code block
+  const fallbackLines: string[] = [];
+  let pastDefinition = false;
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    // Skip until we pass the definition line
+    if (!pastDefinition) {
+      if (/\*\*Định nghĩa:\*\*/.test(trimmed)) {
+        pastDefinition = true;
+      }
+      continue;
+    }
+
+    // Stop at code block, horizontal rule, or next keyword heading
+    if (trimmed.startsWith('```')) break;
+    if (/^---+$/.test(trimmed)) break;
+    if (/^##\s+/.test(trimmed)) break;
+
+    // Collect non-empty paragraph lines
+    if (trimmed !== '') {
+      fallbackLines.push(trimmed);
+    }
+  }
+
+  if (fallbackLines.length > 0) {
+    return fallbackLines.join('\n').trim();
+  }
+
+  // Strategy 3: Extract leading comments from the first code block as explanation
+  const commentLines: string[] = [];
+  let inCodeBlock = false;
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (!inCodeBlock && trimmed.startsWith('```')) {
+      inCodeBlock = true;
+      continue;
+    }
+
+    if (inCodeBlock) {
+      if (trimmed.startsWith('```')) break; // end of code block
+
+      // Collect single-line comments (// ...) as explanation text
+      const commentMatch = trimmed.match(/^\/\/\s*(.+)/);
+      if (commentMatch) {
+        const commentText = (commentMatch[1] ?? '').trim();
+        if (commentText) {
+          commentLines.push(commentText);
+        }
+      } else if (trimmed === '' && commentLines.length > 0) {
+        // Allow blank lines between comment groups
+        continue;
+      } else if (commentLines.length > 0) {
+        // Stop at first non-comment code line after collecting some comments
+        break;
+      }
+    }
+  }
+
+  if (commentLines.length > 0) {
+    return commentLines.join(' ').trim();
+  }
+
+  // Strategy 4: Extract bold section text after the first code block
+  // or the first meaningful line from a diagram code block
+  let afterFirstCodeBlock = false;
+  let codeBlockCount = 0;
+  const postCodeLines: string[] = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith('```')) {
+      codeBlockCount++;
+      if (codeBlockCount === 2) {
+        afterFirstCodeBlock = true;
+      }
+      continue;
+    }
+
+    if (afterFirstCodeBlock) {
+      if (/^##\s+/.test(trimmed)) break;
+      if (/^---+$/.test(trimmed)) break;
+
+      const boldMatch = trimmed.match(/^\*\*([^*]+):\*\*/);
+      if (boldMatch) {
+        postCodeLines.push((boldMatch[1] ?? '').trim());
+        continue;
+      }
+
+      if (trimmed !== '') {
+        postCodeLines.push(trimmed);
+      }
+
+      if (postCodeLines.length >= 3) break;
+    }
+  }
+
+  if (postCodeLines.length > 0) {
+    return postCodeLines.join(' ').trim();
+  }
+
+  // Strategy 5: Use the first non-empty, non-decoration line from the first code block
+  inCodeBlock = false;
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (!inCodeBlock && trimmed.startsWith('```')) {
+      inCodeBlock = true;
+      continue;
+    }
+
+    if (inCodeBlock) {
+      if (trimmed.startsWith('```')) break;
+      if (trimmed !== '' && !/^[┌└├│─┐┘┤┬┴┼]+$/.test(trimmed)) {
+        return trimmed;
+      }
+    }
+  }
+
+  return '';
 }
 
 /**

@@ -344,18 +344,18 @@ Build a local-first mobile learning app for Java Spring using React Native + Exp
   - Verify navigation flows: auth → home → course → lesson → quiz → result
   - Verify search, bookmarks, and profile screens work end-to-end
 
-- [ ] 13. Data invariant property tests
-  - [ ]* 13.1 Write property test: All lessons contain at least one code block (Property 2)
+- [x] 13. Data invariant property tests
+  - [x]* 13.1 Write property test: All lessons contain at least one code block (Property 2)
     - **Property 2: All lessons contain at least one code block**
     - For any lesson in the database, verify parsed `content_json` contains at least one section of type `code_block`
     - **Validates: Requirements 2.2, 3.2, 4.2**
 
-  - [ ]* 13.2 Write property test: Keyword entry completeness (Property 3)
+  - [x]* 13.2 Write property test: Keyword entry completeness (Property 3)
     - **Property 3: Keyword entry completeness**
     - For any keyword, verify non-empty `name`, `definition` ≤ 100 chars, non-empty `explanation`, and valid `lesson_id` referencing an existing lesson
     - **Validates: Requirements 11.1**
 
-  - [ ]* 13.3 Write property test: Every lesson has a quiz with sufficient questions (Property 11)
+  - [x]* 13.3 Write property test: Every lesson has a quiz with sufficient questions (Property 11)
     - **Property 11: Every lesson has a quiz with sufficient questions**
     - For any lesson, verify at least one quiz exists and that quiz has ≥ 3 questions
     - **Validates: Requirements 15.1**

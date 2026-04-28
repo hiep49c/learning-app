@@ -46,12 +46,23 @@ export default function TabLayout() {
       <Tabs.Screen
         name="course"
         options={{
-          title: 'Khóa học',
+          title: 'Java Spring',
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
             <TabIcon name="book-open-variant" color={color} size={size} />
           ),
-          tabBarAccessibilityLabel: 'Khóa học',
+          tabBarAccessibilityLabel: 'Java Spring',
+        }}
+      />
+      <Tabs.Screen
+        name="english"
+        options={{
+          title: 'Tiếng Anh',
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <TabIcon name="alphabetical-variant" color={color} size={size} />
+          ),
+          tabBarAccessibilityLabel: 'Tiếng Anh',
         }}
       />
       <Tabs.Screen

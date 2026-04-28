@@ -2,11 +2,11 @@ import { schema } from '../schema';
 
 describe('WatermelonDB Schema', () => {
   it('should have schema version 1', () => {
-    expect(schema.version).toBe(1);
+    expect(schema.version).toBe(2);
   });
 
   it('should define exactly 12 tables', () => {
-    expect(Object.keys(schema.tables)).toHaveLength(12);
+    expect(Object.keys(schema.tables)).toHaveLength(15);
   });
 
   it('should contain all expected table names', () => {
@@ -23,6 +23,9 @@ describe('WatermelonDB Schema', () => {
       'lesson_progress',
       'quiz_attempts',
       'bookmarks',
+      'vocab_cards',
+      'vocab_reviews',
+      'daily_sessions',
     ];
 
     const tableNames = Object.keys(schema.tables);

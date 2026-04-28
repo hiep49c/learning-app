@@ -1,0 +1,80 @@
+[
+  {
+    "level": "A1",
+    "name": "Beginner",
+    "name_vi": "Sơ cấp",
+    "description": "Can understand and use familiar everyday expressions and very basic phrases.",
+    "description_vi": "Có thể hiểu và sử dụng các cụm từ quen thuộc hàng ngày và các câu rất cơ bản.",
+    "vocabulary_range": "500-1000 words",
+    "can_do": [
+      "Introduce yourself and others",
+      "Ask and answer simple personal questions",
+      "Interact in a simple way if the other person speaks slowly"
+    ]
+  },
+  {
+    "level": "A2",
+    "name": "Elementary",
+    "name_vi": "Sơ cấp nâng cao",
+    "description": "Can understand sentences and frequently used expressions related to areas of most immediate relevance.",
+    "description_vi": "Có thể hiểu các câu và cụm từ thường dùng liên quan đến các lĩnh vực gần gũi nhất.",
+    "vocabulary_range": "1000-2000 words",
+    "can_do": [
+      "Communicate in simple routine tasks",
+      "Describe aspects of background and immediate environment",
+      "Handle short social exchanges"
+    ]
+  },
+  {
+    "level": "B1",
+    "name": "Intermediate",
+    "name_vi": "Trung cấp",
+    "description": "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure.",
+    "description_vi": "Có thể hiểu các ý chính của văn bản chuẩn rõ ràng về các chủ đề quen thuộc trong công việc, trường học, giải trí.",
+    "vocabulary_range": "2000-4000 words",
+    "can_do": [
+      "Deal with most travel situations",
+      "Produce simple connected text on familiar topics",
+      "Describe experiences, events, dreams, and ambitions"
+    ]
+  },
+  {
+    "level": "B2",
+    "name": "Upper Intermediate",
+    "name_vi": "Trung cấp nâng cao",
+    "description": "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field.",
+    "description_vi": "Có thể hiểu ý chính của văn bản phức tạp về cả chủ đề cụ thể và trừu tượng, bao gồm thảo luận chuyên môn.",
+    "vocabulary_range": "4000-6000 words",
+    "can_do": [
+      "Interact with native speakers with fluency and spontaneity",
+      "Produce clear, detailed text on a wide range of subjects",
+      "Explain a viewpoint on a topical issue giving advantages and disadvantages"
+    ]
+  },
+  {
+    "level": "C1",
+    "name": "Advanced",
+    "name_vi": "Cao cấp",
+    "description": "Can understand a wide range of demanding, longer texts, and recognize implicit meaning. Can express ideas fluently and spontaneously.",
+    "description_vi": "Có thể hiểu nhiều loại văn bản dài và phức tạp, nhận ra ý nghĩa ngầm. Có thể diễn đạt ý tưởng trôi chảy và tự nhiên.",
+    "vocabulary_range": "6000-10000 words",
+    "can_do": [
+      "Use language flexibly and effectively for social, academic, and professional purposes",
+      "Produce clear, well-structured, detailed text on complex subjects",
+      "Express yourself fluently without much obvious searching for expressions"
+    ]
+  },
+  {
+    "level": "C2",
+    "name": "Proficiency",
+    "name_vi": "Thành thạo",
+    "description": "Can understand with ease virtually everything heard or read. Can summarize information from different sources, reconstructing arguments coherently.",
+    "description_vi": "Có thể hiểu dễ dàng hầu như mọi thứ nghe hoặc đọc được. Có thể tóm tắt thông tin từ nhiều nguồn khác nhau một cách mạch lạc.",
+    "vocabulary_range": "10000+ words",
+    "can_do": [
+      "Express yourself spontaneously, very fluently, and precisely",
+      "Differentiate finer shades of meaning even in complex situations",
+      "Understand virtually everything with ease"
+    ]
+  }
+]

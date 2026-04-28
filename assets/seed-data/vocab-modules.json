@@ -1,0 +1,252 @@
+[
+  {
+    "id": "vocab-topic-daily-life",
+    "title": "Daily Life",
+    "title_vi": "Cuộc sống hàng ngày",
+    "description": "Everyday vocabulary: greetings, time, weather, food, shopping, home, family — Từ vựng hàng ngày: chào hỏi, thời gian, thời tiết, thức ăn, mua sắm, nhà cửa, gia đình",
+    "order_index": 100,
+    "difficulty_level": "A1-B2",
+    "icon_name": "home",
+    "lesson_count": 69
+  },
+  {
+    "id": "vocab-topic-work-business",
+    "title": "Work & Business",
+    "title_vi": "Công việc & Kinh doanh",
+    "description": "Office, meetings, emails, deadlines, projects, management — Văn phòng, họp, email, hạn chót, dự án, quản lý",
+    "order_index": 101,
+    "difficulty_level": "A2-C1",
+    "icon_name": "briefcase",
+    "lesson_count": 47
+  },
+  {
+    "id": "vocab-topic-technology",
+    "title": "Technology",
+    "title_vi": "Công nghệ",
+    "description": "Software, hardware, internet, apps, AI, data, devices — Phần mềm, phần cứng, internet, ứng dụng, AI, dữ liệu, thiết bị",
+    "order_index": 102,
+    "difficulty_level": "A2-C1",
+    "icon_name": "laptop",
+    "lesson_count": 19
+  },
+  {
+    "id": "vocab-topic-programming-dev",
+    "title": "Programming & Development",
+    "title_vi": "Lập trình & Phát triển",
+    "description": "Coding, algorithms, frameworks, debugging, deployment, architecture — Viết code, thuật toán, framework, gỡ lỗi, triển khai, kiến trúc",
+    "order_index": 103,
+    "difficulty_level": "B1-C2",
+    "icon_name": "code-tags",
+    "lesson_count": 15
+  },
+  {
+    "id": "vocab-topic-education",
+    "title": "Education & Learning",
+    "title_vi": "Giáo dục & Học tập",
+    "description": "School, university, exams, studying, research — Trường học, đại học, thi cử, học tập, nghiên cứu",
+    "order_index": 104,
+    "difficulty_level": "A1-C1",
+    "icon_name": "school",
+    "lesson_count": 29
+  },
+  {
+    "id": "vocab-topic-travel",
+    "title": "Travel & Tourism",
+    "title_vi": "Du lịch",
+    "description": "Airport, hotel, directions, booking, sightseeing — Sân bay, khách sạn, chỉ đường, đặt chỗ, tham quan",
+    "order_index": 105,
+    "difficulty_level": "A1-B2",
+    "icon_name": "airplane",
+    "lesson_count": 12
+  },
+  {
+    "id": "vocab-topic-health",
+    "title": "Health & Fitness",
+    "title_vi": "Sức khỏe & Thể dục",
+    "description": "Body, symptoms, medicine, exercise, nutrition — Cơ thể, triệu chứng, thuốc, tập thể dục, dinh dưỡng",
+    "order_index": 106,
+    "difficulty_level": "A1-C1",
+    "icon_name": "heart-pulse",
+    "lesson_count": 21
+  },
+  {
+    "id": "vocab-topic-communication",
+    "title": "Communication",
+    "title_vi": "Giao tiếp",
+    "description": "Speaking, writing, listening, debate, presentation — Nói, viết, nghe, tranh luận, thuyết trình",
+    "order_index": 107,
+    "difficulty_level": "A2-C1",
+    "icon_name": "message-circle",
+    "lesson_count": 29
+  },
+  {
+    "id": "vocab-topic-emotion-personality",
+    "title": "Emotions & Personality",
+    "title_vi": "Cảm xúc & Tính cách",
+    "description": "Feelings, character traits, relationships — Cảm xúc, đặc điểm tính cách, mối quan hệ",
+    "order_index": 108,
+    "difficulty_level": "A2-C1",
+    "icon_name": "emoticon",
+    "lesson_count": 17
+  },
+  {
+    "id": "vocab-topic-finance",
+    "title": "Finance & Money",
+    "title_vi": "Tài chính & Tiền bạc",
+    "description": "Banking, investment, budget, tax, insurance — Ngân hàng, đầu tư, ngân sách, thuế, bảo hiểm",
+    "order_index": 109,
+    "difficulty_level": "B1-C2",
+    "icon_name": "cash",
+    "lesson_count": 16
+  },
+  {
+    "id": "vocab-topic-social-relationships",
+    "title": "Social & Relationships",
+    "title_vi": "Xã hội & Quan hệ",
+    "description": "Community, friendship, dating, marriage, events — Cộng đồng, tình bạn, hẹn hò, hôn nhân, sự kiện",
+    "order_index": 110,
+    "difficulty_level": "A2-B2",
+    "icon_name": "account-group",
+    "lesson_count": 20
+  },
+  {
+    "id": "vocab-topic-food-cooking",
+    "title": "Food & Cooking",
+    "title_vi": "Ẩm thực & Nấu ăn",
+    "description": "Ingredients, recipes, kitchen, restaurants, flavors — Nguyên liệu, công thức, nhà bếp, nhà hàng, hương vị",
+    "order_index": 111,
+    "difficulty_level": "A1-B2",
+    "icon_name": "food",
+    "lesson_count": 11
+  },
+  {
+    "id": "vocab-topic-environment-nature",
+    "title": "Environment & Nature",
+    "title_vi": "Môi trường & Thiên nhiên",
+    "description": "Climate, pollution, sustainability, animals, geography — Khí hậu, ô nhiễm, bền vững, động vật, địa lý",
+    "order_index": 112,
+    "difficulty_level": "A2-C1",
+    "icon_name": "leaf",
+    "lesson_count": 18
+  },
+  {
+    "id": "vocab-topic-media-entertainment",
+    "title": "Media & Entertainment",
+    "title_vi": "Truyền thông & Giải trí",
+    "description": "Movies, music, social media, news, gaming — Phim, nhạc, mạng xã hội, tin tức, trò chơi",
+    "order_index": 113,
+    "difficulty_level": "A1-C1",
+    "icon_name": "play-circle",
+    "lesson_count": 8
+  },
+  {
+    "id": "vocab-topic-sports-fitness",
+    "title": "Sports & Fitness",
+    "title_vi": "Thể thao & Rèn luyện",
+    "description": "Sports, gym, competition, training, team — Thể thao, phòng gym, thi đấu, tập luyện, đội",
+    "order_index": 114,
+    "difficulty_level": "A1-B2",
+    "icon_name": "run",
+    "lesson_count": 11
+  },
+  {
+    "id": "vocab-topic-shopping-consumer",
+    "title": "Shopping & Consumer",
+    "title_vi": "Mua sắm & Tiêu dùng",
+    "description": "Stores, prices, discounts, online shopping, products — Cửa hàng, giá cả, giảm giá, mua sắm trực tuyến, sản phẩm",
+    "order_index": 115,
+    "difficulty_level": "A1-B2",
+    "icon_name": "cart",
+    "lesson_count": 9
+  },
+  {
+    "id": "vocab-topic-housing-home",
+    "title": "Housing & Home",
+    "title_vi": "Nhà ở & Gia đình",
+    "description": "Rooms, furniture, rent, repair, neighborhood — Phòng, nội thất, thuê nhà, sửa chữa, khu phố",
+    "order_index": 116,
+    "difficulty_level": "A1-B2",
+    "icon_name": "home-city",
+    "lesson_count": 11
+  },
+  {
+    "id": "vocab-topic-law-government",
+    "title": "Law & Government",
+    "title_vi": "Pháp luật & Chính phủ",
+    "description": "Legal terms, politics, rights, regulations, court — Thuật ngữ pháp lý, chính trị, quyền, quy định, tòa án",
+    "order_index": 117,
+    "difficulty_level": "B1-C2",
+    "icon_name": "gavel",
+    "lesson_count": 15
+  },
+  {
+    "id": "vocab-topic-science",
+    "title": "Science",
+    "title_vi": "Khoa học",
+    "description": "Biology, chemistry, physics, research, experiment — Sinh học, hóa học, vật lý, nghiên cứu, thí nghiệm",
+    "order_index": 118,
+    "difficulty_level": "B1-C2",
+    "icon_name": "flask",
+    "lesson_count": 21
+  },
+  {
+    "id": "vocab-topic-idioms-phrasal-verbs",
+    "title": "Idioms & Phrasal Verbs",
+    "title_vi": "Thành ngữ & Cụm động từ",
+    "description": "Common idioms and phrasal verbs in daily English — Thành ngữ và cụm động từ phổ biến",
+    "order_index": 119,
+    "difficulty_level": "B1-C2",
+    "icon_name": "puzzle",
+    "lesson_count": 11
+  },
+  {
+    "id": "vocab-topic-interview-career",
+    "title": "Interview & Career",
+    "title_vi": "Phỏng vấn & Sự nghiệp",
+    "description": "Job interviews, CV, career development — Phỏng vấn xin việc, CV, phát triển sự nghiệp",
+    "order_index": 120,
+    "difficulty_level": "B1-C1",
+    "icon_name": "account-tie",
+    "lesson_count": 9
+  },
+  {
+    "id": "vocab-topic-academic-ielts",
+    "title": "Academic & IELTS",
+    "title_vi": "Học thuật & IELTS",
+    "description": "Academic vocabulary for IELTS/TOEFL — Từ vựng học thuật cho IELTS/TOEFL",
+    "order_index": 121,
+    "difficulty_level": "B2-C2",
+    "icon_name": "certificate",
+    "lesson_count": 32
+  },
+  {
+    "id": "vocab-topic-transportation",
+    "title": "Transportation",
+    "title_vi": "Giao thông",
+    "description": "Vehicles, traffic, public transport, driving — Phương tiện, giao thông, vận tải công cộng, lái xe",
+    "order_index": 122,
+    "difficulty_level": "A1-B2",
+    "icon_name": "bus",
+    "lesson_count": 8
+  },
+  {
+    "id": "vocab-topic-clothing-fashion",
+    "title": "Clothing & Fashion",
+    "title_vi": "Quần áo & Thời trang",
+    "description": "Clothes, accessories, style, trends — Quần áo, phụ kiện, phong cách, xu hướng",
+    "order_index": 123,
+    "difficulty_level": "A1-B2",
+    "icon_name": "tshirt-crew",
+    "lesson_count": 5
+  },
+  {
+    "id": "vocab-topic-art-culture",
+    "title": "Art & Culture",
+    "title_vi": "Nghệ thuật & Văn hóa",
+    "description": "Music, painting, literature, theater, traditions — Âm nhạc, hội họa, văn học, sân khấu, truyền thống",
+    "order_index": 124,
+    "difficulty_level": "A2-C1",
+    "icon_name": "palette",
+    "lesson_count": 11
+  }
+]

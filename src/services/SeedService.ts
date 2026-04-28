@@ -26,13 +26,21 @@ const quizzesData: QuizSeed[] = require('../../assets/seed-data/quizzes.json');
 const quizQuestionsData: QuizQuestionSeed[] = require('../../assets/seed-data/quiz_questions.json');
 const modulePrerequisitesData: ModulePrerequisiteSeed[] = require('../../assets/seed-data/module_prerequisites.json');
 
+// English Vocabulary data
+const vocabModulesData: ModuleSeed[] = require('../../assets/seed-data/vocab-modules.json');
+const vocabLessonsData: LessonSeed[] = require('../../assets/seed-data/vocab-lessons.json');
+const vocabKeywordsData: KeywordSeed[] = require('../../assets/seed-data/vocab-keywords.json');
+const vocabCodeExamplesData: CodeExampleSeed[] = require('../../assets/seed-data/vocab-code-examples.json');
+const vocabQuizzesData: QuizSeed[] = require('../../assets/seed-data/vocab-quizzes.json');
+const vocabQuizQuestionsData: QuizQuestionSeed[] = require('../../assets/seed-data/vocab-quiz-questions.json');
+
 // ─── AsyncStorage keys ───
 
 const SEED_VERSION_KEY = '@seed_version';
 const SEED_LAST_MODULE_KEY = '@seed_last_module';
 
 /** Current seed data version. Bump when seed data changes. */
-const CURRENT_SEED_VERSION = 1;
+const CURRENT_SEED_VERSION = 2;
 
 // ─── Seed data types (snake_case matching JSON files) ───
 
@@ -266,6 +274,38 @@ async function seedCrossCuttingData(db: Database): Promise<void> {
 
 // ─── Public API ───
 
+// ─── Core: seed one vocab module (topic) and its related data ───
+
+async function seedVocabModule(db: Database, moduleItem: ModuleSeed): Promise<void> {
+  const moduleId = moduleItem.id;
+
+  await batchCreate(db, db.get('modules'), [moduleItem], setModuleFields);
+
+  const moduleLessons = vocabLessonsData.filter((l) => l.module_id === moduleId);
+  await batchCreate(db, db.get('lessons'), moduleLessons, setLessonFields);
+
+  const lessonIds = new Set(moduleLessons.map((l) => l.id));
+
+  // Batch keywords in chunks of 500 to avoid memory issues
+  const moduleKeywords = vocabKeywordsData.filter((k) => lessonIds.has(k.lesson_id));
+  for (let i = 0; i < moduleKeywords.length; i += 500) {
+    await batchCreate(db, db.get('keywords'), moduleKeywords.slice(i, i + 500), setKeywordFields);
+  }
+
+  const moduleCodeExamples = vocabCodeExamplesData.filter((c) => lessonIds.has(c.lesson_id));
+  for (let i = 0; i < moduleCodeExamples.length; i += 500) {
+    await batchCreate(db, db.get('code_examples'), moduleCodeExamples.slice(i, i + 500), setCodeExampleFields);
+  }
+
+  const moduleQuizzes = vocabQuizzesData.filter((q) => lessonIds.has(q.lesson_id));
+  await batchCreate(db, db.get('quizzes'), moduleQuizzes, setQuizFields);
+
+  const quizIds = new Set(moduleQuizzes.map((q) => q.id));
+  const moduleQuizQuestions = vocabQuizQuestionsData.filter((qq) => quizIds.has(qq.quiz_id));
+  await batchCreate(db, db.get('quiz_questions'), moduleQuizQuestions, setQuizQuestionFields);
+}
+
+
 /**
  * Check if seed data has been loaded (via `@seed_version` in AsyncStorage).
  */
@@ -289,21 +329,28 @@ export async function getSeedVersion(): Promise<number> {
  */
 export async function seed(onProgress: (percent: number) => void): Promise<void> {
   const sortedModules = [...modulesData].sort((a, b) => a.order_index - b.order_index);
-  const totalModules = sortedModules.length;
+  const sortedVocabModules = [...vocabModulesData].sort((a, b) => a.order_index - b.order_index);
+  const totalSteps = sortedModules.length + sortedVocabModules.length + 1;
+  let step = 0;
 
-  for (let i = 0; i < sortedModules.length; i++) {
-    const moduleItem = sortedModules[i];
-    if (!moduleItem) continue;
-
+  // Seed Java Spring modules
+  for (const moduleItem of sortedModules) {
     await seedModule(database, moduleItem);
     await AsyncStorage.setItem(SEED_LAST_MODULE_KEY, moduleItem.id);
-
-    const percent = Math.round(((i + 1) / (totalModules + 1)) * 100);
-    onProgress(percent);
+    step++;
+    onProgress(Math.round((step / totalSteps) * 100));
   }
 
-  // Seed cross-cutting data after all modules
+  // Seed cross-cutting data
   await seedCrossCuttingData(database);
+
+  // Seed English Vocabulary modules
+  for (const vocabModule of sortedVocabModules) {
+    await seedVocabModule(database, vocabModule);
+    await AsyncStorage.setItem(SEED_LAST_MODULE_KEY, vocabModule.id);
+    step++;
+    onProgress(Math.round((step / totalSteps) * 100));
+  }
 
   // Mark seeding complete
   await AsyncStorage.setItem(SEED_VERSION_KEY, String(CURRENT_SEED_VERSION));
@@ -318,43 +365,42 @@ export async function seed(onProgress: (percent: number) => void): Promise<void>
 export async function resumeSeed(onProgress: (percent: number) => void): Promise<void> {
   const lastModuleId = await AsyncStorage.getItem(SEED_LAST_MODULE_KEY);
   const sortedModules = [...modulesData].sort((a, b) => a.order_index - b.order_index);
-  const totalModules = sortedModules.length;
+  const sortedVocabModules = [...vocabModulesData].sort((a, b) => a.order_index - b.order_index);
+  const allModules = [...sortedModules, ...sortedVocabModules];
+  const totalSteps = allModules.length + 1;
 
   // Find the index of the last completed module
   let startIndex = 0;
   if (lastModuleId !== null) {
-    const lastIndex = sortedModules.findIndex((m) => m.id === lastModuleId);
+    const lastIndex = allModules.findIndex((m) => m.id === lastModuleId);
     if (lastIndex >= 0) {
-      startIndex = lastIndex + 1; // Resume from the next module
+      startIndex = lastIndex + 1;
     }
   }
 
-  // Report progress for already-completed modules
   if (startIndex > 0) {
-    const percent = Math.round((startIndex / (totalModules + 1)) * 100);
-    onProgress(percent);
+    onProgress(Math.round((startIndex / totalSteps) * 100));
   }
 
   // Seed remaining modules
-  for (let i = startIndex; i < sortedModules.length; i++) {
-    const moduleItem = sortedModules[i];
+  for (let i = startIndex; i < allModules.length; i++) {
+    const moduleItem = allModules[i];
     if (!moduleItem) continue;
 
-    await seedModule(database, moduleItem);
+    if (moduleItem.id.startsWith('vocab-')) {
+      await seedVocabModule(database, moduleItem);
+    } else {
+      await seedModule(database, moduleItem);
+    }
     await AsyncStorage.setItem(SEED_LAST_MODULE_KEY, moduleItem.id);
-
-    const percent = Math.round(((i + 1) / (totalModules + 1)) * 100);
-    onProgress(percent);
+    onProgress(Math.round(((i + 1) / totalSteps) * 100));
   }
 
-  // Seed cross-cutting data (idempotent — only runs if not already done)
-  // Check if cross-cutting data already exists to avoid duplicates
   const existingRelations = await database.get('keyword_relations').query().fetchCount();
   if (existingRelations === 0) {
     await seedCrossCuttingData(database);
   }
 
-  // Mark seeding complete
   await AsyncStorage.setItem(SEED_VERSION_KEY, String(CURRENT_SEED_VERSION));
   await AsyncStorage.removeItem(SEED_LAST_MODULE_KEY);
   onProgress(100);

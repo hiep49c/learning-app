@@ -22,7 +22,7 @@
     "lesson_id": "lesson-01-01",
     "name": "Reference Types",
     "definition": "Kiểu dữ liệu lưu reference (con trỏ) đến object trên heap — bao gồm classes, interfaces, arrays, en…",
-    "explanation": "",
+    "explanation": "**Giải thích chi tiết — Memory Layout:**",
     "code_example": null,
     "category": "java-core"
   },
@@ -31,7 +31,7 @@
     "lesson_id": "lesson-01-01",
     "name": "Type Casting & Promotion",
     "definition": "Chuyển đổi giá trị giữa các kiểu dữ liệu — có rules phức tạp mà senior cần nắm.",
-    "explanation": "",
+    "explanation": "**Numeric Promotion Rules (JLS §5.6):**",
     "code_example": null,
     "category": "java-core"
   },
@@ -40,7 +40,7 @@
     "lesson_id": "lesson-01-01",
     "name": "Wrapper Classes & Autoboxing",
     "definition": "Classes bọc primitive thành objects — cần thiết cho Collections, generics, và nullable values.",
-    "explanation": "",
+    "explanation": "**Integer Cache — performance trap phổ biến:**",
     "code_example": null,
     "category": "java-core"
   },
@@ -49,7 +49,7 @@
     "lesson_id": "lesson-01-01",
     "name": "var (Local Variable Type Inference)",
     "definition": "Từ khóa `var` (Java 10+) cho phép compiler suy luận kiểu — giảm boilerplate nhưng cần dùng đúng các…",
-    "explanation": "",
+    "explanation": "Khi NÊN dùng var — kiểu rõ ràng từ vế phải",
     "code_example": null,
     "category": "java-core"
   },
@@ -58,7 +58,7 @@
     "lesson_id": "lesson-01-01",
     "name": "final",
     "definition": "Modifier đánh dấu biến không thể gán lại — nhưng KHÔNG có nghĩa là immutable.",
-    "explanation": "",
+    "explanation": "final primitive — thực sự constant",
     "code_example": null,
     "category": "java-core"
   },
@@ -67,7 +67,7 @@
     "lesson_id": "lesson-01-01",
     "name": "String Interning & Memory",
     "definition": "Cơ chế JVM tối ưu bộ nhớ cho String literals bằng String Pool.",
-    "explanation": "",
+    "explanation": "String Pool nằm trong Heap (Java 7+, trước đó trong PermGen) Mọi String literal tự động được intern",
     "code_example": null,
     "category": "java-core"
   },
@@ -76,7 +76,7 @@
     "lesson_id": "lesson-01-01",
     "name": "Numeric Literals",
     "definition": "Các cách biểu diễn giá trị số trong source code — bao gồm các hệ cơ số và underscore separator.",
-    "explanation": "",
+    "explanation": "Underscore separator (Java 7+) — dễ đọc số lớn",
     "code_example": null,
     "category": "java-core"
   },
@@ -85,7 +85,7 @@
     "lesson_id": "lesson-01-02",
     "name": "Arithmetic Operators",
     "definition": "Toán tử thực hiện phép tính số học: `+`, `-`, `*`, `/`, `%`, `++`, `--`.",
-    "explanation": "",
+    "explanation": "**Deep dive — Integer Division & Overflow:**",
     "code_example": null,
     "category": "java-core"
   },
@@ -94,7 +94,7 @@
     "lesson_id": "lesson-01-02",
     "name": "Comparison Operators & Equality",
     "definition": "Toán tử so sánh: `==`, `!=`, `>`, `<`, `>=`, `<=` — với nhiều pitfalls cho reference types.",
-    "explanation": "",
+    "explanation": "**`==` vs `.equals()` — nguồn gốc vô số bugs:**",
     "code_example": null,
     "category": "java-core"
   },
@@ -103,7 +103,7 @@
     "lesson_id": "lesson-01-02",
     "name": "Logical Operators & Short-Circuit",
     "definition": "`&&`, `||` (short-circuit) vs `&`, `|` (non-short-circuit) — khác biệt quan trọng.",
-    "explanation": "",
+    "explanation": "Short-circuit: && dừng khi gặp false, || dừng khi gặp true → Vế phải CÓ THỂ KHÔNG được evaluate Pattern: null-safe check",
     "code_example": null,
     "category": "java-core"
   },
@@ -112,7 +112,7 @@
     "lesson_id": "lesson-01-02",
     "name": "Bitwise Operators",
     "definition": "Toán tử thao tác trên từng bit — dùng trong low-level programming, flags, và performance optimizati…",
-    "explanation": "",
+    "explanation": "Bit manipulation patterns cho senior 1. Check if power of 2",
     "code_example": null,
     "category": "java-core"
   },
@@ -121,7 +121,7 @@
     "lesson_id": "lesson-01-02",
     "name": "instanceof & Pattern Matching",
     "definition": "Kiểm tra kiểu runtime — Java 16+ thêm pattern matching giảm boilerplate.",
-    "explanation": "",
+    "explanation": "Traditional instanceof + cast",
     "code_example": null,
     "category": "java-core"
   },
@@ -130,7 +130,7 @@
     "lesson_id": "lesson-01-02",
     "name": "Operator Precedence & Evaluation Order",
     "definition": "Thứ tự ưu tiên và thứ tự đánh giá — hai khái niệm khác nhau mà nhiều người nhầm lẫn.",
-    "explanation": "",
+    "explanation": "Precedence: toán tử nào \"bind\" chặt hơn Evaluation order: operand nào được evaluate TRƯỚC Java đảm bảo LEFT-TO-RIGHT evaluation order cho operands (khác C/C++ — undefined evaluation order)",
     "code_example": null,
     "category": "java-core"
   },
@@ -139,7 +139,7 @@
     "lesson_id": "lesson-01-03",
     "name": "if-else",
     "definition": "Câu lệnh rẽ nhánh dựa trên điều kiện boolean.",
-    "explanation": "",
+    "explanation": "**Deep dive — Performance & Patterns:**",
     "code_example": null,
     "category": "java-core"
   },
@@ -148,7 +148,7 @@
     "lesson_id": "lesson-01-03",
     "name": "switch & Switch Expressions",
     "definition": "Rẽ nhánh nhiều hướng — Java 21 hoàn thiện với pattern matching, sealed types, và exhaustiveness che…",
-    "explanation": "",
+    "explanation": "**Evolution of switch qua các Java versions:**",
     "code_example": null,
     "category": "java-core"
   },
@@ -157,7 +157,7 @@
     "lesson_id": "lesson-01-03",
     "name": "for Loop & Enhanced for",
     "definition": "Vòng lặp với nhiều biến thể — hiểu rõ iterator protocol và performance implications.",
-    "explanation": "",
+    "explanation": "Enhanced for — syntactic sugar cho Iterator",
     "code_example": null,
     "category": "java-core"
   },
@@ -166,7 +166,7 @@
     "lesson_id": "lesson-01-03",
     "name": "while & do-while",
     "definition": "Vòng lặp dựa trên điều kiện — while kiểm tra trước, do-while kiểm tra sau.",
-    "explanation": "",
+    "explanation": "Infinite loop patterns while (true) — phổ biến nhất",
     "code_example": null,
     "category": "java-core"
   },
@@ -175,7 +175,7 @@
     "lesson_id": "lesson-01-03",
     "name": "break, continue, return",
     "definition": "Câu lệnh điều khiển luồng trong vòng lặp — break thoát, continue bỏ qua, return thoát method.",
-    "explanation": "",
+    "explanation": "break chỉ thoát vòng lặp/switch GẦN NHẤT Labeled break thoát vòng lặp được đặt tên continue chỉ bỏ qua iteration HIỆN TẠI của vòng lặp GẦN NHẤT Labeled continue bỏ qua iteration của vòng lặp được đặt tên return trong finally — TRAP!",
     "code_example": null,
     "category": "java-core"
   },
@@ -184,7 +184,7 @@
     "lesson_id": "lesson-01-04",
     "name": "Array Internals",
     "definition": "Array là object đặc biệt trên heap — có header, length field, và contiguous memory cho elements.",
-    "explanation": "",
+    "explanation": "**Memory Layout:**",
     "code_example": null,
     "category": "java-core"
   },
@@ -193,7 +193,7 @@
     "lesson_id": "lesson-01-04",
     "name": "Array Operations & Performance",
     "definition": "Các thao tác mảng và đặc điểm hiệu năng.",
-    "explanation": "",
+    "explanation": "System.arraycopy — native method, nhanh nhất JVM có thể dùng CPU memcpy instruction",
     "code_example": null,
     "category": "java-core"
   },
@@ -202,7 +202,7 @@
     "lesson_id": "lesson-01-04",
     "name": "Multidimensional Arrays",
     "definition": "Mảng nhiều chiều — thực chất là mảng chứa mảng (array of arrays), KHÔNG phải matrix liên tục.",
-    "explanation": "",
+    "explanation": "Java multidimensional array = array of arrays (jagged by nature)",
     "code_example": null,
     "category": "java-core"
   },
@@ -211,7 +211,7 @@
     "lesson_id": "lesson-01-04",
     "name": "Arrays vs Collections",
     "definition": "Khi nào dùng array, khi nào dùng Collection — trade-offs quan trọng.",
-    "explanation": "",
+    "explanation": "Dùng Array khi: - Primitive types (int[], double[]) — tránh autoboxing overhead - Fixed size, biết trước - Performance-critical (cache locality, no object overhead) - Varargs parameters - Low-level data structures Dùng Collection khi: - Dynamic size - Cần rich API (sort, filter, search, stream) - Generic type safety (List<String> vs String[]) - Cần immutability (List.of(), Collections.unmodifiableList()) - Interop với APIs (hầu hết modern APIs dùng Collection) Conversion Array → List",
     "code_example": null,
     "category": "java-core"
   },
@@ -220,7 +220,7 @@
     "lesson_id": "lesson-01-05",
     "name": "String Immutability",
     "definition": "String objects không thể thay đổi sau khi tạo — mọi \"modification\" tạo object mới.",
-    "explanation": "",
+    "explanation": "**Tại sao String immutable? (Design decision quan trọng):**",
     "code_example": null,
     "category": "java-core"
   },
@@ -229,7 +229,7 @@
     "lesson_id": "lesson-01-05",
     "name": "String Pool & Interning",
     "definition": "Vùng nhớ trong Heap nơi JVM lưu trữ và tái sử dụng String literals.",
-    "explanation": "",
+    "explanation": "String Pool implementation: - Hashtable native trong JVM (StringTable) - Nằm trong Heap (Java 7+, trước đó trong PermGen) - Default size: -XX:StringTableSize=65536 (Java 11+) - Có thể GC (weak references) Interning rules: 1. String literals tự động intern",
     "code_example": null,
     "category": "java-core"
   },
@@ -238,7 +238,7 @@
     "lesson_id": "lesson-01-05",
     "name": "String Concatenation Optimization",
     "definition": "JVM tối ưu string concatenation qua các phiên bản — từ StringBuilder đến invokedynamic.",
-    "explanation": "",
+    "explanation": "Java 1-4: Compiler tạo StringBuffer (synchronized, chậm) Java 5-8: Compiler tạo StringBuilder (unsynchronized, nhanh hơn)",
     "code_example": null,
     "category": "java-core"
   },
@@ -247,7 +247,7 @@
     "lesson_id": "lesson-01-05",
     "name": "String Methods — Advanced",
     "definition": "Các methods quan trọng và edge cases mà senior cần biết.",
-    "explanation": "",
+    "explanation": "substring() — implementation thay đổi qua versions Java 6-: substring() share underlying char[] → memory leak! String large = readHugeFile(); String small = large.substring(0, 10);  // small giữ reference đến huge char[] Java 7+: substring() tạo copy → không leak, nhưng tốn memory hơn equals() vs equalsIgnoreCase() vs contentEquals()",
     "code_example": null,
     "category": "java-core"
   },
@@ -256,7 +256,7 @@
     "lesson_id": "lesson-01-05",
     "name": "Regular Expressions — Advanced",
     "definition": "Regex engine trong Java dùng NFA (Nondeterministic Finite Automaton) — có thể bị catastrophic backt…",
-    "explanation": "",
+    "explanation": "Pattern compilation — LUÔN compile và reuse ❌ Compile mỗi lần gọi",
     "code_example": null,
     "category": "java-core"
   },
@@ -265,7 +265,7 @@
     "lesson_id": "lesson-01-06",
     "name": "Method Invocation — JVM Level",
     "definition": "JVM có 5 bytecode instructions cho method invocation, mỗi loại có dispatch mechanism khác nhau.",
-    "explanation": "",
+    "explanation": "1. invokestatic — gọi static method (compile-time binding)",
     "code_example": null,
     "category": "java-core"
   },
@@ -274,7 +274,7 @@
     "lesson_id": "lesson-01-06",
     "name": "Method Parameters — Pass-by-Value Deep Dive",
     "definition": "Java LUÔN pass-by-value — primitives copy giá trị, references copy địa chỉ.",
-    "explanation": "",
+    "explanation": "Chứng minh Java là pass-by-value cho references:",
     "code_example": null,
     "category": "java-core"
   },
@@ -283,7 +283,7 @@
     "lesson_id": "lesson-01-06",
     "name": "Varargs — Internals & Pitfalls",
     "definition": "Variable arguments — compiler tạo array tại call site.",
-    "explanation": "",
+    "explanation": "args là Object[] — compiler tạo array khi gọi",
     "code_example": null,
     "category": "java-core"
   },
@@ -292,7 +292,7 @@
     "lesson_id": "lesson-01-06",
     "name": "Method Overloading — Resolution Rules",
     "definition": "Compiler chọn overloaded method tại compile time theo rules phức tạp.",
-    "explanation": "",
+    "explanation": "Overload resolution (JLS §15.12): Phase 1: Exact match (no boxing, no varargs) Phase 2: Allow boxing/unboxing (no varargs) Phase 3: Allow varargs",
     "code_example": null,
     "category": "java-core"
   },
@@ -301,7 +301,7 @@
     "lesson_id": "lesson-01-06",
     "name": "Recursion — Stack & Optimization",
     "definition": "Method gọi chính nó — mỗi call tạo stack frame mới, có thể StackOverflowError.",
-    "explanation": "",
+    "explanation": "Mỗi recursive call = 1 stack frame (~256-1024 bytes) Default stack size: -Xss512k (platform dependent) → ~1000-5000 recursive calls trước khi StackOverflowError Tail recursion — Java KHÔNG optimize (khác Scala, Kotlin) ❌ Java không có tail call optimization",
     "code_example": null,
     "category": "java-core"
   },
@@ -310,7 +310,7 @@
     "lesson_id": "lesson-01-06",
     "name": "Method Design Principles",
     "definition": "Nguyên tắc thiết kế method cho code sạch, dễ bảo trì.",
-    "explanation": "",
+    "explanation": "1. Single Responsibility — mỗi method làm 1 việc ❌",
     "code_example": null,
     "category": "java-core"
   },
@@ -319,7 +319,7 @@
     "lesson_id": "lesson-01-07",
     "name": "Exception Hierarchy & Design",
     "definition": "Phân cấp exception trong Java và lý do thiết kế.",
-    "explanation": "",
+    "explanation": "Design rationale // Error: JVM/system problems — ứng dụng KHÔNG thể recover // → KHÔNG catch (trừ trường hợp đặc biệt như logging before shutdown)",
     "code_example": null,
     "category": "java-core"
   },
@@ -328,7 +328,7 @@
     "lesson_id": "lesson-01-07",
     "name": "Exception Performance Cost",
     "definition": "Tạo exception object rất tốn kém — chủ yếu do fillInStackTrace().",
-    "explanation": "",
+    "explanation": "Exception creation cost: 1. new Exception() → allocate object (cheap) 2. fillInStackTrace() → walk entire call stack (EXPENSIVE) - Mỗi stack frame: resolve class, method, line number - Deep stack (Spring app): 50-100+ frames - Cost: ~1-10 microseconds (vs ~1 nanosecond cho normal method call) Benchmark: throw/catch vs if/else throw/catch: ~1000-10000x chậm hơn if/else check ❌ Anti-pattern: Exception for control flow",
     "code_example": null,
     "category": "java-core"
   },
@@ -337,7 +337,7 @@
     "lesson_id": "lesson-01-07",
     "name": "try-with-resources — Deep Dive",
     "definition": "Automatic resource management — đảm bảo close() được gọi, xử lý suppressed exceptions.",
-    "explanation": "",
+    "explanation": "AutoCloseable interface",
     "code_example": null,
     "category": "java-core"
   },
@@ -346,7 +346,7 @@
     "lesson_id": "lesson-01-07",
     "name": "Exception Handling Patterns",
     "definition": "Patterns và anti-patterns cho exception handling trong enterprise applications.",
-    "explanation": "",
+    "explanation": "1. Exception Translation — wrap low-level exception thành high-level",
     "code_example": null,
     "category": "java-core"
   },
@@ -355,7 +355,7 @@
     "lesson_id": "lesson-01-07",
     "name": "Custom Exception Design",
     "definition": "Thiết kế exception hierarchy cho ứng dụng — balance giữa granularity và simplicity.",
-    "explanation": "",
+    "explanation": "Base exception cho application",
     "code_example": null,
     "category": "java-core"
   },
@@ -364,7 +364,7 @@
     "lesson_id": "lesson-01-07",
     "name": "InterruptedException",
     "definition": "Exception đặc biệt cho thread interruption — xử lý sai là bug phổ biến.",
-    "explanation": "",
+    "explanation": "InterruptedException thrown bởi: Thread.sleep(), Object.wait(), BlockingQueue.take(), Future.get(), Lock.lockInterruptibly()... ❌ Anti-pattern 1: Nuốt interrupt",
     "code_example": null,
     "category": "java-core"
   },
@@ -373,7 +373,7 @@
     "lesson_id": "lesson-02-01",
     "name": "Object Memory Layout",
     "definition": "Cách JVM lưu trữ object trên heap — header, fields, padding.",
-    "explanation": "",
+    "explanation": "// Ví dụ memory calculation public class User { private long id;        // 8 bytes",
     "code_example": null,
     "category": "oop"
   },
@@ -382,7 +382,7 @@
     "lesson_id": "lesson-02-01",
     "name": "Object Lifecycle & Garbage Collection",
     "definition": "Vòng đời object từ allocation đến GC collection — hiểu để tránh memory leaks.",
-    "explanation": "",
+    "explanation": "Object lifecycle: 1. Allocation (new) → Eden space (Young Generation) 2. Minor GC → Survivor space (nếu còn reachable) 3. Aging (survive multiple GCs) → Old Generation (tenured) 4. Major/Full GC → collected khi unreachable Reachability levels (java.lang.ref): 1. Strong reference — bình thường, GC không thu hồi",
     "code_example": null,
     "category": "oop"
   },
@@ -391,7 +391,7 @@
     "lesson_id": "lesson-02-01",
     "name": "Constructor — Advanced",
     "definition": "Constructor không chỉ khởi tạo — liên quan đến initialization order, this() chaining, và object pub…",
-    "explanation": "",
+    "explanation": "Initialization order (quan trọng cho interview): 1. Static fields và static initializer blocks (theo thứ tự xuất hiện) 2. Instance fields và instance initializer blocks (theo thứ tự xuất hiện) 3. Constructor body",
     "code_example": null,
     "category": "oop"
   },
@@ -400,7 +400,7 @@
     "lesson_id": "lesson-02-01",
     "name": "equals, hashCode, toString — Contract & Pitfalls",
     "definition": "Ba methods từ Object mà mọi class nên override đúng cách.",
-    "explanation": "",
+    "explanation": "equals() contract (JLS): 1. Reflexive: x.equals(x) == true 2. Symmetric: x.equals(y) ↔ y.equals(x) 3. Transitive: x.equals(y) && y.equals(z) → x.equals(z) 4. Consistent: multiple calls → same result (nếu object không đổi) 5. x.equals(null) == false TRAP: instanceof vs getClass() trong equals instanceof: vi phạm symmetry khi có inheritance",
     "code_example": null,
     "category": "oop"
   },
@@ -409,7 +409,7 @@
     "lesson_id": "lesson-02-01",
     "name": "Record (Java 16+)",
     "definition": "Transparent carrier cho immutable data — compiler tự generate constructor, accessors, equals, hashC…",
-    "explanation": "",
+    "explanation": "Record = final class + private final fields + canonical constructor + accessors (no get prefix) + equals + hashCode + toString",
     "code_example": null,
     "category": "oop"
   },
@@ -418,7 +418,7 @@
     "lesson_id": "lesson-02-01",
     "name": "Object Creation Patterns",
     "definition": "Các patterns tạo object ngoài constructor — static factory, builder, prototype.",
-    "explanation": "",
+    "explanation": "1. Static Factory Method — ưu tiên hơn constructor",
     "code_example": null,
     "category": "oop"
   },
@@ -427,7 +427,7 @@
     "lesson_id": "lesson-02-02",
     "name": "Encapsulation vs Information Hiding",
     "definition": "Encapsulation = bundling data + behavior. Information hiding = ẩn implementation details. Hai khái …",
-    "explanation": "",
+    "explanation": "Encapsulation WITHOUT information hiding — vô nghĩa ❌ Getter/setter cho mọi field = expose toàn bộ internal state",
     "code_example": null,
     "category": "oop"
   },
@@ -436,7 +436,7 @@
     "lesson_id": "lesson-02-02",
     "name": "Invariant Protection",
     "definition": "Đảm bảo object luôn ở trạng thái hợp lệ — không thể tạo hoặc chuyển sang trạng thái invalid.",
-    "explanation": "",
+    "explanation": "Class invariant: điều kiện LUÔN đúng cho mọi instance Ví dụ: DateRange — start <= end",
     "code_example": null,
     "category": "oop"
   },
@@ -445,7 +445,7 @@
     "lesson_id": "lesson-02-02",
     "name": "Immutability Strategies",
     "definition": "Các cách tạo immutable objects — từ simple đến deep immutability.",
-    "explanation": "",
+    "explanation": "Level 1: Shallow immutability — final fields, no setters",
     "code_example": null,
     "category": "oop"
   },
@@ -454,7 +454,7 @@
     "lesson_id": "lesson-02-02",
     "name": "Module System (Java 9+)",
     "definition": "Java Platform Module System (JPMS) — encapsulation ở cấp package, mạnh hơn access modifiers.",
-    "explanation": "",
+    "explanation": "module-info.java",
     "code_example": null,
     "category": "oop"
   },
@@ -463,7 +463,7 @@
     "lesson_id": "lesson-02-03",
     "name": "Virtual Method Dispatch (vtable)",
     "definition": "JVM dùng virtual method table để resolve method call tại runtime — nền tảng của polymorphism.",
-    "explanation": "",
+    "explanation": "Mỗi class có một vtable (virtual method table) trong Metaspace vtable = array of method pointers, indexed by method slot Ví dụ:",
     "code_example": null,
     "category": "oop"
   },
@@ -472,7 +472,7 @@
     "lesson_id": "lesson-02-03",
     "name": "Fragile Base Class Problem",
     "definition": "Thay đổi base class có thể break subclasses theo cách không lường trước — lý do chính để ưu tiên co…",
-    "explanation": "",
+    "explanation": "Ví dụ kinh điển từ Effective Java:",
     "code_example": null,
     "category": "oop"
   },
@@ -481,7 +481,7 @@
     "lesson_id": "lesson-02-03",
     "name": "Composition over Inheritance",
     "definition": "Ưu tiên \"has-a\" (composition) hơn \"is-a\" (inheritance) — linh hoạt hơn, ít coupling hơn.",
-    "explanation": "",
+    "explanation": "Khi nào dùng Inheritance: 1. Thực sự là quan hệ \"is-a\" (Dog IS-A Animal) 2. Base class được thiết kế cho inheritance (documented, tested) 3. Không vi phạm LSP (Liskov Substitution Principle) Khi nào dùng Composition: 1. \"has-a\" hoặc \"uses-a\" relationship 2. Cần thay đổi behavior tại runtime 3. Cần combine behaviors từ nhiều sources 4. Base class không được thiết kế cho inheritance Strategy Pattern — composition cho swappable behavior",
     "code_example": null,
     "category": "oop"
   },
@@ -490,7 +490,7 @@
     "lesson_id": "lesson-02-03",
     "name": "Designing for Inheritance",
     "definition": "Nếu class được thiết kế để extend, phải document rõ ràng và test kỹ.",
-    "explanation": "",
+    "explanation": "Effective Java Item 19: Design and document for inheritance or else prohibit it Rules cho class designed for inheritance: 1. Document self-use patterns",
     "code_example": null,
     "category": "oop"
   },
@@ -499,7 +499,7 @@
     "lesson_id": "lesson-02-04",
     "name": "Runtime Polymorphism (Dynamic Dispatch)",
     "definition": "JVM chọn method implementation tại runtime dựa trên actual type của object.",
-    "explanation": "",
+    "explanation": "Polymorphism cho phép Open/Closed Principle",
     "code_example": null,
     "category": "oop"
   },
@@ -508,7 +508,7 @@
     "lesson_id": "lesson-02-04",
     "name": "Covariant Return Types",
     "definition": "Override method có thể return subtype của original return type — hữu ích cho fluent APIs.",
-    "explanation": "",
+    "explanation": "Ứng dụng: Builder pattern với inheritance",
     "code_example": null,
     "category": "oop"
   },
@@ -517,7 +517,7 @@
     "lesson_id": "lesson-02-04",
     "name": "Type Erasure & Polymorphism",
     "definition": "Generics bị erase tại runtime — ảnh hưởng đến polymorphism với generic types.",
-    "explanation": "",
+    "explanation": "Type erasure: List<String> và List<Integer> cùng là List tại runtime",
     "code_example": null,
     "category": "oop"
   },
@@ -526,7 +526,7 @@
     "lesson_id": "lesson-02-04",
     "name": "Ad-hoc Polymorphism (Method Overloading)",
     "definition": "Compile-time polymorphism — compiler chọn method dựa trên static type, KHÔNG phải runtime type.",
-    "explanation": "",
+    "explanation": "Vì overloading resolved tại COMPILE TIME dựa trên declared type (Object) Nếu cần runtime dispatch dựa trên argument type: Pattern 1: instanceof chain (simple but not extensible)",
     "code_example": null,
     "category": "oop"
   },
@@ -535,7 +535,7 @@
     "lesson_id": "lesson-02-05",
     "name": "Interface Evolution (Java 8 → 21)",
     "definition": "Interface trong Java đã tiến hóa từ pure contract thành powerful abstraction mechanism.",
-    "explanation": "",
+    "explanation": "Java 1-7: Chỉ abstract methods + constants",
     "code_example": null,
     "category": "oop"
   },
@@ -544,7 +544,7 @@
     "lesson_id": "lesson-02-05",
     "name": "Diamond Problem & Default Method Conflicts",
     "definition": "Khi class implement 2 interfaces có cùng default method — Java có rules rõ ràng để resolve.",
-    "explanation": "",
+    "explanation": "❌ Compile error: class inherits unrelated defaults public class C implements A, B { } ✅ Must override to resolve conflict",
     "code_example": null,
     "category": "oop"
   },
@@ -553,7 +553,7 @@
     "lesson_id": "lesson-02-05",
     "name": "Abstract Class vs Interface — Decision Guide",
     "definition": "Khi nào dùng cái nào — không chỉ về syntax mà về design intent.",
-    "explanation": "",
+    "explanation": "Interface: DEFINES A CONTRACT (what to do) - \"Can do\" relationship: Comparable, Serializable, Runnable - Multiple inheritance of type - Evolve with default methods - Clients depend on interface, not implementation Abstract Class: SHARES IMPLEMENTATION (how to do) - \"Is a\" relationship with shared state - Template Method pattern - Constructor logic - Non-public members Real-world example: Spring Framework Interface: Repository<T, ID> — contract Abstract class: AbstractRepository — shared implementation Concrete: JpaRepository, MongoRepository — specific implementation Skeleton Implementation pattern (Effective Java) Interface + Abstract class = best of both worlds",
     "code_example": null,
     "category": "oop"
   },
@@ -562,7 +562,7 @@
     "lesson_id": "lesson-02-05",
     "name": "Functional Interface & Lambda",
     "definition": "Interface với đúng 1 abstract method — nền tảng của functional programming trong Java.",
-    "explanation": "",
+    "explanation": "Built-in functional interfaces (java.util.function) Memorize these — dùng hàng ngày: Function<T, R>: T → R",
     "code_example": null,
     "category": "oop"
   },
@@ -571,7 +571,7 @@
     "lesson_id": "lesson-02-05",
     "name": "Sealed Types (Java 17+)",
     "definition": "Restrict hierarchy — chỉ cho phép listed subtypes, enabling exhaustive pattern matching.",
-    "explanation": "",
+    "explanation": "Sealed interface — algebraic data type",
     "code_example": null,
     "category": "oop"
   },
@@ -580,7 +580,7 @@
     "lesson_id": "lesson-02-06",
     "name": "Enum Internals",
     "definition": "Enum constants là static final instances — JVM đảm bảo singleton, serialization-safe, reflection-sa…",
-    "explanation": "",
+    "explanation": "Compiler transforms enum thành:",
     "code_example": null,
     "category": "oop"
   },
@@ -589,7 +589,7 @@
     "lesson_id": "lesson-02-06",
     "name": "EnumSet & EnumMap",
     "definition": "Specialized collections cho enums — dùng bitmask internally, cực kỳ nhanh.",
-    "explanation": "",
+    "explanation": "EnumSet — Set<E extends Enum<E>> backed by bit vector O(1) cho add, remove, contains — nhanh hơn HashSet",
     "code_example": null,
     "category": "oop"
   },
@@ -598,7 +598,7 @@
     "lesson_id": "lesson-02-06",
     "name": "Enum Advanced Patterns",
     "definition": "Enum với abstract methods, interface implementation, và state machine pattern.",
-    "explanation": "",
+    "explanation": "Strategy Pattern với enum",
     "code_example": null,
     "category": "oop"
   },
@@ -607,7 +607,7 @@
     "lesson_id": "lesson-02-07",
     "name": "Single Responsibility Principle (SRP)",
     "definition": "Mỗi class chỉ có MỘT lý do để thay đổi — một actor/stakeholder chịu trách nhiệm.",
-    "explanation": "",
+    "explanation": "SRP không phải \"mỗi class làm 1 việc\" — mà là \"1 lý do thay đổi\" \"Lý do thay đổi\" = actor/stakeholder yêu cầu thay đổi ❌ Vi phạm: Employee class phục vụ 3 actors",
     "code_example": null,
     "category": "oop"
   },
@@ -616,7 +616,7 @@
     "lesson_id": "lesson-02-07",
     "name": "Open/Closed Principle (OCP)",
     "definition": "Mở cho extension, đóng cho modification — thêm behavior mới mà không sửa code cũ.",
-    "explanation": "",
+    "explanation": "OCP thường đạt được qua: Strategy, Template Method, Observer, Plugin architecture Ví dụ thực tế: Notification system ❌ Mỗi lần thêm channel → sửa method",
     "code_example": null,
     "category": "oop"
   },
@@ -625,7 +625,7 @@
     "lesson_id": "lesson-02-07",
     "name": "Liskov Substitution Principle (LSP)",
     "definition": "Subtype phải thay thế được supertype mà không làm sai program behavior — behavioral subtyping.",
-    "explanation": "",
+    "explanation": "LSP formal rules: 1. Preconditions cannot be strengthened in subtype 2. Postconditions cannot be weakened in subtype 3. Invariants of supertype must be preserved 4. History constraint: subtype cannot add state changes supertype doesn't allow ❌ Classic violation: Square extends Rectangle",
     "code_example": null,
     "category": "oop"
   },
@@ -634,7 +634,7 @@
     "lesson_id": "lesson-02-07",
     "name": "Interface Segregation Principle (ISP)",
     "definition": "Clients không nên phụ thuộc vào methods không dùng — chia interface lớn thành nhỏ, focused.",
-    "explanation": "",
+    "explanation": "ISP trong Spring: CrudRepository<T, ID> — basic CRUD PagingAndSortingRepository<T, ID> extends CrudRepository — + paging JpaRepository<T, ID> extends PagingAndSortingRepository — + JPA specific Client chỉ cần CRUD → depend on CrudRepository Client cần paging → depend on PagingAndSortingRepository Không bị force depend on JPA-specific methods ISP cho service interfaces: ❌ Fat interface",
     "code_example": null,
     "category": "oop"
   },
@@ -643,7 +643,7 @@
     "lesson_id": "lesson-02-07",
     "name": "Dependency Inversion Principle (DIP)",
     "definition": "High-level modules không phụ thuộc low-level modules — cả hai phụ thuộc abstractions. Đây là nền tả…",
-    "explanation": "",
+    "explanation": "DIP = Inversion of Control (IoC) ở design level Spring DI = implementation của DIP ❌ High-level depends on low-level",
     "code_example": null,
     "category": "oop"
   },
@@ -652,7 +652,7 @@
     "lesson_id": "lesson-03-01",
     "name": "Type Erasure — Deep Dive",
     "definition": "Compiler xóa generic type info, thay bằng bounds (hoặc Object) — generics chỉ tồn tại tại compile t…",
-    "explanation": "",
+    "explanation": "Compiler transforms:",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -661,7 +661,7 @@
     "lesson_id": "lesson-03-01",
     "name": "PECS — Producer Extends, Consumer Super",
     "definition": "Wildcard guideline: dùng `? extends T` khi đọc (produce), `? super T` khi ghi (consume).",
-    "explanation": "",
+    "explanation": "Producer Extends — đọc items từ collection",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -670,7 +670,7 @@
     "lesson_id": "lesson-03-01",
     "name": "Recursive Type Bounds",
     "definition": "Type parameter tham chiếu đến chính nó — pattern cho self-referential types.",
-    "explanation": "",
+    "explanation": "Pattern: <T extends Comparable<T>> \"T là kiểu có thể so sánh với chính nó\"",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -679,7 +679,7 @@
     "lesson_id": "lesson-03-01",
     "name": "Type Tokens & Super Type Tokens",
     "definition": "Patterns để preserve generic type info tại runtime — vượt qua type erasure.",
-    "explanation": "",
+    "explanation": "Simple type token — Class<T>",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -688,7 +688,7 @@
     "lesson_id": "lesson-03-02",
     "name": "HashMap Internals",
     "definition": "Hash table implementation — array of buckets, separate chaining, treeification (Java 8+).",
-    "explanation": "",
+    "explanation": "Internal structure: Node<K,V>[] table — array of buckets Default initial capacity: 16 Default load factor: 0.75 Resize: double capacity khi size > capacity * loadFactor Hash computation: 1. key.hashCode() → int (32 bits) 2. Spread: hash ^ (hash >>> 16) — mix high bits into low bits 3. Bucket index: hash & (capacity - 1) — bitwise AND (capacity is power of 2) Collision resolution: Java 7: Linked list (O(n) worst case) Java 8+: Linked list → Red-Black tree khi bucket size >= 8 Tree → Linked list khi bucket size <= 6 → Worst case: O(log n) thay vì O(n) Treeification requires: key implements Comparable Nếu không Comparable → compare by identityHashCode (less efficient) Performance implications: Good hashCode: O(1) average for get/put Bad hashCode (all same hash): O(log n) with treeification Resize: O(n) — rehash all entries hashCode() quality matters enormously: ❌ Bad: return 1; → all entries in 1 bucket → O(n) ❌ Bad: return random; → same key different hash → lost entries ✅ Good: Objects.hash(field1, field2) — well-distributed ConcurrentHashMap (Java 8+): - Lock striping: lock per bucket (not entire map) - CAS operations for simple updates - No null keys or values (unlike HashMap) - size() is approximate in concurrent scenarios - computeIfAbsent() is atomic",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -697,7 +697,7 @@
     "lesson_id": "lesson-03-02",
     "name": "ArrayList vs LinkedList — Real Performance",
     "definition": "ArrayList gần như luôn nhanh hơn LinkedList — ngay cả cho insertions.",
-    "explanation": "",
+    "explanation": "Common misconception: \"LinkedList tốt cho insert/delete\" Reality: ArrayList thường nhanh hơn do CPU cache locality ArrayList: contiguous memory → cache-friendly LinkedList: scattered nodes → cache misses Benchmark results (typical): Random access:    ArrayList O(1)  vs LinkedList O(n)     → ArrayList wins Iteration:        ArrayList fast  vs LinkedList slow     → ArrayList wins (cache) Add at end:       ArrayList O(1)* vs LinkedList O(1)     → Similar Add at beginning: ArrayList O(n)  vs LinkedList O(1)     → LinkedList wins Add in middle:    ArrayList O(n)  vs LinkedList O(n)**   → ArrayList often wins! * ArrayList amortized O(1) — occasional O(n) resize ** LinkedList O(n) to FIND position + O(1) to insert But finding position requires traversal → cache misses When to actually use LinkedList: 1. Frequent add/remove at BOTH ends → use as Deque 2. Iterator-based removal during iteration 3. Almost never for general-purpose List ArrayList capacity management:",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -706,7 +706,7 @@
     "lesson_id": "lesson-03-02",
     "name": "Set Implementations",
     "definition": "HashSet, LinkedHashSet, TreeSet — chọn dựa trên ordering requirements.",
-    "explanation": "",
+    "explanation": "HashSet: HashMap internally (value = dummy PRESENT object) O(1) add/remove/contains No ordering guarantee Allows null (1 null element) LinkedHashSet: LinkedHashMap internally O(1) operations + maintains insertion order Slightly slower than HashSet (linked list overhead) TreeSet: TreeMap internally (Red-Black tree) O(log n) operations Sorted order (natural or Comparator) NavigableSet: floor, ceiling, subSet, headSet, tailSet Does NOT allow null (needs comparison) CopyOnWriteArraySet: thread-safe, optimized for read-heavy Every write creates new array copy → expensive writes Iteration never throws ConcurrentModificationException Use for: small sets, read-mostly, event listeners Choosing the right Set: Need fast lookup, no order? → HashSet Need insertion order? → LinkedHashSet Need sorted order? → TreeSet Need thread-safe, read-heavy? → CopyOnWriteArraySet Need thread-safe, write-heavy? → ConcurrentHashMap.newKeySet() Enum values? → EnumSet (always!) Set operations:",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -715,7 +715,7 @@
     "lesson_id": "lesson-03-02",
     "name": "Queue & Deque — Choosing Right Implementation",
     "definition": "Queue (FIFO), Deque (double-ended), PriorityQueue (heap) — mỗi cái cho use case khác.",
-    "explanation": "",
+    "explanation": "ArrayDeque — preferred general-purpose Deque/Stack Resizable circular array — faster than LinkedList for both Stack and Queue No null elements",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -724,7 +724,7 @@
     "lesson_id": "lesson-03-02",
     "name": "Fail-Fast vs Fail-Safe Iterators",
     "definition": "Fail-fast throw ConcurrentModificationException; fail-safe work on copy/snapshot.",
-    "explanation": "",
+    "explanation": "Fail-fast: ArrayList, HashMap, HashSet, etc. Detect structural modification during iteration → throw CME",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -733,7 +733,7 @@
     "lesson_id": "lesson-03-03",
     "name": "Lambda Internals",
     "definition": "Lambda KHÔNG phải anonymous class — JVM dùng invokedynamic + LambdaMetafactory để tạo tại runtime.",
-    "explanation": "",
+    "explanation": "Anonymous class vs Lambda — khác biệt quan trọng: Anonymous class: - Tạo .class file riêng (Outer$1.class) - new object mỗi lần - this = anonymous class instance",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -742,7 +742,7 @@
     "lesson_id": "lesson-03-03",
     "name": "Method Reference Types",
     "definition": "4 loại method reference — mỗi loại có capture behavior khác nhau.",
-    "explanation": "",
+    "explanation": "1. Static method: ClassName::staticMethod",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -751,7 +751,7 @@
     "lesson_id": "lesson-03-03",
     "name": "Stream Pipeline Internals",
     "definition": "Stream pipeline = source + intermediate ops (lazy) + terminal op (triggers execution).",
-    "explanation": "",
+    "explanation": "Stream KHÔNG lưu data — chỉ là pipeline description Execution chỉ xảy ra khi terminal operation được gọi Lazy evaluation — intermediate ops không chạy cho đến khi terminal op",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -760,7 +760,7 @@
     "lesson_id": "lesson-03-03",
     "name": "Collectors — Advanced",
     "definition": "Collectors cho complex aggregation — grouping, partitioning, downstream collectors.",
-    "explanation": "",
+    "explanation": "groupingBy with downstream collector",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -769,7 +769,7 @@
     "lesson_id": "lesson-03-03",
     "name": "Parallel Streams — Pitfalls",
     "definition": "Parallel stream dùng ForkJoinPool — nhưng không phải lúc nào cũng nhanh hơn.",
-    "explanation": "",
+    "explanation": "Parallel stream dùng common ForkJoinPool Default parallelism = Runtime.getRuntime().availableProcessors() - 1 Khi NÊN dùng parallel: 1. Large dataset (>10,000 elements) 2. CPU-intensive operations (không I/O) 3. Stateless, non-interfering operations 4. Source hỗ trợ efficient splitting (ArrayList, array, IntRange) Khi KHÔNG NÊN dùng parallel: 1. Small dataset — overhead > benefit 2. I/O operations — threads block, pool exhausted 3. Ordered operations (limit, findFirst) — coordination overhead 4. LinkedList source — poor splitting (O(n) to split) 5. Shared mutable state — race conditions ❌ Race condition",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -778,7 +778,7 @@
     "lesson_id": "lesson-03-03",
     "name": "Optional — Best Practices",
     "definition": "Container cho nullable values — dùng đúng cách tránh anti-patterns.",
-    "explanation": "",
+    "explanation": "✅ DO: Return Optional from methods that may not have result",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -787,7 +787,7 @@
     "lesson_id": "lesson-03-04",
     "name": "Java Memory Model (JMM)",
     "definition": "JMM (JSR 133) định nghĩa cách threads tương tác qua shared memory — visibility và ordering guarante…",
-    "explanation": "",
+    "explanation": "Problem: Mỗi thread có thể cache variables trong CPU registers/L1 cache → Thread A ghi x=1, Thread B có thể vẫn thấy x=0 JMM defines \"happens-before\" relationships: Nếu action A happens-before action B → B thấy kết quả của A Happens-before rules: 1. Program order: trong cùng thread, statement trước HB statement sau 2. Monitor lock: unlock() HB lock() tiếp theo trên cùng monitor 3. Volatile: write HB read tiếp theo trên cùng volatile variable 4. Thread start: thread.start() HB mọi action trong thread đó 5. Thread join: mọi action trong thread HB join() return 6. Transitivity: A HB B, B HB C → A HB C Visibility problem:",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -796,7 +796,7 @@
     "lesson_id": "lesson-03-04",
     "name": "synchronized — Monitor Lock",
     "definition": "Intrinsic lock (monitor) — mutual exclusion + memory visibility.",
-    "explanation": "",
+    "explanation": "Mỗi object có 1 intrinsic lock (monitor) synchronized block: acquire lock → execute → release lock Lock levels (JVM optimization): 1. Biased locking: assume single thread → no CAS (deprecated Java 15+) 2. Thin lock (lightweight): CAS on mark word → fast for low contention 3. Fat lock (heavyweight): OS mutex → slow but fair for high contention Lock escalation: biased → thin → fat (automatic, based on contention) synchronized method vs block:",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -805,7 +805,7 @@
     "lesson_id": "lesson-03-04",
     "name": "java.util.concurrent — Lock Framework",
     "definition": "Explicit locks với more features than synchronized — tryLock, fairness, read-write separation.",
-    "explanation": "",
+    "explanation": "ReentrantLock — explicit lock with more control",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -814,7 +814,7 @@
     "lesson_id": "lesson-03-04",
     "name": "Atomic Classes & CAS",
     "definition": "Lock-free thread-safe operations dùng Compare-And-Swap (CAS) — nhanh hơn synchronized cho simple op…",
-    "explanation": "",
+    "explanation": "CAS: compareAndSet(expected, new) Hardware instruction: nếu current == expected → set new, return true Nếu current != expected → do nothing, return false (retry)",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -823,7 +823,7 @@
     "lesson_id": "lesson-03-04",
     "name": "CompletableFuture — Async Programming",
     "definition": "Composable async operations — Java's answer to Promises/Futures.",
-    "explanation": "",
+    "explanation": "Async execution",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -832,7 +832,7 @@
     "lesson_id": "lesson-03-04",
     "name": "Virtual Threads (Java 21+)",
     "definition": "Lightweight threads managed by JVM — millions of concurrent threads cho I/O-bound workloads.",
-    "explanation": "",
+    "explanation": "Platform thread: 1:1 mapping to OS thread (~1MB stack, expensive) Virtual thread: M:N mapping (many virtual → few platform), ~1KB stack Create virtual threads",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -841,7 +841,7 @@
     "lesson_id": "lesson-03-05",
     "name": "Annotation Processing Pipeline",
     "definition": "Annotations được xử lý ở 3 giai đoạn: compile-time (APT), class-loading, và runtime (reflection).",
-    "explanation": "",
+    "explanation": "@Retention xác định khi nào annotation tồn tại: SOURCE — chỉ trong source code, compiler xóa Dùng cho: code generation, lint checks",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -850,7 +850,7 @@
     "lesson_id": "lesson-03-05",
     "name": "Custom Annotation Design",
     "definition": "Thiết kế annotation cho framework/library — meta-annotations, repeatable, inherited.",
-    "explanation": "",
+    "explanation": "Full-featured custom annotation",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -859,7 +859,7 @@
     "lesson_id": "lesson-03-05",
     "name": "Reflection — Performance & Alternatives",
     "definition": "Reflection cho phép inspect/modify code tại runtime — powerful nhưng có performance cost.",
-    "explanation": "",
+    "explanation": "Reflection performance cost: 1. No JIT optimization (cannot inline reflective calls) 2. Security checks on every access 3. Boxing/unboxing for primitive parameters 4. Array creation for varargs Benchmark: direct call vs reflection Direct: ~1-2 ns Reflection (first call): ~1000 ns Reflection (cached Method): ~50-100 ns MethodHandle: ~5-10 ns Optimization 1: Cache Method/Field objects ❌ Slow: lookup every time",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -868,7 +868,7 @@
     "lesson_id": "lesson-03-05",
     "name": "Dynamic Proxy",
     "definition": "Tạo proxy object tại runtime implement interfaces — nền tảng của Spring AOP.",
-    "explanation": "",
+    "explanation": "JDK Dynamic Proxy — chỉ cho interfaces",
     "code_example": null,
     "category": "java-advanced"
   },
@@ -877,7 +877,7 @@
     "lesson_id": "lesson-04-01",
     "name": "IoC Container Internals",
     "definition": "Spring Container = BeanFactory + ApplicationContext — quản lý bean definitions, instantiation, wiri…",
-    "explanation": "",
+    "explanation": "Container startup sequence: 1. Load bean definitions (XML, annotations, Java config) 2. BeanFactoryPostProcessor — modify bean definitions Ví dụ: PropertySourcesPlaceholderConfigurer resolve ${...} 3. Instantiate beans (constructor) 4. Populate properties (setter injection, field injection) 5. BeanPostProcessor.postProcessBeforeInitialization Ví dụ: @Autowired resolution, @Value resolution 6. InitializingBean.afterPropertiesSet() / @PostConstruct 7. BeanPostProcessor.postProcessAfterInitialization Ví dụ: AOP proxy creation, @Async proxy 8. Bean ready to use ... 9. @PreDestroy / DisposableBean.destroy() 10. Container shutdown BeanFactory vs ApplicationContext: BeanFactory: lazy initialization, basic DI ApplicationContext: eager initialization + events + i18n + AOP + ... → Luôn dùng ApplicationContext trong production Bean Definition: - Class name - Scope (singleton, prototype, request, session) - Constructor arguments - Property values - Init/destroy methods - Dependencies (autowire candidates) Component scanning:",
     "code_example": null,
     "category": "spring-core"
   },
@@ -886,7 +886,7 @@
     "lesson_id": "lesson-04-01",
     "name": "Dependency Injection — Advanced Patterns",
     "definition": "Ngoài basic constructor/setter/field injection, Spring hỗ trợ nhiều patterns phức tạp.",
-    "explanation": "",
+    "explanation": "1. Constructor Injection — BEST PRACTICE",
     "code_example": null,
     "category": "spring-core"
   },
@@ -895,7 +895,7 @@
     "lesson_id": "lesson-04-01",
     "name": "Bean Resolution & Ambiguity",
     "definition": "Cách Spring chọn bean khi có nhiều candidates — @Primary, @Qualifier, custom qualifiers.",
-    "explanation": "",
+    "explanation": "Khi có nhiều beans cùng type:",
     "code_example": null,
     "category": "spring-core"
   },
@@ -904,7 +904,7 @@
     "lesson_id": "lesson-04-01",
     "name": "Circular Dependencies",
     "definition": "A depends on B, B depends on A — Spring có thể resolve cho setter/field injection nhưng KHÔNG cho c…",
-    "explanation": "",
+    "explanation": "❌ Circular dependency với constructor injection → BeanCurrentlyInCreationException",
     "code_example": null,
     "category": "spring-core"
   },
@@ -913,7 +913,7 @@
     "lesson_id": "lesson-04-01",
     "name": "Bean Scope — Deep Dive",
     "definition": "Scope xác định lifecycle và sharing behavior của beans.",
-    "explanation": "",
+    "explanation": "Singleton (default): 1 instance per container → Stateless services, repositories, configurations ⚠️ KHÔNG lưu request-specific state trong singleton bean! Prototype: new instance mỗi lần inject/getBean → Stateful objects, builders ⚠️ Container KHÔNG quản lý lifecycle (không gọi @PreDestroy) Request: 1 instance per HTTP request (web only)",
     "code_example": null,
     "category": "spring-core"
   },
@@ -922,7 +922,7 @@
     "lesson_id": "lesson-04-02",
     "name": "AOP Proxy Mechanism",
     "definition": "Spring AOP dùng runtime proxies — JDK Dynamic Proxy hoặc CGLIB.",
-    "explanation": "",
+    "explanation": "JDK Dynamic Proxy: target implements interface → Proxy implements same interface, delegates to target Limitation: chỉ intercept interface methods CGLIB Proxy: target không implement interface → Proxy extends target class, override methods Limitation: cannot proxy final classes/methods Spring Boot default: CGLIB cho tất cả (spring.aop.proxy-target-class=true) Self-invocation trap — BUG PHỔ BIẾN NHẤT với AOP",
     "code_example": null,
     "category": "spring-core"
   },
@@ -931,7 +931,7 @@
     "lesson_id": "lesson-04-02",
     "name": "Pointcut Expressions — Advanced",
     "definition": "Pointcut language xác định WHERE advice applies — execution, annotation, within, args.",
-    "explanation": "",
+    "explanation": "execution — most common, match method execution",
     "code_example": null,
     "category": "spring-core"
   },
@@ -940,7 +940,7 @@
     "lesson_id": "lesson-04-02",
     "name": "Advice Ordering & @Transactional Internals",
     "definition": "Khi nhiều aspects apply cùng method — thứ tự quan trọng.",
-    "explanation": "",
+    "explanation": "Advice execution order (same join point): @Around (before proceed) → @Before → Method → @AfterReturning → @After → @Around (after proceed) Multiple aspects — order by @Order",
     "code_example": null,
     "category": "spring-core"
   },
@@ -949,7 +949,7 @@
     "lesson_id": "lesson-05-01",
     "name": "Auto-configuration Mechanism",
     "definition": "Spring Boot tự động cấu hình beans dựa trên classpath, properties, và existing beans.",
-    "explanation": "",
+    "explanation": "Auto-configuration flow: 1. @SpringBootApplication includes @EnableAutoConfiguration 2. Spring loads META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports (trước Spring Boot 3.0: META-INF/spring.factories) 3. Mỗi auto-configuration class có @Conditional annotations 4. Conditions evaluated → beans created if conditions met Ví dụ: DataSourceAutoConfiguration",
     "code_example": null,
     "category": "spring-boot"
   },
@@ -958,7 +958,7 @@
     "lesson_id": "lesson-05-01",
     "name": "@ConfigurationProperties — Type-safe Configuration",
     "definition": "Bind configuration properties vào Java objects — type-safe, validated, IDE-supported.",
-    "explanation": "",
+    "explanation": "Nested configuration",
     "code_example": null,
     "category": "spring-boot"
   },
@@ -967,7 +967,7 @@
     "lesson_id": "lesson-05-01",
     "name": "Profiles & Conditional Configuration",
     "definition": "Tách cấu hình theo môi trường — profiles, conditional beans, feature flags.",
-    "explanation": "",
+    "explanation": "Profile activation: 1. spring.profiles.active=dev,metrics 2. SPRING_PROFILES_ACTIVE=prod 3. --spring.profiles.active=staging 4. SpringApplication.setAdditionalProfiles(\"dev\") Profile groups (Spring Boot 2.4+): spring.profiles.group.production=proddb,prodmq,prodmetrics Activate \"production\" → activates all three Profile-specific beans:",
     "code_example": null,
     "category": "spring-boot"
   },
@@ -976,7 +976,7 @@
     "lesson_id": "lesson-05-01",
     "name": "Actuator & Production Readiness",
     "definition": "Monitoring, health checks, metrics — production-grade observability.",
-    "explanation": "",
+    "explanation": "Custom health indicator",
     "code_example": null,
     "category": "spring-boot"
   },
@@ -985,7 +985,7 @@
     "lesson_id": "lesson-05-02",
     "name": "Request Lifecycle",
     "definition": "HTTP request đi qua nhiều layers trước khi đến controller method.",
-    "explanation": "",
+    "explanation": "// Custom HandlerInterceptor — cross-cutting concerns @Component public class RequestTimingInterceptor implements HandlerInterceptor {",
     "code_example": null,
     "category": "spring-boot"
   },
@@ -994,7 +994,7 @@
     "lesson_id": "lesson-05-02",
     "name": "Error Handling — Production Grade",
     "definition": "Consistent error responses, proper HTTP status codes, và error detail levels.",
-    "explanation": "",
+    "explanation": "RFC 7807 Problem Details (Spring 6+)",
     "code_example": null,
     "category": "spring-boot"
   },
@@ -1003,7 +1003,7 @@
     "lesson_id": "lesson-05-02",
     "name": "API Design Best Practices",
     "definition": "RESTful conventions, versioning, pagination, HATEOAS.",
-    "explanation": "",
+    "explanation": "URL design: GET    /api/v1/users          — list users GET    /api/v1/users/123      — get user POST   /api/v1/users          — create user PUT    /api/v1/users/123      — full update PATCH  /api/v1/users/123      — partial update DELETE /api/v1/users/123      — delete user GET    /api/v1/users/123/orders — nested resource API Versioning strategies: 1. URL path: /api/v1/users (most common, clear) 2. Header: Accept: application/vnd.example.v1+json 3. Query param: /api/users?version=1 Pagination response:",
     "code_example": null,
     "category": "spring-boot"
   },
@@ -1012,7 +1012,7 @@
     "lesson_id": "lesson-06-01",
     "name": "Entity Lifecycle & Persistence Context",
     "definition": "JPA Entity có 4 states — Transient, Managed, Detached, Removed. Persistence Context (EntityManager)…",
-    "explanation": "",
+    "explanation": "Entity states: Transient: new object, not in DB, not managed",
     "code_example": null,
     "category": "spring-data"
   },
@@ -1021,7 +1021,7 @@
     "lesson_id": "lesson-06-01",
     "name": "N+1 Problem & Solutions",
     "definition": "Loading N child collections triggers N additional queries — most common JPA performance issue.",
-    "explanation": "",
+    "explanation": "N+1 Problem:",
     "code_example": null,
     "category": "spring-data"
   },
@@ -1030,7 +1030,7 @@
     "lesson_id": "lesson-06-01",
     "name": "Transaction Isolation & Locking",
     "definition": "Isolation levels và locking strategies cho concurrent data access.",
-    "explanation": "",
+    "explanation": "Isolation levels: READ_UNCOMMITTED: dirty reads possible (rarely used) READ_COMMITTED: no dirty reads (PostgreSQL default) REPEATABLE_READ: no dirty/non-repeatable reads (MySQL InnoDB default) SERIALIZABLE: no phantom reads (slowest)",
     "code_example": null,
     "category": "spring-data"
   },
@@ -1039,7 +1039,7 @@
     "lesson_id": "lesson-06-01",
     "name": "Query Optimization",
     "definition": "Techniques để optimize JPA queries cho production workloads.",
-    "explanation": "",
+    "explanation": "1. Use projections — load only needed columns",
     "code_example": null,
     "category": "spring-data"
   },
@@ -1048,7 +1048,7 @@
     "lesson_id": "lesson-07-01",
     "name": "Security Filter Chain Architecture",
     "definition": "Spring Security = chain of servlet filters — mỗi filter xử lý một security concern.",
-    "explanation": "",
+    "explanation": "Filter chain order (simplified): 1. SecurityContextPersistenceFilter — load/save SecurityContext 2. CorsFilter — CORS headers 3. CsrfFilter — CSRF protection 4. LogoutFilter — handle /logout 5. UsernamePasswordAuthenticationFilter — form login 6. BasicAuthenticationFilter — HTTP Basic 7. BearerTokenAuthenticationFilter — OAuth2/JWT 8. ExceptionTranslationFilter — convert security exceptions to HTTP responses 9. FilterSecurityInterceptor — authorization check Custom filter chain:",
     "code_example": null,
     "category": "spring-security"
   },
@@ -1057,7 +1057,7 @@
     "lesson_id": "lesson-07-01",
     "name": "JWT Authentication — Production Implementation",
     "definition": "Stateless authentication bằng signed tokens — không cần server-side session.",
-    "explanation": "",
+    "explanation": "JWT structure: header.payload.signature Header: {\"alg\": \"HS256\", \"typ\": \"JWT\"} Payload: {\"sub\": \"user@example.com\", \"roles\": [\"USER\"], \"iat\": ..., \"exp\": ...} Signature: HMAC-SHA256(base64(header) + \".\" + base64(payload), secret)",
     "code_example": null,
     "category": "spring-security"
   },
@@ -1066,7 +1066,7 @@
     "lesson_id": "lesson-07-01",
     "name": "Method Security & Authorization",
     "definition": "Fine-grained authorization tại method level — SpEL expressions, custom permission evaluators.",
-    "explanation": "",
+    "explanation": "Role-based",
     "code_example": null,
     "category": "spring-security"
   },
@@ -1075,7 +1075,7 @@
     "lesson_id": "lesson-07-01",
     "name": "Common Security Vulnerabilities",
     "definition": "OWASP Top 10 vulnerabilities và cách Spring Security bảo vệ.",
-    "explanation": "",
+    "explanation": "1. SQL Injection — Spring Data JPA parameterized queries protect ❌ Vulnerable:",
     "code_example": null,
     "category": "spring-security"
   },
@@ -1084,7 +1084,7 @@
     "lesson_id": "lesson-08-01",
     "name": "Microservices Trade-offs",
     "definition": "Microservices không phải silver bullet — hiểu trade-offs trước khi adopt.",
-    "explanation": "",
+    "explanation": "Monolith advantages:",
     "code_example": null,
     "category": "spring-cloud"
   },
@@ -1093,7 +1093,7 @@
     "lesson_id": "lesson-08-01",
     "name": "Service Communication Patterns",
     "definition": "Synchronous (REST, gRPC) vs Asynchronous (messaging) — mỗi cái cho use case khác.",
-    "explanation": "",
+    "explanation": "Synchronous — REST with WebClient (reactive, non-blocking)",
     "code_example": null,
     "category": "spring-cloud"
   },
@@ -1102,7 +1102,7 @@
     "lesson_id": "lesson-08-01",
     "name": "Resilience Patterns",
     "definition": "Patterns để handle failures trong distributed systems — Circuit Breaker, Retry, Bulkhead, Rate Limi…",
-    "explanation": "",
+    "explanation": "Resilience4j — lightweight fault tolerance library Circuit Breaker — prevent cascade failures",
     "code_example": null,
     "category": "spring-cloud"
   },
@@ -1111,7 +1111,7 @@
     "lesson_id": "lesson-08-01",
     "name": "Distributed Data Patterns",
     "definition": "Patterns cho data consistency across microservices — Saga, CQRS, Event Sourcing.",
-    "explanation": "",
+    "explanation": "Saga Pattern — distributed transaction as sequence of local transactions Each service: local transaction + publish event If any step fails: compensating transactions undo previous steps Choreography Saga (event-driven): OrderService: create order → publish OrderCreated PaymentService: listen OrderCreated → charge → publish PaymentCompleted InventoryService: listen PaymentCompleted → reserve → publish InventoryReserved OrderService: listen InventoryReserved → confirm order Compensation: PaymentService: charge fails → publish PaymentFailed OrderService: listen PaymentFailed → cancel order Orchestration Saga (central coordinator):",
     "code_example": null,
     "category": "spring-cloud"
   },
@@ -1120,7 +1120,7 @@
     "lesson_id": "lesson-08-01",
     "name": "Observability — Logging, Metrics, Tracing",
     "definition": "Three pillars of observability cho microservices — logs, metrics, distributed tracing.",
-    "explanation": "",
+    "explanation": "Distributed Tracing — Micrometer Tracing (Spring Boot 3+) Replaces Spring Cloud Sleuth Trace: entire request journey across services Span: single operation within a trace Auto-instrumented: RestTemplate, WebClient, @Async, messaging Log correlation: traceId and spanId in MDC [order-service,traceId=abc123,spanId=def456] Processing order... [payment-service,traceId=abc123,spanId=ghi789] Charging payment... Same traceId → same request chain Structured logging",
     "code_example": null,
     "category": "spring-cloud"
   },
@@ -1129,7 +1129,7 @@
     "lesson_id": "lesson-09-01",
     "name": "Architecture Decision Records (ADR)",
     "definition": "Document architecture decisions — context, decision, consequences.",
-    "explanation": "",
+    "explanation": "# ADR-001: Use PostgreSQL as primary database",
     "code_example": null,
     "category": "real-world"
   },
@@ -1138,7 +1138,7 @@
     "lesson_id": "lesson-09-01",
     "name": "Testing Pyramid — Production Strategy",
     "definition": "Unit → Integration → E2E — mỗi level có purpose và cost khác nhau.",
-    "explanation": "",
+    "explanation": "Testing pyramid: /  E2E  \\        Few, slow, expensive / Contract \\      API contract verification / Integration \\    DB, HTTP, messaging /    Unit       \\   Many, fast, cheap Unit Test — test business logic in isolation",
     "code_example": null,
     "category": "real-world"
   },
@@ -1147,7 +1147,7 @@
     "lesson_id": "lesson-09-01",
     "name": "Performance Engineering",
     "definition": "Systematic approach to performance — profiling, benchmarking, optimization.",
-    "explanation": "",
+    "explanation": "1. Measure first — don't optimize prematurely Tools: JMH (microbenchmark), JProfiler, async-profiler, Micrometer JMH Benchmark",
     "code_example": null,
     "category": "real-world"
   },
@@ -1156,7 +1156,7 @@
     "lesson_id": "lesson-09-01",
     "name": "Common Anti-patterns — Senior Perspective",
     "definition": "Design và implementation mistakes phổ biến trong production systems.",
-    "explanation": "",
+    "explanation": "1. Distributed Monolith — worst of both worlds Microservices that are tightly coupled, must deploy together Fix: ensure services can deploy and fail independently 2. Shared Database — coupling through data Multiple services access same tables Fix: database per service, API for data access 3. Chatty Services — too many inter-service calls Order service calls User, Product, Inventory, Payment for every request Fix: aggregate data, cache, async events, BFF pattern 4. Anemic Domain Model — entities without behavior ❌ All logic in services, entities are just data holders",
     "code_example": null,
     "category": "real-world"
   }

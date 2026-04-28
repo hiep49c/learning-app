@@ -10,6 +10,9 @@ import QuizQuestion from './QuizQuestion';
 import LessonProgress from './LessonProgress';
 import QuizAttempt from './QuizAttempt';
 import Bookmark from './Bookmark';
+import VocabCard from './VocabCard';
+import VocabReview from './VocabReview';
+import DailySession from './DailySession';
 
 export const modelClasses = [
   UserProfile,
@@ -24,6 +27,9 @@ export const modelClasses = [
   LessonProgress,
   QuizAttempt,
   Bookmark,
+  VocabCard,
+  VocabReview,
+  DailySession,
 ];
 
 export {
@@ -39,4 +45,7 @@ export {
   LessonProgress,
   QuizAttempt,
   Bookmark,
+  VocabCard,
+  VocabReview,
+  DailySession,
 };

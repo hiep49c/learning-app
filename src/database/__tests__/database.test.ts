@@ -28,10 +28,10 @@ describe('Database initialization', () => {
   });
 
   it('has the correct schema version', () => {
-    expect(database.schema.version).toBe(1);
+    expect(database.schema.version).toBe(2);
   });
 
-  it('has all 12 tables registered', () => {
+  it('has all 15 tables registered', () => {
     const expectedTables = [
       'user_profiles',
       'modules',
@@ -45,12 +45,15 @@ describe('Database initialization', () => {
       'lesson_progress',
       'quiz_attempts',
       'bookmarks',
+      'vocab_cards',
+      'vocab_reviews',
+      'daily_sessions',
     ];
 
     const tableNames = Object.keys(database.schema.tables);
     for (const table of expectedTables) {
       expect(tableNames).toContain(table);
     }
-    expect(tableNames).toHaveLength(expectedTables.length);
+    expect(tableNames).toHaveLength(15);
   });
 });

@@ -12,11 +12,14 @@ import {
   LessonProgress,
   QuizAttempt,
   Bookmark,
+  VocabCard,
+  VocabReview,
+  DailySession,
 } from '../models';
 
 describe('WatermelonDB Model classes', () => {
-  it('exports modelClasses array with all 12 models', () => {
-    expect(modelClasses).toHaveLength(12);
+  it('exports modelClasses array with all 15 models', () => {
+    expect(modelClasses).toHaveLength(15);
   });
 
   it('exports all model classes individually', () => {
@@ -32,6 +35,9 @@ describe('WatermelonDB Model classes', () => {
     expect(LessonProgress).toBeDefined();
     expect(QuizAttempt).toBeDefined();
     expect(Bookmark).toBeDefined();
+    expect(VocabCard).toBeDefined();
+    expect(VocabReview).toBeDefined();
+    expect(DailySession).toBeDefined();
   });
 
   it('modelClasses contains all exported model classes', () => {
@@ -48,6 +54,9 @@ describe('WatermelonDB Model classes', () => {
       LessonProgress,
       QuizAttempt,
       Bookmark,
+  VocabCard,
+  VocabReview,
+  DailySession,
     ];
     expectedClasses.forEach((cls) => {
       expect(modelClasses).toContain(cls);
@@ -55,7 +64,7 @@ describe('WatermelonDB Model classes', () => {
   });
 
   describe('static table names match schema', () => {
-    const expectedTables: [typeof UserProfile | typeof Module | typeof ModulePrerequisite | typeof Lesson | typeof Keyword | typeof KeywordRelation | typeof CodeExample | typeof Quiz | typeof QuizQuestion | typeof LessonProgress | typeof QuizAttempt | typeof Bookmark, string][] = [
+    const expectedTables: [typeof UserProfile | typeof Module | typeof ModulePrerequisite | typeof Lesson | typeof Keyword | typeof KeywordRelation | typeof CodeExample | typeof Quiz | typeof QuizQuestion | typeof LessonProgress | typeof QuizAttempt | typeof Bookmark | typeof VocabCard | typeof VocabReview | typeof DailySession, string][] = [
       [UserProfile, 'user_profiles'],
       [Module, 'modules'],
       [ModulePrerequisite, 'module_prerequisites'],
@@ -68,6 +77,9 @@ describe('WatermelonDB Model classes', () => {
       [LessonProgress, 'lesson_progress'],
       [QuizAttempt, 'quiz_attempts'],
       [Bookmark, 'bookmarks'],
+      [VocabCard, 'vocab_cards'],
+      [VocabReview, 'vocab_reviews'],
+      [DailySession, 'daily_sessions'],
     ];
 
     it.each(expectedTables)('%p has table name %s', (ModelClass, tableName) => {
