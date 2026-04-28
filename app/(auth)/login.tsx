@@ -33,6 +33,7 @@ import {
 import type { MD3Theme } from 'react-native-paper';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { router } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useAuthStore } from '@/stores/authStore';
 import type { UserProfileData } from '@/stores/authStore';
@@ -85,12 +86,18 @@ export default function LoginScreen() {
     void init();
   }, [loadProfiles]);
 
-  // ── Auto-login: single profile with no PIN ──
+  // ── Auto-login: single profile with no PIN (skip if user just logged out) ──
 
   useEffect(() => {
     if (isLoading) return;
     if (profiles.length === 1 && profiles[0]!.pinHash === null) {
-      void handleLogin(profiles[0]!);
+      void AsyncStorage.getItem('@explicit_logout').then((flag) => {
+        if (flag === 'true') {
+          void AsyncStorage.removeItem('@explicit_logout');
+          return;
+        }
+        void handleLogin(profiles[0]!);
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoading, profiles]);

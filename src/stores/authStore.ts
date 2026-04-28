@@ -97,6 +97,7 @@ export const useAuthStore = create<AuthState & AuthActions>()(
     logout: async (): Promise<void> => {
       try {
         await AsyncStorage.removeItem(CURRENT_USER_KEY);
+        await AsyncStorage.setItem('@explicit_logout', 'true');
 
         set((state) => {
           state.currentUser = null;
