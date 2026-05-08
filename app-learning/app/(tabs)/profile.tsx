@@ -35,8 +35,6 @@ import { useProgressStore } from '@/stores/progressStore';
 import { useCourseStore } from '@/stores/courseStore';
 import { useAppTheme } from '@/theme/useAppTheme';
 import type { ThemePreference } from '@/theme';
-import { database } from '@/database';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // ─── Avatar icons (same as login) ───
 
@@ -65,7 +63,6 @@ export default function ProfileScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [showResetDialog, setShowResetDialog] = useState(false);
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
-  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
 
   // ── Load data on mount ──
 
@@ -100,19 +97,6 @@ export default function ProfileScreen() {
     await logout();
     router.replace('/(auth)/login');
   }, [logout]);
-
-  const handleDeleteAccount = useCallback(async () => {
-    setShowDeleteDialog(false);
-    try {
-      await database.write(async () => {
-        await database.unsafeResetDatabase();
-      });
-      await AsyncStorage.clear();
-    } catch (e) {
-      console.error('[Profile] deleteAccount failed:', e);
-    }
-    router.replace('/(auth)/login');
-  }, []);
 
   const handleThemeChange = useCallback(
     (value: string) => {
@@ -272,18 +256,6 @@ export default function ProfileScreen() {
         >
           Đăng xuất
         </Button>
-
-        <Button
-          mode="outlined"
-          icon="delete-forever"
-          onPress={() => setShowDeleteDialog(true)}
-          style={[styles.actionButton, { borderColor: theme.colors.error }]}
-          contentStyle={styles.actionButtonContent}
-          textColor={theme.colors.error}
-          accessibilityLabel="Xóa tài khoản và toàn bộ dữ liệu"
-        >
-          Xóa tài khoản
-        </Button>
       </View>
 
       <View style={styles.bottomSpacer} />
@@ -323,26 +295,6 @@ export default function ProfileScreen() {
             </Button>
             <Button onPress={handleLogout} accessibilityLabel="Đăng xuất">
               Đăng xuất
-            </Button>
-          </Dialog.Actions>
-        </Dialog>
-      </Portal>
-
-      {/* Delete account confirmation dialog */}
-      <Portal>
-        <Dialog visible={showDeleteDialog} onDismiss={() => setShowDeleteDialog(false)}>
-          <Dialog.Title>Xóa tài khoản</Dialog.Title>
-          <Dialog.Content>
-            <Text variant="bodyMedium">
-              Toàn bộ dữ liệu sẽ bị xóa vĩnh viễn: tài khoản, tiến trình học, từ vựng đã học, bookmark... Không thể khôi phục.
-            </Text>
-          </Dialog.Content>
-          <Dialog.Actions>
-            <Button onPress={() => setShowDeleteDialog(false)} accessibilityLabel="Hủy">
-              Hủy
-            </Button>
-            <Button onPress={handleDeleteAccount} textColor={theme.colors.error} accessibilityLabel="Xóa vĩnh viễn">
-              Xóa vĩnh viễn
             </Button>
           </Dialog.Actions>
         </Dialog>

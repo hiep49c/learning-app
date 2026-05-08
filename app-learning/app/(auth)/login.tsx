@@ -37,6 +37,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useAuthStore } from '@/stores/authStore';
 import type { UserProfileData } from '@/stores/authStore';
+import { database } from '@/database';
 
 // ─── Constants ───
 
@@ -69,6 +70,7 @@ export default function LoginScreen() {
   const [attempts, setAttempts] = useState(0);
   const [cooldownRemaining, setCooldownRemaining] = useState(0);
   const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [newName, setNewName] = useState('');
   const [newPin, setNewPin] = useState('');
   const [isCreating, setIsCreating] = useState(false);
@@ -211,6 +213,19 @@ export default function LoginScreen() {
       setIsCreating(false);
     }
   }, [newName, newPin, createProfile, handleLogin]);
+
+  const handleDeleteAccount = useCallback(async () => {
+    setShowDeleteDialog(false);
+    try {
+      await database.write(async () => {
+        await database.unsafeResetDatabase();
+      });
+      await AsyncStorage.clear();
+      await loadProfiles();
+    } catch (e) {
+      console.error('[Login] deleteAccount failed:', e);
+    }
+  }, [loadProfiles]);
 
   // ── Render avatar ──
 
@@ -392,6 +407,37 @@ export default function LoginScreen() {
         Tạo hồ sơ mới
       </Button>
 
+      {profiles.length > 0 && (
+        <Button
+          mode="text"
+          icon="delete-forever"
+          onPress={() => setShowDeleteDialog(true)}
+          textColor={theme.colors.error}
+          style={styles.deleteButton}
+          accessibilityLabel="Xóa tài khoản và toàn bộ dữ liệu"
+        >
+          Xóa tài khoản
+        </Button>
+      )}
+
+      {/* Delete Account Dialog */}
+      <Portal>
+        <Dialog visible={showDeleteDialog} onDismiss={() => setShowDeleteDialog(false)}>
+          <Dialog.Title>Xóa tài khoản</Dialog.Title>
+          <Dialog.Content>
+            <Text variant="bodyMedium">
+              Toàn bộ dữ liệu sẽ bị xóa vĩnh viễn: tất cả hồ sơ, tiến trình học, từ vựng, bookmark... Không thể khôi phục.
+            </Text>
+          </Dialog.Content>
+          <Dialog.Actions>
+            <Button onPress={() => setShowDeleteDialog(false)} accessibilityLabel="Hủy">Hủy</Button>
+            <Button onPress={handleDeleteAccount} textColor={theme.colors.error} accessibilityLabel="Xóa vĩnh viễn">
+              Xóa vĩnh viễn
+            </Button>
+          </Dialog.Actions>
+        </Dialog>
+      </Portal>
+
       {/* Create Profile Dialog */}
       <Portal>
         <Dialog
@@ -493,6 +539,9 @@ const styles = StyleSheet.create({
   },
   createButtonContent: {
     minHeight: 48,
+  },
+  deleteButton: {
+    marginBottom: 8,
   },
   pinContainer: {
     alignItems: 'center',
