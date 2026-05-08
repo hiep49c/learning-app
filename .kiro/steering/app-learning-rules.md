@@ -45,3 +45,17 @@ fileMatchPattern: "**/app-learning/**/*.ts,**/app-learning/**/*.tsx,**/app-learn
   2. Check `parsed?.sections` → dùng `parsed.sections`
   3. Normalize key: nếu section có `content` mà không có `text` → copy `content` sang `text`
 - Đã fix ở 3 files: `english/[lessonId].tsx`, `learn/[lessonId].tsx`, `course/[lessonId].tsx`
+
+## Android allowBackup — Dữ liệu tồn tại sau khi gỡ cài đặt
+
+- `android:allowBackup` trong `AndroidManifest.xml` PHẢI là `"false"`
+- Nếu `true`: Android Auto Backup sẽ restore SQLite DB + SharedPreferences khi cài lại → user thấy data cũ
+- Hiện tại đã set `false` — gỡ app = mất hết data
+
+## Xóa tài khoản / hồ sơ
+
+- Chức năng xóa nằm ở màn hình **Chọn hồ sơ** (`app/(auth)/login.tsx`), KHÔNG ở Profile
+- 2 loại xóa:
+  - **Xóa từng hồ sơ**: icon delete trên mỗi profile card → xóa profile + data liên quan (lesson_progress, vocab_cards, vocab_reviews, daily_sessions, bookmarks)
+  - **Xóa tất cả**: `database.unsafeResetDatabase()` + `AsyncStorage.clear()` → app reset hoàn toàn
+- Khi thêm table mới có `user_id`: PHẢI thêm vào danh sách tables trong `handleDeleteProfile`
