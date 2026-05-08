@@ -102,7 +102,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hiepnt/.gradle/caches
 	android:label
 		ADDED from /home/hiepnt/projects/app/app-vietlot/app/src/main/AndroidManifest.xml:10:9-41
 	android:icon
-		ADDED from /home/hiepnt/projects/app/app-vietlot/app/src/main/AndroidManifest.xml:9:9-45
+		ADDED from /home/hiepnt/projects/app/app-vietlot/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
 		ADDED from /home/hiepnt/projects/app/app-vietlot/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
