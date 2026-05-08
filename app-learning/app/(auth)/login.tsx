@@ -38,6 +38,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuthStore } from '@/stores/authStore';
 import type { UserProfileData } from '@/stores/authStore';
 import { database } from '@/database';
+import { Q } from '@nozbe/watermelondb';
 
 // ─── Constants ───
 
@@ -71,6 +72,8 @@ export default function LoginScreen() {
   const [cooldownRemaining, setCooldownRemaining] = useState(0);
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [showDeleteAllDialog, setShowDeleteAllDialog] = useState(false);
+  const [profileToDelete, setProfileToDelete] = useState<UserProfileData | null>(null);
   const [newName, setNewName] = useState('');
   const [newPin, setNewPin] = useState('');
   const [isCreating, setIsCreating] = useState(false);
@@ -214,8 +217,29 @@ export default function LoginScreen() {
     }
   }, [newName, newPin, createProfile, handleLogin]);
 
-  const handleDeleteAccount = useCallback(async () => {
+  const handleDeleteProfile = useCallback(async () => {
+    if (!profileToDelete) return;
     setShowDeleteDialog(false);
+    try {
+      await database.write(async () => {
+        const record = await database.get('user_profiles').find(profileToDelete.id);
+        await record.destroyPermanently();
+        // Delete related data
+        const tables = ['lesson_progress', 'vocab_cards', 'vocab_reviews', 'daily_sessions', 'bookmarks'];
+        for (const table of tables) {
+          const records = await database.get(table).query(Q.where('user_id', profileToDelete.id)).fetch();
+          for (const r of records) await r.destroyPermanently();
+        }
+      });
+      await loadProfiles();
+    } catch (e) {
+      console.error('[Login] deleteProfile failed:', e);
+    }
+    setProfileToDelete(null);
+  }, [profileToDelete, loadProfiles]);
+
+  const handleDeleteAll = useCallback(async () => {
+    setShowDeleteAllDialog(false);
     try {
       await database.write(async () => {
         await database.unsafeResetDatabase();
@@ -223,7 +247,7 @@ export default function LoginScreen() {
       await AsyncStorage.clear();
       await loadProfiles();
     } catch (e) {
-      console.error('[Login] deleteAccount failed:', e);
+      console.error('[Login] deleteAll failed:', e);
     }
   }, [loadProfiles]);
 
@@ -265,6 +289,13 @@ export default function LoginScreen() {
               </Text>
             )}
           </View>
+          <IconButton
+            icon="delete-outline"
+            size={20}
+            iconColor={theme.colors.error}
+            onPress={() => { setProfileToDelete(item); setShowDeleteDialog(true); }}
+            accessibilityLabel={`Xóa hồ sơ ${item.name}`}
+          />
           <MaterialCommunityIcons
             name="chevron-right"
             size={24}
@@ -411,28 +442,46 @@ export default function LoginScreen() {
         <Button
           mode="text"
           icon="delete-forever"
-          onPress={() => setShowDeleteDialog(true)}
+          onPress={() => setShowDeleteAllDialog(true)}
           textColor={theme.colors.error}
           style={styles.deleteButton}
-          accessibilityLabel="Xóa tài khoản và toàn bộ dữ liệu"
+          accessibilityLabel="Xóa tất cả dữ liệu"
         >
-          Xóa tài khoản
+          Xóa tất cả dữ liệu
         </Button>
       )}
 
-      {/* Delete Account Dialog */}
+      {/* Delete single profile Dialog */}
       <Portal>
         <Dialog visible={showDeleteDialog} onDismiss={() => setShowDeleteDialog(false)}>
-          <Dialog.Title>Xóa tài khoản</Dialog.Title>
+          <Dialog.Title>Xóa hồ sơ</Dialog.Title>
           <Dialog.Content>
             <Text variant="bodyMedium">
-              Toàn bộ dữ liệu sẽ bị xóa vĩnh viễn: tất cả hồ sơ, tiến trình học, từ vựng, bookmark... Không thể khôi phục.
+              Xóa hồ sơ "{profileToDelete?.name}" và toàn bộ tiến trình học của hồ sơ này? Không thể khôi phục.
             </Text>
           </Dialog.Content>
           <Dialog.Actions>
             <Button onPress={() => setShowDeleteDialog(false)} accessibilityLabel="Hủy">Hủy</Button>
-            <Button onPress={handleDeleteAccount} textColor={theme.colors.error} accessibilityLabel="Xóa vĩnh viễn">
-              Xóa vĩnh viễn
+            <Button onPress={handleDeleteProfile} textColor={theme.colors.error} accessibilityLabel="Xóa">
+              Xóa
+            </Button>
+          </Dialog.Actions>
+        </Dialog>
+      </Portal>
+
+      {/* Delete ALL data Dialog */}
+      <Portal>
+        <Dialog visible={showDeleteAllDialog} onDismiss={() => setShowDeleteAllDialog(false)}>
+          <Dialog.Title>Xóa tất cả dữ liệu</Dialog.Title>
+          <Dialog.Content>
+            <Text variant="bodyMedium">
+              Xóa TẤT CẢ hồ sơ, tiến trình, từ vựng, bookmark... App sẽ trở về trạng thái mới cài. Không thể khôi phục.
+            </Text>
+          </Dialog.Content>
+          <Dialog.Actions>
+            <Button onPress={() => setShowDeleteAllDialog(false)} accessibilityLabel="Hủy">Hủy</Button>
+            <Button onPress={handleDeleteAll} textColor={theme.colors.error} accessibilityLabel="Xóa tất cả">
+              Xóa tất cả
             </Button>
           </Dialog.Actions>
         </Dialog>
