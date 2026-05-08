@@ -81,7 +81,20 @@ export default function LessonScreen() {
         const contentStr = raw['content_json'];
         if (typeof contentStr === 'string' && contentStr.length > 2) {
           const parsed = JSON.parse(contentStr);
-          if (parsed?.sections?.length > 0) setContent(parsed as LessonContent);
+          let sections: ContentSection[] = [];
+          if (Array.isArray(parsed)) {
+            sections = parsed;
+          } else if (parsed?.sections?.length > 0) {
+            sections = parsed.sections;
+          }
+          // Normalize: some data uses 'content' key instead of 'text'
+          sections = sections.map((s: Record<string, unknown>) => {
+            if (s['content'] != null && s['text'] == null) {
+              return { ...s, text: s['content'] } as unknown as ContentSection;
+            }
+            return s as unknown as ContentSection;
+          });
+          if (sections.length > 0) setContent({ sections });
         }
 
         // Find prev/next lessons in same module

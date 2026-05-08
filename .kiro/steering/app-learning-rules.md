@@ -35,3 +35,13 @@ fileMatchPattern: "**/app-learning/**/*.ts,**/app-learning/**/*.tsx,**/app-learn
 - Seed: `node scripts/generate-vocab-seed.js` → `assets/seed-data/vocab-*.json`
 - Docx: `python3 scripts/export-dictionary.py` → `English-Dictionary.docx`
 - Khi enrich vocab files → chạy lại cả pipeline + bump seed version
+
+## content_json format khác nhau giữa Java và English
+
+- **Java lessons**: `content_json` = `{"sections": [...]}` (object), sections dùng key `text`
+- **English vocab lessons**: `content_json` = `[...]` (flat array), sections dùng key `content`
+- Khi parse content_json trong lesson screens: PHẢI handle cả 2 format:
+  1. Check `Array.isArray(parsed)` → dùng trực tiếp làm sections
+  2. Check `parsed?.sections` → dùng `parsed.sections`
+  3. Normalize key: nếu section có `content` mà không có `text` → copy `content` sang `text`
+- Đã fix ở 3 files: `english/[lessonId].tsx`, `learn/[lessonId].tsx`, `course/[lessonId].tsx`
