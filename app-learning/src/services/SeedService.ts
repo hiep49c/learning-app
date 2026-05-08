@@ -133,15 +133,36 @@ async function batchCreate<T extends { id: string }>(
 ): Promise<void> {
   if (items.length === 0) return;
 
-  await db.write(async () => {
-    const batch = items.map((item) =>
-      collection.prepareCreate((record) => {
-        record._raw.id = item.id;
-        setFields(record, item);
-      }),
-    );
-    await db.batch(...batch);
-  });
+  // Batch in chunks of 200 to avoid memory pressure on low-end devices
+  for (let i = 0; i < items.length; i += 200) {
+    const chunk = items.slice(i, i + 200);
+    try {
+      await db.write(async () => {
+        const batch = chunk.map((item) =>
+          collection.prepareCreate((record) => {
+            record._raw.id = item.id;
+            setFields(record, item);
+          }),
+        );
+        await db.batch(...batch);
+      });
+    } catch {
+      // If batch fails (likely duplicate IDs from partial previous seed),
+      // insert one by one, skipping existing
+      for (const item of chunk) {
+        try {
+          await collection.find(item.id);
+        } catch {
+          await db.write(async () => {
+            await collection.create((record) => {
+              record._raw.id = item.id;
+              setFields(record, item);
+            });
+          });
+        }
+      }
+    }
+  }
 }
 
 // ─── Field setters per table ───
@@ -226,15 +247,7 @@ function setModulePrerequisiteFields(record: Model, item: ModulePrerequisiteSeed
 async function seedModule(db: Database, moduleItem: ModuleSeed): Promise<void> {
   const moduleId = moduleItem.id;
 
-  // Skip if this module already exists
-  try {
-    await db.get('modules').find(moduleId);
-    return;
-  } catch {
-    // Not found — proceed with seeding
-  }
-
-  // 1. Create the module record
+  // Create module if not exists
   await batchCreate(db, db.get('modules'), [moduleItem], setModuleFields);
 
   // 2. Lessons for this module
@@ -289,14 +302,7 @@ async function seedCrossCuttingData(db: Database): Promise<void> {
 async function seedVocabModule(db: Database, moduleItem: ModuleSeed): Promise<void> {
   const moduleId = moduleItem.id;
 
-  // Skip if this module already exists
-  try {
-    await db.get('modules').find(moduleId);
-    return;
-  } catch {
-    // Not found — proceed with seeding
-  }
-
+  // Create module if not exists
   await batchCreate(db, db.get('modules'), [moduleItem], setModuleFields);
 
   const moduleLessons = vocabLessonsData.filter((l) => l.module_id === moduleId);
