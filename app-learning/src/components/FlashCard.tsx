@@ -40,10 +40,10 @@ export function FlashCard({ word, showBack: controlledShowBack }: FlashCardProps
         ) : (
           <View style={styles.back}>
             <TappableText text={word.word} variant="titleLarge" />
-            <Text variant="bodyLarge" style={{ color: theme.colors.onSurface, marginTop: 8 }}>
+            <Text variant="bodyLarge" style={{ color: theme.colors.onSurface, marginTop: 8 }} selectable>
               {word.meaningVi}
             </Text>
-            <Text variant="bodyMedium" style={{ color: theme.colors.onSurfaceVariant, fontStyle: 'italic', marginTop: 4 }}>
+            <Text variant="bodyMedium" style={{ color: theme.colors.onSurfaceVariant, fontStyle: 'italic', marginTop: 4 }} selectable>
               {word.meaningEn}
             </Text>
             {word.example ? (

@@ -196,6 +196,7 @@ export function ContentRenderer({
                 section.level === 1 && styles.headingLevel1,
               ]}
               accessibilityRole="header"
+              selectable
             >
               {section.text ?? ''}
             </Text>
@@ -207,6 +208,7 @@ export function ContentRenderer({
               key={index}
               variant="bodyLarge"
               style={[styles.paragraph, { color: theme.colors.onSurface }]}
+              selectable
             >
               {renderInlineText(section.text ?? '')}
             </Text>
@@ -269,6 +271,7 @@ export function ContentRenderer({
                         <Text
                           variant="bodyMedium"
                           style={{ color: theme.colors.onSurface }}
+                          selectable
                         >
                           {cell}
                         </Text>
@@ -294,6 +297,7 @@ export function ContentRenderer({
                   <Text
                     variant="bodyLarge"
                     style={[styles.listItemText, { color: theme.colors.onSurface }]}
+                    selectable
                   >
                     {renderInlineText(item)}
                   </Text>

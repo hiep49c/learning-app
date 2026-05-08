@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
+    <TextView android:textIsSelectable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="🔥 Top 10 số nóng"
@@ -68,14 +68,14 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp" />
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:id="@+id/tv_hot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="monospace" />
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="❄️ Top 10 số lạnh"
@@ -83,14 +83,14 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp" />
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:id="@+id/tv_cold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="monospace" />
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="⏳ Top 10 số lâu chưa ra"
@@ -98,14 +98,14 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp" />
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:id="@+id/tv_absent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="monospace" />
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="👫 Top 10 cặp số hay đi cùng"
@@ -113,7 +113,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp" />
 
-            <TextView
+            <TextView android:textIsSelectable="true"
                 android:id="@+id/tv_pairs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

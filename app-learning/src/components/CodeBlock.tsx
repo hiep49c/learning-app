@@ -251,7 +251,7 @@ export function CodeBlock({
                   {index + 1}
                 </Text>
               )}
-              <Text style={[styles.codeLine, { fontFamily: MONOSPACE_FONT }]}>
+              <Text style={[styles.codeLine, { fontFamily: MONOSPACE_FONT }]} selectable>
                 {tokenizeLine(line, language).map((token, tokenIdx) => (
                   <Text
                     key={tokenIdx}

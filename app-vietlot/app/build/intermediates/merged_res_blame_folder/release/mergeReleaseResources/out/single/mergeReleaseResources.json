@@ -1,7 +1,7 @@
 [
     {
-        "merged": "com.hiepnt.vietlott.app-release-42:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.hiepnt.vietlott.app-main-43:/mipmap-hdpi/ic_launcher.png"
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/mipmap-mdpi/ic_launcher.png"
     },
     {
         "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/layout_fragment_random.xml.flat",
@@ -16,24 +16,44 @@
         "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/item_history.xml"
     },
     {
-        "merged": "com.hiepnt.vietlott.app-release-42:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.hiepnt.vietlott.app-main-43:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.hiepnt.vietlott.app-release-42:/layout_fragment_statistics.xml.flat",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/fragment_statistics.xml"
     },
     {
-        "merged": "com.hiepnt.vietlott.app-release-42:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.hiepnt.vietlott.app-main-43:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/layout_fragment_statistics.xml.flat",
         "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/fragment_statistics.xml"
     },
     {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "com.hiepnt.vietlott.app-release-42:/layout_fragment_history.xml.flat",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/layout_fragment_history.xml.flat",
         "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.hiepnt.vietlott.app-release-42:/layout_item_result.xml.flat",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/item_result.xml"
     },
     {
         "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/layout_fragment_recommend.xml.flat",
@@ -48,20 +68,20 @@
         "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/activity_main.xml"
     },
     {
-        "merged": "com.hiepnt.vietlott.app-release-42:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.hiepnt.vietlott.app-main-43:/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.hiepnt.vietlott.app-release-42:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.hiepnt.vietlott.app-main-43:/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.hiepnt.vietlott.app-release-42:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.hiepnt.vietlott.app-main-43:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.hiepnt.vietlott.app-release-42:/layout_fragment_recommend.xml.flat",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/fragment_recommend.xml"
     },
     {
         "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/layout_item_result.xml.flat",
         "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/item_result.xml"
+    },
+    {
+        "merged": "com.hiepnt.vietlott.app-release-42:/layout_item_history.xml.flat",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/item_history.xml"
+    },
+    {
+        "merged": "com.hiepnt.vietlott.app-release-42:/layout_fragment_random.xml.flat",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/fragment_random.xml"
     },
     {
         "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-release-42:/drawable_ic_launcher.xml.flat",

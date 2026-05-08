@@ -7,14 +7,14 @@
     android:layout_marginBottom="8dp"
     android:background="@drawable/bg_result_item">
 
-    <TextView
+    <TextView android:textIsSelectable="true"
         android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="13sp"
         android:textColor="#666" />
 
-    <TextView
+    <TextView android:textIsSelectable="true"
         android:id="@+id/tv_numbers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

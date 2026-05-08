@@ -20,7 +20,7 @@ function InfoRow({ label, value }: { label: string; value: string }): React.JSX.
   return (
     <View style={styles.row}>
       <Text variant="labelMedium" style={{ color: theme.colors.onSurfaceVariant }}>{label}</Text>
-      <Text variant="bodyMedium" style={{ color: theme.colors.onSurface }}>{value}</Text>
+      <Text variant="bodyMedium" style={{ color: theme.colors.onSurface }} selectable>{value}</Text>
     </View>
   );
 }
@@ -38,7 +38,7 @@ export function DeepCard({ word }: DeepCardProps): React.JSX.Element {
 
         <Divider style={styles.divider} />
 
-        <Text variant="bodyLarge" style={{ color: theme.colors.onSurface }}>
+        <Text variant="bodyLarge" style={{ color: theme.colors.onSurface }} selectable>
           {word.meaningVi} — {word.meaningEn}
         </Text>
 

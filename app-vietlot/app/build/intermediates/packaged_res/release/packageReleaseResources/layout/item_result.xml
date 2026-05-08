@@ -7,7 +7,7 @@
     android:layout_marginBottom="4dp"
     android:background="@drawable/bg_result_item">
 
-    <TextView
+    <TextView android:textIsSelectable="true"
         android:id="@+id/tv_index"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         android:textColor="@color/design_default_color_primary"
         android:textStyle="bold" />
 
-    <TextView
+    <TextView android:textIsSelectable="true"
         android:id="@+id/tv_numbers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
