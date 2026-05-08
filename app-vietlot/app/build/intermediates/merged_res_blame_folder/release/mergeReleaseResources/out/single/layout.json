@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-mergeReleaseResources-41:/layout/fragment_recommend.xml",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/fragment_recommend.xml"
+    },
+    {
+        "merged": "com.hiepnt.vietlott.app-mergeReleaseResources-41:/layout/item_history.xml",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/item_history.xml"
+    },
+    {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-mergeReleaseResources-41:/layout/activity_main.xml",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-mergeReleaseResources-41:/layout/fragment_statistics.xml",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/fragment_statistics.xml"
+    },
+    {
+        "merged": "com.hiepnt.vietlott.app-mergeReleaseResources-41:/layout/fragment_history.xml",
+        "source": "com.hiepnt.vietlott.app-main-43:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-mergeReleaseResources-41:/layout/item_result.xml",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/item_result.xml"
+    },
+    {
+        "merged": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-mergeReleaseResources-41:/layout/fragment_random.xml",
+        "source": "/home/hiepnt/.gradle/daemon/8.10.2/com.hiepnt.vietlott.app-main-43:/layout/fragment_random.xml"
+    }
+]

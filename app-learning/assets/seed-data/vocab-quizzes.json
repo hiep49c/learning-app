@@ -1,0 +1,2708 @@
+[
+  {
+    "id": "vocab-quiz-daily-life-a1-1",
+    "lesson_id": "vocab-lesson-daily-life-a1-1",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-2",
+    "lesson_id": "vocab-lesson-daily-life-a1-2",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-3",
+    "lesson_id": "vocab-lesson-daily-life-a1-3",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-4",
+    "lesson_id": "vocab-lesson-daily-life-a1-4",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-5",
+    "lesson_id": "vocab-lesson-daily-life-a1-5",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-6",
+    "lesson_id": "vocab-lesson-daily-life-a1-6",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-7",
+    "lesson_id": "vocab-lesson-daily-life-a1-7",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-8",
+    "lesson_id": "vocab-lesson-daily-life-a1-8",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-9",
+    "lesson_id": "vocab-lesson-daily-life-a1-9",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-10",
+    "lesson_id": "vocab-lesson-daily-life-a1-10",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (10)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-11",
+    "lesson_id": "vocab-lesson-daily-life-a1-11",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (11)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-12",
+    "lesson_id": "vocab-lesson-daily-life-a1-12",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (12)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-13",
+    "lesson_id": "vocab-lesson-daily-life-a1-13",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (13)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a1-14",
+    "lesson_id": "vocab-lesson-daily-life-a1-14",
+    "title": "Quiz: A1 Cuộc sống hàng ngày (14)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-1",
+    "lesson_id": "vocab-lesson-daily-life-a2-1",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-2",
+    "lesson_id": "vocab-lesson-daily-life-a2-2",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-3",
+    "lesson_id": "vocab-lesson-daily-life-a2-3",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-4",
+    "lesson_id": "vocab-lesson-daily-life-a2-4",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-5",
+    "lesson_id": "vocab-lesson-daily-life-a2-5",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-6",
+    "lesson_id": "vocab-lesson-daily-life-a2-6",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-7",
+    "lesson_id": "vocab-lesson-daily-life-a2-7",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-8",
+    "lesson_id": "vocab-lesson-daily-life-a2-8",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-9",
+    "lesson_id": "vocab-lesson-daily-life-a2-9",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-10",
+    "lesson_id": "vocab-lesson-daily-life-a2-10",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (10)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-11",
+    "lesson_id": "vocab-lesson-daily-life-a2-11",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (11)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-12",
+    "lesson_id": "vocab-lesson-daily-life-a2-12",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (12)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-13",
+    "lesson_id": "vocab-lesson-daily-life-a2-13",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (13)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-14",
+    "lesson_id": "vocab-lesson-daily-life-a2-14",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (14)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-15",
+    "lesson_id": "vocab-lesson-daily-life-a2-15",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (15)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-16",
+    "lesson_id": "vocab-lesson-daily-life-a2-16",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (16)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-17",
+    "lesson_id": "vocab-lesson-daily-life-a2-17",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (17)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-18",
+    "lesson_id": "vocab-lesson-daily-life-a2-18",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (18)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-19",
+    "lesson_id": "vocab-lesson-daily-life-a2-19",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (19)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-20",
+    "lesson_id": "vocab-lesson-daily-life-a2-20",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (20)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-a2-21",
+    "lesson_id": "vocab-lesson-daily-life-a2-21",
+    "title": "Quiz: A2 Cuộc sống hàng ngày (21)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-1",
+    "lesson_id": "vocab-lesson-daily-life-b1-1",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-2",
+    "lesson_id": "vocab-lesson-daily-life-b1-2",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-3",
+    "lesson_id": "vocab-lesson-daily-life-b1-3",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-4",
+    "lesson_id": "vocab-lesson-daily-life-b1-4",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-5",
+    "lesson_id": "vocab-lesson-daily-life-b1-5",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-6",
+    "lesson_id": "vocab-lesson-daily-life-b1-6",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-7",
+    "lesson_id": "vocab-lesson-daily-life-b1-7",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-8",
+    "lesson_id": "vocab-lesson-daily-life-b1-8",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-9",
+    "lesson_id": "vocab-lesson-daily-life-b1-9",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-10",
+    "lesson_id": "vocab-lesson-daily-life-b1-10",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (10)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-11",
+    "lesson_id": "vocab-lesson-daily-life-b1-11",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (11)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-12",
+    "lesson_id": "vocab-lesson-daily-life-b1-12",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (12)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-13",
+    "lesson_id": "vocab-lesson-daily-life-b1-13",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (13)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-14",
+    "lesson_id": "vocab-lesson-daily-life-b1-14",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (14)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-15",
+    "lesson_id": "vocab-lesson-daily-life-b1-15",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (15)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-16",
+    "lesson_id": "vocab-lesson-daily-life-b1-16",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (16)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-17",
+    "lesson_id": "vocab-lesson-daily-life-b1-17",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (17)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-18",
+    "lesson_id": "vocab-lesson-daily-life-b1-18",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (18)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-19",
+    "lesson_id": "vocab-lesson-daily-life-b1-19",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (19)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b1-20",
+    "lesson_id": "vocab-lesson-daily-life-b1-20",
+    "title": "Quiz: B1 Cuộc sống hàng ngày (20)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-1",
+    "lesson_id": "vocab-lesson-daily-life-b2-1",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-2",
+    "lesson_id": "vocab-lesson-daily-life-b2-2",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-3",
+    "lesson_id": "vocab-lesson-daily-life-b2-3",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-4",
+    "lesson_id": "vocab-lesson-daily-life-b2-4",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-5",
+    "lesson_id": "vocab-lesson-daily-life-b2-5",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-6",
+    "lesson_id": "vocab-lesson-daily-life-b2-6",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-7",
+    "lesson_id": "vocab-lesson-daily-life-b2-7",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-8",
+    "lesson_id": "vocab-lesson-daily-life-b2-8",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-b2-9",
+    "lesson_id": "vocab-lesson-daily-life-b2-9",
+    "title": "Quiz: B2 Cuộc sống hàng ngày (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-c1-1",
+    "lesson_id": "vocab-lesson-daily-life-c1-1",
+    "title": "Quiz: C1 Cuộc sống hàng ngày (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-c1-2",
+    "lesson_id": "vocab-lesson-daily-life-c1-2",
+    "title": "Quiz: C1 Cuộc sống hàng ngày (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-c1-3",
+    "lesson_id": "vocab-lesson-daily-life-c1-3",
+    "title": "Quiz: C1 Cuộc sống hàng ngày (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-c1-4",
+    "lesson_id": "vocab-lesson-daily-life-c1-4",
+    "title": "Quiz: C1 Cuộc sống hàng ngày (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-daily-life-c2",
+    "lesson_id": "vocab-lesson-daily-life-c2",
+    "title": "Quiz: C2 Cuộc sống hàng ngày",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a1-1",
+    "lesson_id": "vocab-lesson-work-business-a1-1",
+    "title": "Quiz: A1 Công việc & Kinh doanh (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a1-2",
+    "lesson_id": "vocab-lesson-work-business-a1-2",
+    "title": "Quiz: A1 Công việc & Kinh doanh (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a2-1",
+    "lesson_id": "vocab-lesson-work-business-a2-1",
+    "title": "Quiz: A2 Công việc & Kinh doanh (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a2-2",
+    "lesson_id": "vocab-lesson-work-business-a2-2",
+    "title": "Quiz: A2 Công việc & Kinh doanh (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a2-3",
+    "lesson_id": "vocab-lesson-work-business-a2-3",
+    "title": "Quiz: A2 Công việc & Kinh doanh (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a2-4",
+    "lesson_id": "vocab-lesson-work-business-a2-4",
+    "title": "Quiz: A2 Công việc & Kinh doanh (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a2-5",
+    "lesson_id": "vocab-lesson-work-business-a2-5",
+    "title": "Quiz: A2 Công việc & Kinh doanh (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a2-6",
+    "lesson_id": "vocab-lesson-work-business-a2-6",
+    "title": "Quiz: A2 Công việc & Kinh doanh (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-a2-7",
+    "lesson_id": "vocab-lesson-work-business-a2-7",
+    "title": "Quiz: A2 Công việc & Kinh doanh (7)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-1",
+    "lesson_id": "vocab-lesson-work-business-b1-1",
+    "title": "Quiz: B1 Công việc & Kinh doanh (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-2",
+    "lesson_id": "vocab-lesson-work-business-b1-2",
+    "title": "Quiz: B1 Công việc & Kinh doanh (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-3",
+    "lesson_id": "vocab-lesson-work-business-b1-3",
+    "title": "Quiz: B1 Công việc & Kinh doanh (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-4",
+    "lesson_id": "vocab-lesson-work-business-b1-4",
+    "title": "Quiz: B1 Công việc & Kinh doanh (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-5",
+    "lesson_id": "vocab-lesson-work-business-b1-5",
+    "title": "Quiz: B1 Công việc & Kinh doanh (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-6",
+    "lesson_id": "vocab-lesson-work-business-b1-6",
+    "title": "Quiz: B1 Công việc & Kinh doanh (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-7",
+    "lesson_id": "vocab-lesson-work-business-b1-7",
+    "title": "Quiz: B1 Công việc & Kinh doanh (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-8",
+    "lesson_id": "vocab-lesson-work-business-b1-8",
+    "title": "Quiz: B1 Công việc & Kinh doanh (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-9",
+    "lesson_id": "vocab-lesson-work-business-b1-9",
+    "title": "Quiz: B1 Công việc & Kinh doanh (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-10",
+    "lesson_id": "vocab-lesson-work-business-b1-10",
+    "title": "Quiz: B1 Công việc & Kinh doanh (10)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-11",
+    "lesson_id": "vocab-lesson-work-business-b1-11",
+    "title": "Quiz: B1 Công việc & Kinh doanh (11)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-12",
+    "lesson_id": "vocab-lesson-work-business-b1-12",
+    "title": "Quiz: B1 Công việc & Kinh doanh (12)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b1-13",
+    "lesson_id": "vocab-lesson-work-business-b1-13",
+    "title": "Quiz: B1 Công việc & Kinh doanh (13)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-1",
+    "lesson_id": "vocab-lesson-work-business-b2-1",
+    "title": "Quiz: B2 Công việc & Kinh doanh (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-2",
+    "lesson_id": "vocab-lesson-work-business-b2-2",
+    "title": "Quiz: B2 Công việc & Kinh doanh (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-3",
+    "lesson_id": "vocab-lesson-work-business-b2-3",
+    "title": "Quiz: B2 Công việc & Kinh doanh (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-4",
+    "lesson_id": "vocab-lesson-work-business-b2-4",
+    "title": "Quiz: B2 Công việc & Kinh doanh (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-5",
+    "lesson_id": "vocab-lesson-work-business-b2-5",
+    "title": "Quiz: B2 Công việc & Kinh doanh (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-6",
+    "lesson_id": "vocab-lesson-work-business-b2-6",
+    "title": "Quiz: B2 Công việc & Kinh doanh (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-7",
+    "lesson_id": "vocab-lesson-work-business-b2-7",
+    "title": "Quiz: B2 Công việc & Kinh doanh (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-8",
+    "lesson_id": "vocab-lesson-work-business-b2-8",
+    "title": "Quiz: B2 Công việc & Kinh doanh (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-9",
+    "lesson_id": "vocab-lesson-work-business-b2-9",
+    "title": "Quiz: B2 Công việc & Kinh doanh (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-10",
+    "lesson_id": "vocab-lesson-work-business-b2-10",
+    "title": "Quiz: B2 Công việc & Kinh doanh (10)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-11",
+    "lesson_id": "vocab-lesson-work-business-b2-11",
+    "title": "Quiz: B2 Công việc & Kinh doanh (11)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-12",
+    "lesson_id": "vocab-lesson-work-business-b2-12",
+    "title": "Quiz: B2 Công việc & Kinh doanh (12)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-13",
+    "lesson_id": "vocab-lesson-work-business-b2-13",
+    "title": "Quiz: B2 Công việc & Kinh doanh (13)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-14",
+    "lesson_id": "vocab-lesson-work-business-b2-14",
+    "title": "Quiz: B2 Công việc & Kinh doanh (14)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-b2-15",
+    "lesson_id": "vocab-lesson-work-business-b2-15",
+    "title": "Quiz: B2 Công việc & Kinh doanh (15)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-1",
+    "lesson_id": "vocab-lesson-work-business-c1-1",
+    "title": "Quiz: C1 Công việc & Kinh doanh (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-2",
+    "lesson_id": "vocab-lesson-work-business-c1-2",
+    "title": "Quiz: C1 Công việc & Kinh doanh (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-3",
+    "lesson_id": "vocab-lesson-work-business-c1-3",
+    "title": "Quiz: C1 Công việc & Kinh doanh (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-4",
+    "lesson_id": "vocab-lesson-work-business-c1-4",
+    "title": "Quiz: C1 Công việc & Kinh doanh (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-5",
+    "lesson_id": "vocab-lesson-work-business-c1-5",
+    "title": "Quiz: C1 Công việc & Kinh doanh (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-6",
+    "lesson_id": "vocab-lesson-work-business-c1-6",
+    "title": "Quiz: C1 Công việc & Kinh doanh (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-7",
+    "lesson_id": "vocab-lesson-work-business-c1-7",
+    "title": "Quiz: C1 Công việc & Kinh doanh (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c1-8",
+    "lesson_id": "vocab-lesson-work-business-c1-8",
+    "title": "Quiz: C1 Công việc & Kinh doanh (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c2-1",
+    "lesson_id": "vocab-lesson-work-business-c2-1",
+    "title": "Quiz: C2 Công việc & Kinh doanh (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-work-business-c2-2",
+    "lesson_id": "vocab-lesson-work-business-c2-2",
+    "title": "Quiz: C2 Công việc & Kinh doanh (2)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-technology-a1-1",
+    "lesson_id": "vocab-lesson-technology-a1-1",
+    "title": "Quiz: A1 Công nghệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-a1-2",
+    "lesson_id": "vocab-lesson-technology-a1-2",
+    "title": "Quiz: A1 Công nghệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-a2-1",
+    "lesson_id": "vocab-lesson-technology-a2-1",
+    "title": "Quiz: A2 Công nghệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-a2-2",
+    "lesson_id": "vocab-lesson-technology-a2-2",
+    "title": "Quiz: A2 Công nghệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-a2-3",
+    "lesson_id": "vocab-lesson-technology-a2-3",
+    "title": "Quiz: A2 Công nghệ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b1-1",
+    "lesson_id": "vocab-lesson-technology-b1-1",
+    "title": "Quiz: B1 Công nghệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b1-2",
+    "lesson_id": "vocab-lesson-technology-b1-2",
+    "title": "Quiz: B1 Công nghệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b1-3",
+    "lesson_id": "vocab-lesson-technology-b1-3",
+    "title": "Quiz: B1 Công nghệ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b1-4",
+    "lesson_id": "vocab-lesson-technology-b1-4",
+    "title": "Quiz: B1 Công nghệ (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b2-1",
+    "lesson_id": "vocab-lesson-technology-b2-1",
+    "title": "Quiz: B2 Công nghệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b2-2",
+    "lesson_id": "vocab-lesson-technology-b2-2",
+    "title": "Quiz: B2 Công nghệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b2-3",
+    "lesson_id": "vocab-lesson-technology-b2-3",
+    "title": "Quiz: B2 Công nghệ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b2-4",
+    "lesson_id": "vocab-lesson-technology-b2-4",
+    "title": "Quiz: B2 Công nghệ (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b2-5",
+    "lesson_id": "vocab-lesson-technology-b2-5",
+    "title": "Quiz: B2 Công nghệ (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b2-6",
+    "lesson_id": "vocab-lesson-technology-b2-6",
+    "title": "Quiz: B2 Công nghệ (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-b2-7",
+    "lesson_id": "vocab-lesson-technology-b2-7",
+    "title": "Quiz: B2 Công nghệ (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-c1-1",
+    "lesson_id": "vocab-lesson-technology-c1-1",
+    "title": "Quiz: C1 Công nghệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-c1-2",
+    "lesson_id": "vocab-lesson-technology-c1-2",
+    "title": "Quiz: C1 Công nghệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-technology-c2",
+    "lesson_id": "vocab-lesson-technology-c2",
+    "title": "Quiz: C2 Công nghệ",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-a1",
+    "lesson_id": "vocab-lesson-programming-dev-a1",
+    "title": "Quiz: A1 Lập trình & Phát triển",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-a2-1",
+    "lesson_id": "vocab-lesson-programming-dev-a2-1",
+    "title": "Quiz: A2 Lập trình & Phát triển (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-a2-2",
+    "lesson_id": "vocab-lesson-programming-dev-a2-2",
+    "title": "Quiz: A2 Lập trình & Phát triển (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-a2-3",
+    "lesson_id": "vocab-lesson-programming-dev-a2-3",
+    "title": "Quiz: A2 Lập trình & Phát triển (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-a2-4",
+    "lesson_id": "vocab-lesson-programming-dev-a2-4",
+    "title": "Quiz: A2 Lập trình & Phát triển (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b1-1",
+    "lesson_id": "vocab-lesson-programming-dev-b1-1",
+    "title": "Quiz: B1 Lập trình & Phát triển (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b1-2",
+    "lesson_id": "vocab-lesson-programming-dev-b1-2",
+    "title": "Quiz: B1 Lập trình & Phát triển (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b1-3",
+    "lesson_id": "vocab-lesson-programming-dev-b1-3",
+    "title": "Quiz: B1 Lập trình & Phát triển (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b1-4",
+    "lesson_id": "vocab-lesson-programming-dev-b1-4",
+    "title": "Quiz: B1 Lập trình & Phát triển (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b2-1",
+    "lesson_id": "vocab-lesson-programming-dev-b2-1",
+    "title": "Quiz: B2 Lập trình & Phát triển (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b2-2",
+    "lesson_id": "vocab-lesson-programming-dev-b2-2",
+    "title": "Quiz: B2 Lập trình & Phát triển (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b2-3",
+    "lesson_id": "vocab-lesson-programming-dev-b2-3",
+    "title": "Quiz: B2 Lập trình & Phát triển (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b2-4",
+    "lesson_id": "vocab-lesson-programming-dev-b2-4",
+    "title": "Quiz: B2 Lập trình & Phát triển (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-b2-5",
+    "lesson_id": "vocab-lesson-programming-dev-b2-5",
+    "title": "Quiz: B2 Lập trình & Phát triển (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-programming-dev-c1",
+    "lesson_id": "vocab-lesson-programming-dev-c1",
+    "title": "Quiz: C1 Lập trình & Phát triển",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-a1-1",
+    "lesson_id": "vocab-lesson-education-a1-1",
+    "title": "Quiz: A1 Giáo dục & Học tập (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-a1-2",
+    "lesson_id": "vocab-lesson-education-a1-2",
+    "title": "Quiz: A1 Giáo dục & Học tập (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-a2-1",
+    "lesson_id": "vocab-lesson-education-a2-1",
+    "title": "Quiz: A2 Giáo dục & Học tập (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-a2-2",
+    "lesson_id": "vocab-lesson-education-a2-2",
+    "title": "Quiz: A2 Giáo dục & Học tập (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-a2-3",
+    "lesson_id": "vocab-lesson-education-a2-3",
+    "title": "Quiz: A2 Giáo dục & Học tập (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-a2-4",
+    "lesson_id": "vocab-lesson-education-a2-4",
+    "title": "Quiz: A2 Giáo dục & Học tập (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-a2-5",
+    "lesson_id": "vocab-lesson-education-a2-5",
+    "title": "Quiz: A2 Giáo dục & Học tập (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-1",
+    "lesson_id": "vocab-lesson-education-b1-1",
+    "title": "Quiz: B1 Giáo dục & Học tập (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-2",
+    "lesson_id": "vocab-lesson-education-b1-2",
+    "title": "Quiz: B1 Giáo dục & Học tập (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-3",
+    "lesson_id": "vocab-lesson-education-b1-3",
+    "title": "Quiz: B1 Giáo dục & Học tập (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-4",
+    "lesson_id": "vocab-lesson-education-b1-4",
+    "title": "Quiz: B1 Giáo dục & Học tập (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-5",
+    "lesson_id": "vocab-lesson-education-b1-5",
+    "title": "Quiz: B1 Giáo dục & Học tập (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-6",
+    "lesson_id": "vocab-lesson-education-b1-6",
+    "title": "Quiz: B1 Giáo dục & Học tập (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-7",
+    "lesson_id": "vocab-lesson-education-b1-7",
+    "title": "Quiz: B1 Giáo dục & Học tập (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b1-8",
+    "lesson_id": "vocab-lesson-education-b1-8",
+    "title": "Quiz: B1 Giáo dục & Học tập (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-1",
+    "lesson_id": "vocab-lesson-education-b2-1",
+    "title": "Quiz: B2 Giáo dục & Học tập (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-2",
+    "lesson_id": "vocab-lesson-education-b2-2",
+    "title": "Quiz: B2 Giáo dục & Học tập (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-3",
+    "lesson_id": "vocab-lesson-education-b2-3",
+    "title": "Quiz: B2 Giáo dục & Học tập (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-4",
+    "lesson_id": "vocab-lesson-education-b2-4",
+    "title": "Quiz: B2 Giáo dục & Học tập (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-5",
+    "lesson_id": "vocab-lesson-education-b2-5",
+    "title": "Quiz: B2 Giáo dục & Học tập (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-6",
+    "lesson_id": "vocab-lesson-education-b2-6",
+    "title": "Quiz: B2 Giáo dục & Học tập (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-7",
+    "lesson_id": "vocab-lesson-education-b2-7",
+    "title": "Quiz: B2 Giáo dục & Học tập (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-b2-8",
+    "lesson_id": "vocab-lesson-education-b2-8",
+    "title": "Quiz: B2 Giáo dục & Học tập (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-c1-1",
+    "lesson_id": "vocab-lesson-education-c1-1",
+    "title": "Quiz: C1 Giáo dục & Học tập (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-c1-2",
+    "lesson_id": "vocab-lesson-education-c1-2",
+    "title": "Quiz: C1 Giáo dục & Học tập (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-c1-3",
+    "lesson_id": "vocab-lesson-education-c1-3",
+    "title": "Quiz: C1 Giáo dục & Học tập (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-c1-4",
+    "lesson_id": "vocab-lesson-education-c1-4",
+    "title": "Quiz: C1 Giáo dục & Học tập (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-education-c2",
+    "lesson_id": "vocab-lesson-education-c2",
+    "title": "Quiz: C2 Giáo dục & Học tập",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-a1-1",
+    "lesson_id": "vocab-lesson-travel-a1-1",
+    "title": "Quiz: A1 Du lịch (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-a2-1",
+    "lesson_id": "vocab-lesson-travel-a2-1",
+    "title": "Quiz: A2 Du lịch (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-a2-2",
+    "lesson_id": "vocab-lesson-travel-a2-2",
+    "title": "Quiz: A2 Du lịch (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-a2-3",
+    "lesson_id": "vocab-lesson-travel-a2-3",
+    "title": "Quiz: A2 Du lịch (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-b1-1",
+    "lesson_id": "vocab-lesson-travel-b1-1",
+    "title": "Quiz: B1 Du lịch (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-b1-2",
+    "lesson_id": "vocab-lesson-travel-b1-2",
+    "title": "Quiz: B1 Du lịch (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-b1-3",
+    "lesson_id": "vocab-lesson-travel-b1-3",
+    "title": "Quiz: B1 Du lịch (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-b2-1",
+    "lesson_id": "vocab-lesson-travel-b2-1",
+    "title": "Quiz: B2 Du lịch (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-b2-2",
+    "lesson_id": "vocab-lesson-travel-b2-2",
+    "title": "Quiz: B2 Du lịch (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-travel-c1",
+    "lesson_id": "vocab-lesson-travel-c1",
+    "title": "Quiz: C1 Du lịch",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-a1-1",
+    "lesson_id": "vocab-lesson-health-a1-1",
+    "title": "Quiz: A1 Sức khỏe & Thể dục (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-a1-2",
+    "lesson_id": "vocab-lesson-health-a1-2",
+    "title": "Quiz: A1 Sức khỏe & Thể dục (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-a2-1",
+    "lesson_id": "vocab-lesson-health-a2-1",
+    "title": "Quiz: A2 Sức khỏe & Thể dục (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-a2-2",
+    "lesson_id": "vocab-lesson-health-a2-2",
+    "title": "Quiz: A2 Sức khỏe & Thể dục (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-a2-3",
+    "lesson_id": "vocab-lesson-health-a2-3",
+    "title": "Quiz: A2 Sức khỏe & Thể dục (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-a2-4",
+    "lesson_id": "vocab-lesson-health-a2-4",
+    "title": "Quiz: A2 Sức khỏe & Thể dục (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b1-1",
+    "lesson_id": "vocab-lesson-health-b1-1",
+    "title": "Quiz: B1 Sức khỏe & Thể dục (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b1-2",
+    "lesson_id": "vocab-lesson-health-b1-2",
+    "title": "Quiz: B1 Sức khỏe & Thể dục (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b1-3",
+    "lesson_id": "vocab-lesson-health-b1-3",
+    "title": "Quiz: B1 Sức khỏe & Thể dục (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b1-4",
+    "lesson_id": "vocab-lesson-health-b1-4",
+    "title": "Quiz: B1 Sức khỏe & Thể dục (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b1-5",
+    "lesson_id": "vocab-lesson-health-b1-5",
+    "title": "Quiz: B1 Sức khỏe & Thể dục (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b1-6",
+    "lesson_id": "vocab-lesson-health-b1-6",
+    "title": "Quiz: B1 Sức khỏe & Thể dục (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b2-1",
+    "lesson_id": "vocab-lesson-health-b2-1",
+    "title": "Quiz: B2 Sức khỏe & Thể dục (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b2-2",
+    "lesson_id": "vocab-lesson-health-b2-2",
+    "title": "Quiz: B2 Sức khỏe & Thể dục (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b2-3",
+    "lesson_id": "vocab-lesson-health-b2-3",
+    "title": "Quiz: B2 Sức khỏe & Thể dục (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b2-4",
+    "lesson_id": "vocab-lesson-health-b2-4",
+    "title": "Quiz: B2 Sức khỏe & Thể dục (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-b2-5",
+    "lesson_id": "vocab-lesson-health-b2-5",
+    "title": "Quiz: B2 Sức khỏe & Thể dục (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-c1-1",
+    "lesson_id": "vocab-lesson-health-c1-1",
+    "title": "Quiz: C1 Sức khỏe & Thể dục (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-c1-2",
+    "lesson_id": "vocab-lesson-health-c1-2",
+    "title": "Quiz: C1 Sức khỏe & Thể dục (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-health-c2",
+    "lesson_id": "vocab-lesson-health-c2",
+    "title": "Quiz: C2 Sức khỏe & Thể dục",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-a1-1",
+    "lesson_id": "vocab-lesson-communication-a1-1",
+    "title": "Quiz: A1 Giao tiếp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-a1-2",
+    "lesson_id": "vocab-lesson-communication-a1-2",
+    "title": "Quiz: A1 Giao tiếp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-a2-1",
+    "lesson_id": "vocab-lesson-communication-a2-1",
+    "title": "Quiz: A2 Giao tiếp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-a2-2",
+    "lesson_id": "vocab-lesson-communication-a2-2",
+    "title": "Quiz: A2 Giao tiếp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-a2-3",
+    "lesson_id": "vocab-lesson-communication-a2-3",
+    "title": "Quiz: A2 Giao tiếp (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-a2-4",
+    "lesson_id": "vocab-lesson-communication-a2-4",
+    "title": "Quiz: A2 Giao tiếp (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b1-1",
+    "lesson_id": "vocab-lesson-communication-b1-1",
+    "title": "Quiz: B1 Giao tiếp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b1-2",
+    "lesson_id": "vocab-lesson-communication-b1-2",
+    "title": "Quiz: B1 Giao tiếp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b1-3",
+    "lesson_id": "vocab-lesson-communication-b1-3",
+    "title": "Quiz: B1 Giao tiếp (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b1-4",
+    "lesson_id": "vocab-lesson-communication-b1-4",
+    "title": "Quiz: B1 Giao tiếp (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b1-5",
+    "lesson_id": "vocab-lesson-communication-b1-5",
+    "title": "Quiz: B1 Giao tiếp (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b2-1",
+    "lesson_id": "vocab-lesson-communication-b2-1",
+    "title": "Quiz: B2 Giao tiếp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b2-2",
+    "lesson_id": "vocab-lesson-communication-b2-2",
+    "title": "Quiz: B2 Giao tiếp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b2-3",
+    "lesson_id": "vocab-lesson-communication-b2-3",
+    "title": "Quiz: B2 Giao tiếp (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b2-4",
+    "lesson_id": "vocab-lesson-communication-b2-4",
+    "title": "Quiz: B2 Giao tiếp (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b2-5",
+    "lesson_id": "vocab-lesson-communication-b2-5",
+    "title": "Quiz: B2 Giao tiếp (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b2-6",
+    "lesson_id": "vocab-lesson-communication-b2-6",
+    "title": "Quiz: B2 Giao tiếp (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-b2-7",
+    "lesson_id": "vocab-lesson-communication-b2-7",
+    "title": "Quiz: B2 Giao tiếp (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-1",
+    "lesson_id": "vocab-lesson-communication-c1-1",
+    "title": "Quiz: C1 Giao tiếp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-2",
+    "lesson_id": "vocab-lesson-communication-c1-2",
+    "title": "Quiz: C1 Giao tiếp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-3",
+    "lesson_id": "vocab-lesson-communication-c1-3",
+    "title": "Quiz: C1 Giao tiếp (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-4",
+    "lesson_id": "vocab-lesson-communication-c1-4",
+    "title": "Quiz: C1 Giao tiếp (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-5",
+    "lesson_id": "vocab-lesson-communication-c1-5",
+    "title": "Quiz: C1 Giao tiếp (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-6",
+    "lesson_id": "vocab-lesson-communication-c1-6",
+    "title": "Quiz: C1 Giao tiếp (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-7",
+    "lesson_id": "vocab-lesson-communication-c1-7",
+    "title": "Quiz: C1 Giao tiếp (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c1-8",
+    "lesson_id": "vocab-lesson-communication-c1-8",
+    "title": "Quiz: C1 Giao tiếp (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c2-1",
+    "lesson_id": "vocab-lesson-communication-c2-1",
+    "title": "Quiz: C2 Giao tiếp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c2-2",
+    "lesson_id": "vocab-lesson-communication-c2-2",
+    "title": "Quiz: C2 Giao tiếp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-communication-c2-3",
+    "lesson_id": "vocab-lesson-communication-c2-3",
+    "title": "Quiz: C2 Giao tiếp (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-a1",
+    "lesson_id": "vocab-lesson-emotion-personality-a1",
+    "title": "Quiz: A1 Cảm xúc & Tính cách",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-a2-1",
+    "lesson_id": "vocab-lesson-emotion-personality-a2-1",
+    "title": "Quiz: A2 Cảm xúc & Tính cách (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-a2-2",
+    "lesson_id": "vocab-lesson-emotion-personality-a2-2",
+    "title": "Quiz: A2 Cảm xúc & Tính cách (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b1-1",
+    "lesson_id": "vocab-lesson-emotion-personality-b1-1",
+    "title": "Quiz: B1 Cảm xúc & Tính cách (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b1-2",
+    "lesson_id": "vocab-lesson-emotion-personality-b1-2",
+    "title": "Quiz: B1 Cảm xúc & Tính cách (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b1-3",
+    "lesson_id": "vocab-lesson-emotion-personality-b1-3",
+    "title": "Quiz: B1 Cảm xúc & Tính cách (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b1-4",
+    "lesson_id": "vocab-lesson-emotion-personality-b1-4",
+    "title": "Quiz: B1 Cảm xúc & Tính cách (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b2-1",
+    "lesson_id": "vocab-lesson-emotion-personality-b2-1",
+    "title": "Quiz: B2 Cảm xúc & Tính cách (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b2-2",
+    "lesson_id": "vocab-lesson-emotion-personality-b2-2",
+    "title": "Quiz: B2 Cảm xúc & Tính cách (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b2-3",
+    "lesson_id": "vocab-lesson-emotion-personality-b2-3",
+    "title": "Quiz: B2 Cảm xúc & Tính cách (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-b2-4",
+    "lesson_id": "vocab-lesson-emotion-personality-b2-4",
+    "title": "Quiz: B2 Cảm xúc & Tính cách (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-c1-1",
+    "lesson_id": "vocab-lesson-emotion-personality-c1-1",
+    "title": "Quiz: C1 Cảm xúc & Tính cách (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-c1-2",
+    "lesson_id": "vocab-lesson-emotion-personality-c1-2",
+    "title": "Quiz: C1 Cảm xúc & Tính cách (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-c1-3",
+    "lesson_id": "vocab-lesson-emotion-personality-c1-3",
+    "title": "Quiz: C1 Cảm xúc & Tính cách (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-c1-4",
+    "lesson_id": "vocab-lesson-emotion-personality-c1-4",
+    "title": "Quiz: C1 Cảm xúc & Tính cách (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-c2-1",
+    "lesson_id": "vocab-lesson-emotion-personality-c2-1",
+    "title": "Quiz: C2 Cảm xúc & Tính cách (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-emotion-personality-c2-2",
+    "lesson_id": "vocab-lesson-emotion-personality-c2-2",
+    "title": "Quiz: C2 Cảm xúc & Tính cách (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-a1",
+    "lesson_id": "vocab-lesson-finance-a1",
+    "title": "Quiz: A1 Tài chính & Tiền bạc",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-a2-1",
+    "lesson_id": "vocab-lesson-finance-a2-1",
+    "title": "Quiz: A2 Tài chính & Tiền bạc (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b1-1",
+    "lesson_id": "vocab-lesson-finance-b1-1",
+    "title": "Quiz: B1 Tài chính & Tiền bạc (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b1-2",
+    "lesson_id": "vocab-lesson-finance-b1-2",
+    "title": "Quiz: B1 Tài chính & Tiền bạc (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b1-3",
+    "lesson_id": "vocab-lesson-finance-b1-3",
+    "title": "Quiz: B1 Tài chính & Tiền bạc (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b2-1",
+    "lesson_id": "vocab-lesson-finance-b2-1",
+    "title": "Quiz: B2 Tài chính & Tiền bạc (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b2-2",
+    "lesson_id": "vocab-lesson-finance-b2-2",
+    "title": "Quiz: B2 Tài chính & Tiền bạc (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b2-3",
+    "lesson_id": "vocab-lesson-finance-b2-3",
+    "title": "Quiz: B2 Tài chính & Tiền bạc (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b2-4",
+    "lesson_id": "vocab-lesson-finance-b2-4",
+    "title": "Quiz: B2 Tài chính & Tiền bạc (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-b2-5",
+    "lesson_id": "vocab-lesson-finance-b2-5",
+    "title": "Quiz: B2 Tài chính & Tiền bạc (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-c1-1",
+    "lesson_id": "vocab-lesson-finance-c1-1",
+    "title": "Quiz: C1 Tài chính & Tiền bạc (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-c1-2",
+    "lesson_id": "vocab-lesson-finance-c1-2",
+    "title": "Quiz: C1 Tài chính & Tiền bạc (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-c1-3",
+    "lesson_id": "vocab-lesson-finance-c1-3",
+    "title": "Quiz: C1 Tài chính & Tiền bạc (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-c1-4",
+    "lesson_id": "vocab-lesson-finance-c1-4",
+    "title": "Quiz: C1 Tài chính & Tiền bạc (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-finance-c2",
+    "lesson_id": "vocab-lesson-finance-c2",
+    "title": "Quiz: C2 Tài chính & Tiền bạc",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-a1",
+    "lesson_id": "vocab-lesson-social-relationships-a1",
+    "title": "Quiz: A1 Xã hội & Quan hệ",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-a2-1",
+    "lesson_id": "vocab-lesson-social-relationships-a2-1",
+    "title": "Quiz: A2 Xã hội & Quan hệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-a2-2",
+    "lesson_id": "vocab-lesson-social-relationships-a2-2",
+    "title": "Quiz: A2 Xã hội & Quan hệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-a2-3",
+    "lesson_id": "vocab-lesson-social-relationships-a2-3",
+    "title": "Quiz: A2 Xã hội & Quan hệ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b1-1",
+    "lesson_id": "vocab-lesson-social-relationships-b1-1",
+    "title": "Quiz: B1 Xã hội & Quan hệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b1-2",
+    "lesson_id": "vocab-lesson-social-relationships-b1-2",
+    "title": "Quiz: B1 Xã hội & Quan hệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b1-3",
+    "lesson_id": "vocab-lesson-social-relationships-b1-3",
+    "title": "Quiz: B1 Xã hội & Quan hệ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b1-4",
+    "lesson_id": "vocab-lesson-social-relationships-b1-4",
+    "title": "Quiz: B1 Xã hội & Quan hệ (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b1-5",
+    "lesson_id": "vocab-lesson-social-relationships-b1-5",
+    "title": "Quiz: B1 Xã hội & Quan hệ (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b2-1",
+    "lesson_id": "vocab-lesson-social-relationships-b2-1",
+    "title": "Quiz: B2 Xã hội & Quan hệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b2-2",
+    "lesson_id": "vocab-lesson-social-relationships-b2-2",
+    "title": "Quiz: B2 Xã hội & Quan hệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b2-3",
+    "lesson_id": "vocab-lesson-social-relationships-b2-3",
+    "title": "Quiz: B2 Xã hội & Quan hệ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b2-4",
+    "lesson_id": "vocab-lesson-social-relationships-b2-4",
+    "title": "Quiz: B2 Xã hội & Quan hệ (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-b2-5",
+    "lesson_id": "vocab-lesson-social-relationships-b2-5",
+    "title": "Quiz: B2 Xã hội & Quan hệ (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-c1-1",
+    "lesson_id": "vocab-lesson-social-relationships-c1-1",
+    "title": "Quiz: C1 Xã hội & Quan hệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-c1-2",
+    "lesson_id": "vocab-lesson-social-relationships-c1-2",
+    "title": "Quiz: C1 Xã hội & Quan hệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-c1-3",
+    "lesson_id": "vocab-lesson-social-relationships-c1-3",
+    "title": "Quiz: C1 Xã hội & Quan hệ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-c2-1",
+    "lesson_id": "vocab-lesson-social-relationships-c2-1",
+    "title": "Quiz: C2 Xã hội & Quan hệ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-social-relationships-c2-2",
+    "lesson_id": "vocab-lesson-social-relationships-c2-2",
+    "title": "Quiz: C2 Xã hội & Quan hệ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-a1-1",
+    "lesson_id": "vocab-lesson-food-cooking-a1-1",
+    "title": "Quiz: A1 Ẩm thực & Nấu ăn (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-a1-2",
+    "lesson_id": "vocab-lesson-food-cooking-a1-2",
+    "title": "Quiz: A1 Ẩm thực & Nấu ăn (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-a2-1",
+    "lesson_id": "vocab-lesson-food-cooking-a2-1",
+    "title": "Quiz: A2 Ẩm thực & Nấu ăn (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-a2-2",
+    "lesson_id": "vocab-lesson-food-cooking-a2-2",
+    "title": "Quiz: A2 Ẩm thực & Nấu ăn (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-a2-3",
+    "lesson_id": "vocab-lesson-food-cooking-a2-3",
+    "title": "Quiz: A2 Ẩm thực & Nấu ăn (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-b1-1",
+    "lesson_id": "vocab-lesson-food-cooking-b1-1",
+    "title": "Quiz: B1 Ẩm thực & Nấu ăn (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-b1-2",
+    "lesson_id": "vocab-lesson-food-cooking-b1-2",
+    "title": "Quiz: B1 Ẩm thực & Nấu ăn (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-b1-3",
+    "lesson_id": "vocab-lesson-food-cooking-b1-3",
+    "title": "Quiz: B1 Ẩm thực & Nấu ăn (3)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-food-cooking-b2",
+    "lesson_id": "vocab-lesson-food-cooking-b2",
+    "title": "Quiz: B2 Ẩm thực & Nấu ăn",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-food-cooking-c1",
+    "lesson_id": "vocab-lesson-food-cooking-c1",
+    "title": "Quiz: C1 Ẩm thực & Nấu ăn",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-food-cooking-c2",
+    "lesson_id": "vocab-lesson-food-cooking-c2",
+    "title": "Quiz: C2 Ẩm thực & Nấu ăn",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-environment-nature-a1-1",
+    "lesson_id": "vocab-lesson-environment-nature-a1-1",
+    "title": "Quiz: A1 Môi trường & Thiên nhiên (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-a1-2",
+    "lesson_id": "vocab-lesson-environment-nature-a1-2",
+    "title": "Quiz: A1 Môi trường & Thiên nhiên (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-a2-1",
+    "lesson_id": "vocab-lesson-environment-nature-a2-1",
+    "title": "Quiz: A2 Môi trường & Thiên nhiên (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-a2-2",
+    "lesson_id": "vocab-lesson-environment-nature-a2-2",
+    "title": "Quiz: A2 Môi trường & Thiên nhiên (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-a2-3",
+    "lesson_id": "vocab-lesson-environment-nature-a2-3",
+    "title": "Quiz: A2 Môi trường & Thiên nhiên (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-a2-4",
+    "lesson_id": "vocab-lesson-environment-nature-a2-4",
+    "title": "Quiz: A2 Môi trường & Thiên nhiên (4)",
+    "question_count": 4
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b1-1",
+    "lesson_id": "vocab-lesson-environment-nature-b1-1",
+    "title": "Quiz: B1 Môi trường & Thiên nhiên (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b1-2",
+    "lesson_id": "vocab-lesson-environment-nature-b1-2",
+    "title": "Quiz: B1 Môi trường & Thiên nhiên (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b1-3",
+    "lesson_id": "vocab-lesson-environment-nature-b1-3",
+    "title": "Quiz: B1 Môi trường & Thiên nhiên (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b1-4",
+    "lesson_id": "vocab-lesson-environment-nature-b1-4",
+    "title": "Quiz: B1 Môi trường & Thiên nhiên (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b1-5",
+    "lesson_id": "vocab-lesson-environment-nature-b1-5",
+    "title": "Quiz: B1 Môi trường & Thiên nhiên (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b2-1",
+    "lesson_id": "vocab-lesson-environment-nature-b2-1",
+    "title": "Quiz: B2 Môi trường & Thiên nhiên (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b2-2",
+    "lesson_id": "vocab-lesson-environment-nature-b2-2",
+    "title": "Quiz: B2 Môi trường & Thiên nhiên (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-b2-3",
+    "lesson_id": "vocab-lesson-environment-nature-b2-3",
+    "title": "Quiz: B2 Môi trường & Thiên nhiên (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-c1-1",
+    "lesson_id": "vocab-lesson-environment-nature-c1-1",
+    "title": "Quiz: C1 Môi trường & Thiên nhiên (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-c1-2",
+    "lesson_id": "vocab-lesson-environment-nature-c1-2",
+    "title": "Quiz: C1 Môi trường & Thiên nhiên (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-environment-nature-c2",
+    "lesson_id": "vocab-lesson-environment-nature-c2",
+    "title": "Quiz: C2 Môi trường & Thiên nhiên",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-media-entertainment-a1",
+    "lesson_id": "vocab-lesson-media-entertainment-a1",
+    "title": "Quiz: A1 Truyền thông & Giải trí",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-media-entertainment-a2",
+    "lesson_id": "vocab-lesson-media-entertainment-a2",
+    "title": "Quiz: A2 Truyền thông & Giải trí",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-media-entertainment-b1-1",
+    "lesson_id": "vocab-lesson-media-entertainment-b1-1",
+    "title": "Quiz: B1 Truyền thông & Giải trí (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-media-entertainment-b1-2",
+    "lesson_id": "vocab-lesson-media-entertainment-b1-2",
+    "title": "Quiz: B1 Truyền thông & Giải trí (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-media-entertainment-b2-1",
+    "lesson_id": "vocab-lesson-media-entertainment-b2-1",
+    "title": "Quiz: B2 Truyền thông & Giải trí (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-media-entertainment-b2-2",
+    "lesson_id": "vocab-lesson-media-entertainment-b2-2",
+    "title": "Quiz: B2 Truyền thông & Giải trí (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-media-entertainment-c1",
+    "lesson_id": "vocab-lesson-media-entertainment-c1",
+    "title": "Quiz: C1 Truyền thông & Giải trí",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-a1",
+    "lesson_id": "vocab-lesson-sports-fitness-a1",
+    "title": "Quiz: A1 Thể thao & Rèn luyện",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-a2-1",
+    "lesson_id": "vocab-lesson-sports-fitness-a2-1",
+    "title": "Quiz: A2 Thể thao & Rèn luyện (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-a2-2",
+    "lesson_id": "vocab-lesson-sports-fitness-a2-2",
+    "title": "Quiz: A2 Thể thao & Rèn luyện (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-a2-3",
+    "lesson_id": "vocab-lesson-sports-fitness-a2-3",
+    "title": "Quiz: A2 Thể thao & Rèn luyện (3)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-b1-1",
+    "lesson_id": "vocab-lesson-sports-fitness-b1-1",
+    "title": "Quiz: B1 Thể thao & Rèn luyện (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-b1-2",
+    "lesson_id": "vocab-lesson-sports-fitness-b1-2",
+    "title": "Quiz: B1 Thể thao & Rèn luyện (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-b1-3",
+    "lesson_id": "vocab-lesson-sports-fitness-b1-3",
+    "title": "Quiz: B1 Thể thao & Rèn luyện (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-b2-1",
+    "lesson_id": "vocab-lesson-sports-fitness-b2-1",
+    "title": "Quiz: B2 Thể thao & Rèn luyện (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-b2-2",
+    "lesson_id": "vocab-lesson-sports-fitness-b2-2",
+    "title": "Quiz: B2 Thể thao & Rèn luyện (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-sports-fitness-c1",
+    "lesson_id": "vocab-lesson-sports-fitness-c1",
+    "title": "Quiz: C1 Thể thao & Rèn luyện",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-a1-1",
+    "lesson_id": "vocab-lesson-shopping-consumer-a1-1",
+    "title": "Quiz: A1 Mua sắm & Tiêu dùng (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-a2-1",
+    "lesson_id": "vocab-lesson-shopping-consumer-a2-1",
+    "title": "Quiz: A2 Mua sắm & Tiêu dùng (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-a2-2",
+    "lesson_id": "vocab-lesson-shopping-consumer-a2-2",
+    "title": "Quiz: A2 Mua sắm & Tiêu dùng (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-b1-1",
+    "lesson_id": "vocab-lesson-shopping-consumer-b1-1",
+    "title": "Quiz: B1 Mua sắm & Tiêu dùng (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-b1-2",
+    "lesson_id": "vocab-lesson-shopping-consumer-b1-2",
+    "title": "Quiz: B1 Mua sắm & Tiêu dùng (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-b2-1",
+    "lesson_id": "vocab-lesson-shopping-consumer-b2-1",
+    "title": "Quiz: B2 Mua sắm & Tiêu dùng (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-b2-2",
+    "lesson_id": "vocab-lesson-shopping-consumer-b2-2",
+    "title": "Quiz: B2 Mua sắm & Tiêu dùng (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-shopping-consumer-c1",
+    "lesson_id": "vocab-lesson-shopping-consumer-c1",
+    "title": "Quiz: C1 Mua sắm & Tiêu dùng",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-a1-1",
+    "lesson_id": "vocab-lesson-housing-home-a1-1",
+    "title": "Quiz: A1 Nhà ở & Gia đình (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-a1-2",
+    "lesson_id": "vocab-lesson-housing-home-a1-2",
+    "title": "Quiz: A1 Nhà ở & Gia đình (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-a2-1",
+    "lesson_id": "vocab-lesson-housing-home-a2-1",
+    "title": "Quiz: A2 Nhà ở & Gia đình (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-a2-2",
+    "lesson_id": "vocab-lesson-housing-home-a2-2",
+    "title": "Quiz: A2 Nhà ở & Gia đình (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-a2-3",
+    "lesson_id": "vocab-lesson-housing-home-a2-3",
+    "title": "Quiz: A2 Nhà ở & Gia đình (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-a2-4",
+    "lesson_id": "vocab-lesson-housing-home-a2-4",
+    "title": "Quiz: A2 Nhà ở & Gia đình (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-b1-1",
+    "lesson_id": "vocab-lesson-housing-home-b1-1",
+    "title": "Quiz: B1 Nhà ở & Gia đình (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-b1-2",
+    "lesson_id": "vocab-lesson-housing-home-b1-2",
+    "title": "Quiz: B1 Nhà ở & Gia đình (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-housing-home-b2",
+    "lesson_id": "vocab-lesson-housing-home-b2",
+    "title": "Quiz: B2 Nhà ở & Gia đình",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-a2",
+    "lesson_id": "vocab-lesson-law-government-a2",
+    "title": "Quiz: A2 Pháp luật & Chính phủ",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-b1-1",
+    "lesson_id": "vocab-lesson-law-government-b1-1",
+    "title": "Quiz: B1 Pháp luật & Chính phủ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-b1-2",
+    "lesson_id": "vocab-lesson-law-government-b1-2",
+    "title": "Quiz: B1 Pháp luật & Chính phủ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-b1-3",
+    "lesson_id": "vocab-lesson-law-government-b1-3",
+    "title": "Quiz: B1 Pháp luật & Chính phủ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-b2-1",
+    "lesson_id": "vocab-lesson-law-government-b2-1",
+    "title": "Quiz: B2 Pháp luật & Chính phủ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-b2-2",
+    "lesson_id": "vocab-lesson-law-government-b2-2",
+    "title": "Quiz: B2 Pháp luật & Chính phủ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-b2-3",
+    "lesson_id": "vocab-lesson-law-government-b2-3",
+    "title": "Quiz: B2 Pháp luật & Chính phủ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-b2-4",
+    "lesson_id": "vocab-lesson-law-government-b2-4",
+    "title": "Quiz: B2 Pháp luật & Chính phủ (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-c1-1",
+    "lesson_id": "vocab-lesson-law-government-c1-1",
+    "title": "Quiz: C1 Pháp luật & Chính phủ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-c1-2",
+    "lesson_id": "vocab-lesson-law-government-c1-2",
+    "title": "Quiz: C1 Pháp luật & Chính phủ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-c1-3",
+    "lesson_id": "vocab-lesson-law-government-c1-3",
+    "title": "Quiz: C1 Pháp luật & Chính phủ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-law-government-c2",
+    "lesson_id": "vocab-lesson-law-government-c2",
+    "title": "Quiz: C2 Pháp luật & Chính phủ",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-a2-1",
+    "lesson_id": "vocab-lesson-science-a2-1",
+    "title": "Quiz: A2 Khoa học (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-a2-2",
+    "lesson_id": "vocab-lesson-science-a2-2",
+    "title": "Quiz: A2 Khoa học (2)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-science-b1-1",
+    "lesson_id": "vocab-lesson-science-b1-1",
+    "title": "Quiz: B1 Khoa học (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b1-2",
+    "lesson_id": "vocab-lesson-science-b1-2",
+    "title": "Quiz: B1 Khoa học (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b1-3",
+    "lesson_id": "vocab-lesson-science-b1-3",
+    "title": "Quiz: B1 Khoa học (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b1-4",
+    "lesson_id": "vocab-lesson-science-b1-4",
+    "title": "Quiz: B1 Khoa học (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b1-5",
+    "lesson_id": "vocab-lesson-science-b1-5",
+    "title": "Quiz: B1 Khoa học (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b2-1",
+    "lesson_id": "vocab-lesson-science-b2-1",
+    "title": "Quiz: B2 Khoa học (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b2-2",
+    "lesson_id": "vocab-lesson-science-b2-2",
+    "title": "Quiz: B2 Khoa học (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b2-3",
+    "lesson_id": "vocab-lesson-science-b2-3",
+    "title": "Quiz: B2 Khoa học (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b2-4",
+    "lesson_id": "vocab-lesson-science-b2-4",
+    "title": "Quiz: B2 Khoa học (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b2-5",
+    "lesson_id": "vocab-lesson-science-b2-5",
+    "title": "Quiz: B2 Khoa học (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b2-6",
+    "lesson_id": "vocab-lesson-science-b2-6",
+    "title": "Quiz: B2 Khoa học (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-b2-7",
+    "lesson_id": "vocab-lesson-science-b2-7",
+    "title": "Quiz: B2 Khoa học (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-c1-1",
+    "lesson_id": "vocab-lesson-science-c1-1",
+    "title": "Quiz: C1 Khoa học (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-c1-2",
+    "lesson_id": "vocab-lesson-science-c1-2",
+    "title": "Quiz: C1 Khoa học (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-c1-3",
+    "lesson_id": "vocab-lesson-science-c1-3",
+    "title": "Quiz: C1 Khoa học (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-c1-4",
+    "lesson_id": "vocab-lesson-science-c1-4",
+    "title": "Quiz: C1 Khoa học (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-c1-5",
+    "lesson_id": "vocab-lesson-science-c1-5",
+    "title": "Quiz: C1 Khoa học (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-science-c2",
+    "lesson_id": "vocab-lesson-science-c2",
+    "title": "Quiz: C2 Khoa học",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-a2",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-a2",
+    "title": "Quiz: A2 Thành ngữ & Cụm động từ",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-b1-1",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-b1-1",
+    "title": "Quiz: B1 Thành ngữ & Cụm động từ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-b1-2",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-b1-2",
+    "title": "Quiz: B1 Thành ngữ & Cụm động từ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-b1-3",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-b1-3",
+    "title": "Quiz: B1 Thành ngữ & Cụm động từ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-b2-1",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-b2-1",
+    "title": "Quiz: B2 Thành ngữ & Cụm động từ (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-b2-2",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-b2-2",
+    "title": "Quiz: B2 Thành ngữ & Cụm động từ (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-b2-3",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-b2-3",
+    "title": "Quiz: B2 Thành ngữ & Cụm động từ (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-b2-4",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-b2-4",
+    "title": "Quiz: B2 Thành ngữ & Cụm động từ (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-idioms-phrasal-verbs-c1",
+    "lesson_id": "vocab-lesson-idioms-phrasal-verbs-c1",
+    "title": "Quiz: C1 Thành ngữ & Cụm động từ",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-interview-career-a2",
+    "lesson_id": "vocab-lesson-interview-career-a2",
+    "title": "Quiz: A2 Phỏng vấn & Sự nghiệp",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-interview-career-b1-1",
+    "lesson_id": "vocab-lesson-interview-career-b1-1",
+    "title": "Quiz: B1 Phỏng vấn & Sự nghiệp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-interview-career-b1-2",
+    "lesson_id": "vocab-lesson-interview-career-b1-2",
+    "title": "Quiz: B1 Phỏng vấn & Sự nghiệp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-interview-career-b2-1",
+    "lesson_id": "vocab-lesson-interview-career-b2-1",
+    "title": "Quiz: B2 Phỏng vấn & Sự nghiệp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-interview-career-b2-2",
+    "lesson_id": "vocab-lesson-interview-career-b2-2",
+    "title": "Quiz: B2 Phỏng vấn & Sự nghiệp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-interview-career-c1-1",
+    "lesson_id": "vocab-lesson-interview-career-c1-1",
+    "title": "Quiz: C1 Phỏng vấn & Sự nghiệp (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-interview-career-c1-2",
+    "lesson_id": "vocab-lesson-interview-career-c1-2",
+    "title": "Quiz: C1 Phỏng vấn & Sự nghiệp (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-a2",
+    "lesson_id": "vocab-lesson-academic-ielts-a2",
+    "title": "Quiz: A2 Học thuật & IELTS",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b1-1",
+    "lesson_id": "vocab-lesson-academic-ielts-b1-1",
+    "title": "Quiz: B1 Học thuật & IELTS (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b1-2",
+    "lesson_id": "vocab-lesson-academic-ielts-b1-2",
+    "title": "Quiz: B1 Học thuật & IELTS (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b1-3",
+    "lesson_id": "vocab-lesson-academic-ielts-b1-3",
+    "title": "Quiz: B1 Học thuật & IELTS (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b1-4",
+    "lesson_id": "vocab-lesson-academic-ielts-b1-4",
+    "title": "Quiz: B1 Học thuật & IELTS (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b1-5",
+    "lesson_id": "vocab-lesson-academic-ielts-b1-5",
+    "title": "Quiz: B1 Học thuật & IELTS (5)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-1",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-1",
+    "title": "Quiz: B2 Học thuật & IELTS (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-2",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-2",
+    "title": "Quiz: B2 Học thuật & IELTS (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-3",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-3",
+    "title": "Quiz: B2 Học thuật & IELTS (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-4",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-4",
+    "title": "Quiz: B2 Học thuật & IELTS (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-5",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-5",
+    "title": "Quiz: B2 Học thuật & IELTS (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-6",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-6",
+    "title": "Quiz: B2 Học thuật & IELTS (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-7",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-7",
+    "title": "Quiz: B2 Học thuật & IELTS (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-8",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-8",
+    "title": "Quiz: B2 Học thuật & IELTS (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-9",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-9",
+    "title": "Quiz: B2 Học thuật & IELTS (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-b2-10",
+    "lesson_id": "vocab-lesson-academic-ielts-b2-10",
+    "title": "Quiz: B2 Học thuật & IELTS (10)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-1",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-1",
+    "title": "Quiz: C1 Học thuật & IELTS (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-2",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-2",
+    "title": "Quiz: C1 Học thuật & IELTS (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-3",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-3",
+    "title": "Quiz: C1 Học thuật & IELTS (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-4",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-4",
+    "title": "Quiz: C1 Học thuật & IELTS (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-5",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-5",
+    "title": "Quiz: C1 Học thuật & IELTS (5)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-6",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-6",
+    "title": "Quiz: C1 Học thuật & IELTS (6)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-7",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-7",
+    "title": "Quiz: C1 Học thuật & IELTS (7)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-8",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-8",
+    "title": "Quiz: C1 Học thuật & IELTS (8)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-9",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-9",
+    "title": "Quiz: C1 Học thuật & IELTS (9)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c1-10",
+    "lesson_id": "vocab-lesson-academic-ielts-c1-10",
+    "title": "Quiz: C1 Học thuật & IELTS (10)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c2-1",
+    "lesson_id": "vocab-lesson-academic-ielts-c2-1",
+    "title": "Quiz: C2 Học thuật & IELTS (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c2-2",
+    "lesson_id": "vocab-lesson-academic-ielts-c2-2",
+    "title": "Quiz: C2 Học thuật & IELTS (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c2-3",
+    "lesson_id": "vocab-lesson-academic-ielts-c2-3",
+    "title": "Quiz: C2 Học thuật & IELTS (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-academic-ielts-c2-4",
+    "lesson_id": "vocab-lesson-academic-ielts-c2-4",
+    "title": "Quiz: C2 Học thuật & IELTS (4)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-transportation-a1",
+    "lesson_id": "vocab-lesson-transportation-a1",
+    "title": "Quiz: A1 Giao thông",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-transportation-a2-1",
+    "lesson_id": "vocab-lesson-transportation-a2-1",
+    "title": "Quiz: A2 Giao thông (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-transportation-a2-2",
+    "lesson_id": "vocab-lesson-transportation-a2-2",
+    "title": "Quiz: A2 Giao thông (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-transportation-b1-1",
+    "lesson_id": "vocab-lesson-transportation-b1-1",
+    "title": "Quiz: B1 Giao thông (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-transportation-b1-2",
+    "lesson_id": "vocab-lesson-transportation-b1-2",
+    "title": "Quiz: B1 Giao thông (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-transportation-b2-1",
+    "lesson_id": "vocab-lesson-transportation-b2-1",
+    "title": "Quiz: B2 Giao thông (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-transportation-b2-2",
+    "lesson_id": "vocab-lesson-transportation-b2-2",
+    "title": "Quiz: B2 Giao thông (2)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-clothing-fashion-a1",
+    "lesson_id": "vocab-lesson-clothing-fashion-a1",
+    "title": "Quiz: A1 Quần áo & Thời trang",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-clothing-fashion-a2-1",
+    "lesson_id": "vocab-lesson-clothing-fashion-a2-1",
+    "title": "Quiz: A2 Quần áo & Thời trang (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-clothing-fashion-a2-2",
+    "lesson_id": "vocab-lesson-clothing-fashion-a2-2",
+    "title": "Quiz: A2 Quần áo & Thời trang (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-clothing-fashion-b1",
+    "lesson_id": "vocab-lesson-clothing-fashion-b1",
+    "title": "Quiz: B1 Quần áo & Thời trang",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-clothing-fashion-b2",
+    "lesson_id": "vocab-lesson-clothing-fashion-b2",
+    "title": "Quiz: B2 Quần áo & Thời trang",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-a1",
+    "lesson_id": "vocab-lesson-art-culture-a1",
+    "title": "Quiz: A1 Nghệ thuật & Văn hóa",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-a2",
+    "lesson_id": "vocab-lesson-art-culture-a2",
+    "title": "Quiz: A2 Nghệ thuật & Văn hóa",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-b1-1",
+    "lesson_id": "vocab-lesson-art-culture-b1-1",
+    "title": "Quiz: B1 Nghệ thuật & Văn hóa (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-b1-2",
+    "lesson_id": "vocab-lesson-art-culture-b1-2",
+    "title": "Quiz: B1 Nghệ thuật & Văn hóa (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-b1-3",
+    "lesson_id": "vocab-lesson-art-culture-b1-3",
+    "title": "Quiz: B1 Nghệ thuật & Văn hóa (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-b2-1",
+    "lesson_id": "vocab-lesson-art-culture-b2-1",
+    "title": "Quiz: B2 Nghệ thuật & Văn hóa (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-b2-2",
+    "lesson_id": "vocab-lesson-art-culture-b2-2",
+    "title": "Quiz: B2 Nghệ thuật & Văn hóa (2)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-b2-3",
+    "lesson_id": "vocab-lesson-art-culture-b2-3",
+    "title": "Quiz: B2 Nghệ thuật & Văn hóa (3)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-c1-1",
+    "lesson_id": "vocab-lesson-art-culture-c1-1",
+    "title": "Quiz: C1 Nghệ thuật & Văn hóa (1)",
+    "question_count": 5
+  },
+  {
+    "id": "vocab-quiz-art-culture-c1-2",
+    "lesson_id": "vocab-lesson-art-culture-c1-2",
+    "title": "Quiz: C1 Nghệ thuật & Văn hóa (2)",
+    "question_count": 3
+  },
+  {
+    "id": "vocab-quiz-art-culture-c2",
+    "lesson_id": "vocab-lesson-art-culture-c2",
+    "title": "Quiz: C2 Nghệ thuật & Văn hóa",
+    "question_count": 5
+  }
+]
